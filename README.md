@@ -1,6 +1,6 @@
-## Digital Library of SMAN 2 Blega
+## Digital Library of SMAN 1 Blega
 
-Digital Library of SMAN 2 Blega adalah sebuah platform yang dirancang khusus untuk menyediakan akses mudah dan praktis ke berbagai sumber daya pendidikan digital kepada siswa dan guru di tingkat Sekolah Menengah Atas (SMA). Ini adalah suatu inovasi modern yang menggabungkan teknologi dengan pendidikan, memberikan manfaat besar dalam meningkatkan kualitas pembelajaran di sekolah.
+Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus untuk menyediakan akses mudah dan praktis ke berbagai sumber daya pendidikan digital kepada siswa dan guru di tingkat Sekolah Menengah Atas (SMA). Ini adalah suatu inovasi modern yang menggabungkan teknologi dengan pendidikan, memberikan manfaat besar dalam meningkatkan kualitas pembelajaran di sekolah.
 
 ## Contributors
 
