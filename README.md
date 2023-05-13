@@ -16,7 +16,7 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 
 2.  lakukan perubahan pada file contributor.txt
 
-3, git commit -m "pesan commit"
+3.  git commit -m "pesan commit"
 
 4.  git push origin main
 
