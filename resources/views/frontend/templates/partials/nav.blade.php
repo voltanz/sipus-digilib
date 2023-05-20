@@ -3,66 +3,171 @@
 use App\Borrow;
 
 if ($user = auth()->user()) {
-
     $count = Borrow::where('user_id', $user->id)->count();
 }
 ?>
 
-<div class="navbar-fixed">
+{{-- <div class="navbar-fixed">
     <nav class="teal lighten-2">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="{{asset('assets/logo/logo.png')}}" style="width: 60px;"></a>
+                <a href="#!" class="brand-logo"><img src="{{ asset('assets/logo/logo.png') }}"
+                        style="width: 60px;"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ route('homepage') }}">Koleksi Buku</a></li>
                     <li><a href="badges.html">Layanan</a></li>
                     <li><a href="collapsible.html">Syarat & Ketentuan</a></li>
                     @guest
-                    <li><a href="{{ route('login') }}">Login</a></li>
-                    @if (Route::has('register'))
-                    <li><a href="{{ route('register') }}">Register</a></li>
-                    @endif
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                        @if (Route::has('register'))
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @endif
                     @else
-                    <li>
-                        <a href="{{ route('pinjam.index') }}"><i class="material-icons">shopping_basket</i> ( {{ $count }} )</a>
-                    </li>
-                    <ul id="dropdown2" class="dropdown-content">
-                        <li><a href="{{ route('home.profile') }}">Profil</a></li>
-                        <li><a href="{{ route('transaksi.index') }}">Peminjaman</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#!" onclick="event.preventDefault();
+                        <li>
+                            <a href="{{ route('pinjam.index') }}"><i class="material-icons">shopping_basket</i> (
+                                {{ $count }} )</a>
+                        </li>
+                        <ul id="dropdown2" class="dropdown-content">
+                            <li><a href="{{ route('home.profile') }}">Profil</a></li>
+                            <li><a href="{{ route('transaksi.index') }}">Peminjaman</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!"
+                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                Logout</a></li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </ul>
-                    <li><a class="dropdown-trigger" href="#" data-target="dropdown2"> {{ ucwords(Auth()->user()->name) }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                                    Logout</a></li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </ul>
+                        <li><a class="dropdown-trigger" href="#" data-target="dropdown2">
+                                {{ ucwords(Auth()->user()->name) }}<i class="material-icons right">arrow_drop_down</i></a>
+                        </li>
                     @endguest
                 </ul>
 
             </div>
         </div>
     </nav>
-</div>
-<ul class="sidenav" id="mobile-demo">
+</div> --}}
+
+<nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
+
+    <div class="container-fluid w-full d-flex justify-content-start mb-4">
+        <ul class="navbar-nav" style="font-size: 12px">
+            <li class="nav-item pr-4">
+                <a href="" class="text-light text-decoration-none d-flex">
+                    <p class="mr-2"><i class="bi bi-geo-alt-fill"></i></p>
+                    <p>Jl. Letjen S.Parman No.1, Jakarta, 11440, ID</p>
+                </a>
+            </li>
+            <li class="nav-item pr-4">
+                <a href="" class="text-light text-decoration-none d-flex">
+                    <p class="mr-2">
+                        <i class="bi bi-phone"></i>
+                    </p>
+                    <p>
+                        (021) 56958721 ext.
+                    </p>
+                    1000
+                </a>
+            </li>
+            <li class="nav-item pr-4">
+                <a href="" class="text-light text-decoration-none d-flex">
+                    <p class="mr-2">
+                        <i class="bi bi-envelope-at"></i>
+                    </p>
+                    <p>
+                        sipus.smansaga.sch.id
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid d-flex justify-content-center flex-column my-2">
+        <div class="d-flex">
+            <a href="#!" class="brand-logo">
+                <img src="{{ asset('assets/logo/logo.png') }}" style="width: 80px;"></a>
+            <ul class="mx-2 list-unstyled  text-light">
+                <li class="text-uppercase font-monospace d-flex justify-content-around fw-bold">
+                    <h1>s</h1>
+                    <h1>i</h1>
+                    <h1>p</h1>
+                    <h1>u</h1>
+                    <h1>s</h1>
+                </li>
+                <li class="text-capitalize fw-bold">
+                    <p>digital library of sman 1 blega</p>
+                </li>
+            </ul>
+        </div>
+        <div class="w-full">
+            <ul class="navbar-nav me-auto mb-lg-0 text-uppercase" style="font-size: 11px">
+                <li class="nav-item">
+                    <a class="nav-link text-light " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">peraturan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('homepage') }}" class="nav-link text-light">Koleksi Buku</a>
+                </li>
+                @guest
+                    <li><a href="{{ route('login') }}" class="nav-link text-light">Login</a></li>
+                    @if (Route::has('register'))
+                        <li><a href="{{ route('register') }}" class="nav-link text-light">Register</a></li>
+                    @endif
+                @else
+                    <li>
+                        <a href="{{ route('pinjam.index') }}" class="nav-link text-light"><i
+                                class="material-icons">shopping_basket</i>
+                            (
+                            {{ $count }} )</a>
+                    </li>
+                    <ul id="dropdown2" class="dropdown-content">
+                        <li><a href="{{ route('home.profile') }}" class="nav-link text-light">Profil</a></li>
+                        <li><a href="{{ route('transaksi.index') }}" class="nav-link text-light">Peminjaman</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!" class="nav-link text-light"
+                                onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                Logout</a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </ul>
+                    <li><a class="dropdown-trigger" href="#" data-target="dropdown2">
+                            {{ ucwords(Auth()->user()->name) }}<i class="material-icons right">arrow_drop_down</i></a>
+                    </li>
+                @endguest
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{{-- <ul class="sidenav" id="mobile-demo">
     <li><a href="{{ route('homepage') }}">Koleksi Buku</a></li>
     <li><a href="badges.html">Layanan</a></li>
     <li><a href="collapsible.html">Syarat & Ketentuan</a></li>
     @guest
-    <li><a href="{{ route('login') }}">Login</a></li>
-    @if (Route::has('register'))
-    <li><a href="{{ route('register') }}">Register</a></li>
-    @endif
+        <li><a href="{{ route('login') }}">Login</a></li>
+        @if (Route::has('register'))
+            <li><a href="{{ route('register') }}">Register</a></li>
+        @endif
     @else
-    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">{{ ucwords(Auth()->user()->name) }}<i class="material-icons right">arrow_drop_down</i></a></li>
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Profil</a></li>
-        <li><a href="#!">Peminjaman</a></li>
-        <li class="divider"></li>
-        <li><a href="#!" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout</a></li>
-    </ul>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">{{ ucwords(Auth()->user()->name) }}<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Profil</a></li>
+            <li><a href="#!">Peminjaman</a></li>
+            <li class="divider"></li>
+            <li><a href="#!"
+                    onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
+            </li>
+        </ul>
     @endguest
-</ul>
+</ul> --}}

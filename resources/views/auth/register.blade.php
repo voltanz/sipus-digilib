@@ -1,54 +1,69 @@
 @extends('frontend.default')
-@section('title','Registrasi')
+@section('title', 'Registrasi')
 @section('content')
 
-<div class="container">
-    <h4 class="center">Form Registrasi</h4>
-    <div class="row">
-        <form class="col s12 offset-m2 m8" action="{{ route('register') }}" method="POST">
-            @csrf
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="first_name" name="name" autocomplete="off" type="text" class="@error('name') invalid @enderror" value="{{ old('name') }}">
-                    <label for="first_name">Nama Lengkap</label>
+    <div class="container py-3">
+        <h2 class="text-capitalize text-center mb-2">Registrasi</h2>
+        <div class="d-flex justify-content-center">
+            <form class="w-50" action="{{ route('register') }}" method="POST">
+                @csrf
+                <div class="row">
+                    <div class="col d-flex align-content-center">
+                        <p class="regsiter mr-2">
+                            <i class="bi bi-person-circle"></i>
+                        </p>
+                        <input class="form-control" id="first_name" name="name" autocomplete="off"
+                            placeholder="your name" type="text" class="@error('name') invalid @enderror"
+                            value="{{ old('name') }}">
+                    </div>
                     @error('name')
-                    <span class="helper-text" data-error="{{ $message }}"></span>
+                        <span class="helper-text" data-error="{{ $message }}"></span>
                     @enderror()
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" name="email" type="email" autocomplete="off" class="@error('email') invalid @enderror" value="{{ old('email') }}">
-                    <label for="email">Email</label>
+
+                <div class="row">
+                    <div class="col d-flex align-content-center">
+                        <p class="regsiter mr-2">
+                            <i class="bi bi-envelope-at-fill"></i>
+                        </p>
+                        <input class="form-control" id="email" name="email" autocomplete="off"
+                            placeholder="sma1.belga@gmail.com" type="email" class="@error('email') invalid @enderror"
+                            value="{{ old('email') }}">
+                    </div>
                     @error('email')
-                    <span class="helper-text" data-error="{{ $message }}"></span>
+                        <span class="helper-text" data-error="{{ $message }}"></span>
                     @enderror()
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">lock</i>
-                    <input name="password" id="password" type="password" class="@error('password') invalid @enderror">
-                    <label for="password">Password</label>
+
+                <div class=" row">
+                    <div class="col d-flex align-content-center">
+                        <p class="regsiter mr-2">
+                            <i class="bi bi-lock-fill"></i>
+                        </p>
+                        <input class="form-control" id="password" name="password" type="password" placeholder="password"
+                            class="@error('password') invalid @enderror">
+                    </div>
                     @error('password')
-                    <span class="helper-text" data-error="{{ $message }}"></span>
+                        <span class="helper-text" data-error="{{ $message }}"></span>
                     @enderror()
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">lock</i>
-                    <input name="password_confirmation" id="password_confirmation" type="password" class="validate">
-                    <label for="password_confirmation">Konfirmasi Password</label>
+
+                <div class="row">
+                    <div class="col d-flex align-content-center">
+                        <p class="regsiter mr-2">
+                            <i class="bi bi-lock-fill"></i>
+                        </p>
+                        <input class="form-control" id="password_confirmation" placeholder="confrim password"
+                            name="password_confirmation" autocomplete="off" type="password">
+                    </div>
                     @error('password_confirmation')
-                    <span class="helper-text" data-error="{{ $message }}"></span>
+                        <span class="helper-text" data-error="{{ $message }}"></span>
                     @enderror()
                 </div>
-            </div>
-            <button type="submit" class="waves-effect waves-light btn teal lighten-2 right">Register</button>
-        </form>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="w-25 btn btn-primary">kirim</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 @endsection

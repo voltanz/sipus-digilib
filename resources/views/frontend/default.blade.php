@@ -6,6 +6,7 @@
     @include('frontend.templates.partials.nav')
     @yield('content')
 </body>
+@include('frontend.templates.partials.footer')
 @include('frontend.templates.partials.scripts')
 @include('frontend.templates.partials.toast')
 
