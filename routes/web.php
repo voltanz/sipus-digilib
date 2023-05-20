@@ -3,18 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-
 Route::get('/', 'User\BookController@index')->name('homepage');
 Route::get('/book/{book}', 'User\BookController@show')->name('book.show');
 Route::post('/book/borrow', 'User\BookController@borrow')->name('book.borrow')->middleware('auth');
-
-
 
 Route::get('/user', function () {
     return view('/admin/user/index');
 });
 
-Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true]); //  menghasilkan beberapa rute, termasuk rute untuk mengirimkan email verifikasi, verifikasi email dan menampilkan pesan setelah verifikasi sukses.
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/home/profile', 'HomeController@profile')->name('home.profile')->middleware('verified');

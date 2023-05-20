@@ -37,14 +37,16 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
+            'driver' => 'session', // menyimpan otentikasi pengguna
+            'provider' => 'users', // tabel dengan nama 'user' menjadi sumber informasi yang akan diverivikasi
+            'middleware' => ['web'] // otentikasi hanya berlaku untuk media web
         ],
 
         'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
+            'driver' => 'token', // autentikasi menggunakan token
+            'provider' => 'users', // model User digunakan sebagai provider untuk autentikasi
+            'middleware' => ['auth:api'] // mengamankan endpoint API agar hanya dapat diakses oleh pengguna yang telah melakukan autentikasi.
+            // 'hash' => false,
         ],
     ],
 
@@ -67,8 +69,9 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
+            'driver' => 'eloquent', // menggunakan driver eloquent yang merupakan default driver autentikasi Laravel.
+            // driver yang disediakan oleh Laravel, seperti database dan session, 
+            'model' => App\User::class, // model yang digunakan sebagai autentikasi (mencari dan memverivikasi pengguna)
         ],
 
         // 'users' => [
@@ -94,10 +97,11 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
+            'provider' => 'users', // table user akan digunakan oleh laravle untuk melakukan autentikasi
+            'table' => 'password_resets', // table untuk menyimpan token reset password
+            //  Saat pengguna meminta reset password, Laravel akan menyimpan token reset password ke dalam tabel
+            'expire' => 60, // waktu kadaluarsa token resert password alam menit 
+            'throttle' => 60, // waktu jeda yang harus diambil antara dua permintaan reset password
         ],
     ],
 
@@ -113,5 +117,8 @@ return [
     */
 
     'password_timeout' => 10800,
+
+    // enable email verivication
+    'email_verification' => true
 
 ];
