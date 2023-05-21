@@ -1,10 +1,10 @@
 @extends('frontend.default')
 @section('title', 'Registrasi')
-@section('content')
 
-    <div class="container py-3">
-        <h2 class="text-capitalize text-center mb-2">Registrasi</h2>
-        <div class="d-flex justify-content-center">
+@section('content')
+    <div class="container py-5">
+        <div class="d-flex flex-column align-items-center">
+            <h2 class="text-capitalize text-center mb-2">Registrasi</h2>
             <form class="w-50" action="{{ route('register') }}" method="POST">
                 @csrf
                 <div class="row mb-3 mb-3">
