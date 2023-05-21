@@ -1,9 +1,9 @@
 @extends('frontend.default')
 @section('title', 'Homepage')
 @section('content')
-    <div class="container py-5">
+    <div class="containe-fluid py-5 d-flex flex-column align-items-center">
         <h2 class="text-center text-capitalize">Koleksi buku</h2>
-        <div class="row">
+        <div class="row row-cols-4 justify-content-center w-75">
             @foreach ($books as $book)
                 @include('frontend/templates/partials/component-card', $book)
             @endforeach()

@@ -1,22 +1,21 @@
-<div class="col s12 m6">
-    <div class="card horizontal hoverable">
-
-        <div class="card-image">
-            <img src="{{ $book->getCover() }}" class="materialboxed" style="max-height: 250px;">
+<div class="col my-2">
+    <div class="d-flex flex-column align-items-center card h-100">
+        <div class="mb-2">
+            <img src="{{ $book->getCover() }}" class="card-img-top">
         </div>
-        <div class="card-stacked">
+        <div class="card-body d-flex flex-column justify-content-between">
             <div class="card-content">
-                <a href="{{ route('book.show', $book) }}">
-                    <p class="card-title"><b>{{ Str::limit($book->title,10)}}</b></p>
+                <a href="{{ route('book.show', $book) }}" class="text-decoration-none text-dark fs-5 text-center">
+                    <p class="card-title">{{ Str::limit($book->title, 10) }}</p>
                 </a>
-                <p>{{ Str::limit($book->description,100) }}</p>
+                <p>{{ Str::limit($book->description, 100) }}</p>
             </div>
-            <div class="card-action">
+            <div class="w-full">
                 <form action="{{ route('book.borrow') }}" method="POST">
                     @csrf
                     <input type="hidden" name="book_id" value="{{ $book->id }}">
                     <input type="hidden" name="title" value="{{ $book->title }}">
-                    <button type="submit" class="btn-floating waves-effect waves-light teal lighten-2"><i class="material-icons">add</i></button>
+                    <button type="submit" class="btn btn-primary text-light text-capitalize w-100">tambahkan</button>
                 </form>
             </div>
         </div>
