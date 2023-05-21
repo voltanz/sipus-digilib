@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <style>
-        .regsiter {
-            font-size: 25px;
+        .register {
+            font-size: 12px;
         }
     </style>
 </head>

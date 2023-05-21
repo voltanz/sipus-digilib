@@ -52,38 +52,35 @@ if ($user = auth()->user()) {
 </div> --}}
 
 <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
-
-    <div class="container-fluid w-full d-flex justify-content-start mb-4">
-        <ul class="navbar-nav" style="font-size: 12px">
-            <li class="nav-item pr-4">
-                <a href="" class="text-light text-decoration-none d-flex">
-                    <p class="mr-2"><i class="bi bi-geo-alt-fill"></i></p>
-                    <p>Jl. Letjen S.Parman No.1, Jakarta, 11440, ID</p>
-                </a>
-            </li>
-            <li class="nav-item pr-4">
-                <a href="" class="text-light text-decoration-none d-flex">
-                    <p class="mr-2">
-                        <i class="bi bi-phone"></i>
-                    </p>
-                    <p>
-                        (021) 56958721 ext.
-                    </p>
-                    1000
-                </a>
-            </li>
-            <li class="nav-item pr-4">
-                <a href="" class="text-light text-decoration-none d-flex">
-                    <p class="mr-2">
-                        <i class="bi bi-envelope-at"></i>
-                    </p>
-                    <p>
-                        sipus.smansaga.sch.id
-                    </p>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
+        <li class="pe-4">
+            <a href="" class="text-light text-decoration-none d-flex">
+                <p class="me-2"><i class="bi bi-geo-alt-fill"></i></p>
+                <p>Jl. Letjen S.Parman No.1, Jakarta, 11440, ID</p>
+            </a>
+        </li>
+        <li class="pe-4">
+            <a href="" class="text-light text-decoration-none d-flex">
+                <p class="me-2">
+                    <i class="bi bi-phone"></i>
+                </p>
+                <p>
+                    (021) 56958721 ext.
+                </p>
+                1000
+            </a>
+        </li>
+        <li class="pe-4">
+            <a href="" class="text-light text-decoration-none d-flex">
+                <p class="me-2">
+                    <i class="bi bi-envelope-at"></i>
+                </p>
+                <p>
+                    sipus.smansaga.sch.id
+                </p>
+            </a>
+        </li>
+    </ul>
     <div class="container-fluid d-flex justify-content-center flex-column my-2">
         <div class="d-flex">
             <a href="#!" class="brand-logo">

@@ -1,5 +1,5 @@
 <footer class="bg-dark text-light py-5">
-    <div class="w-full d-flex justify-content-center">
+    <div class="w-full d-flex justify-content-center align-items-center">
         <div class="d-flex p-2 mx-5">
             <a href="#!" class="brand-logo">
                 <img src="{{ asset('assets/logo/logo.png') }}" style="width: 60px;"></a>
@@ -16,27 +16,23 @@
                 </li>
             </ul>
         </div>
-        <div class="p-2 mx-5 text-white-50 text-capitalize w-full h-full d-flex align-items-center">
-            <p style="font-size: 11px">&copy; pusat
-                komputer 2023 //
-                SMA
-                negeri 1 belga</p>
-        </div>
-        <div class="w-full h-full d-flex align-items-center">
-            <ul class="list-unstyled d-flex p-2 mx-5">
-                <li>
-                    <a href="" class="nav-link text-light"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="" class="nav-link text-light"><i class="bi bi-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="" class="nav-link text-light"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="" class="nav-link text-light"><i class="bi bi-youtube"></i></a>
-                </li>
-            </ul>
-        </div>
+        <p style="font-size: 11px">&copy; pusat
+            komputer 2023 //
+            SMA
+            negeri 1 belga</p>
+        <ul class="list-unstyled d-flex justify-content-around p-2 mx-5">
+            <li class="mx-2">
+                <a href="" class="text-light"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="mx-2">
+                <a href="" class="text-light"><i class="bi bi-twitter"></i></a>
+            </li>
+            <li class="mx-2">
+                <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="mx-2">
+                <a href="" class="text-light"><i class="bi bi-youtube"></i></a>
+            </li>
+        </ul>
     </div>
 </footer>
