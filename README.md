@@ -10,7 +10,7 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 -   [Ibnu Hajar Askholani](https://github.com/askholani)
 -   [Yuliyana Rahmawati](https://github.com/ylnrahma)
 
-# Step-step
+## Step-step
 
 1.  Git clone https://github.com/nikoshaa/sipus-digilib (pada terminal)
 
@@ -20,9 +20,9 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 
 4.  Git push origin main
 
-# Step menjalankan pada lokal komputer
+## Step menjalankan pada lokal komputer
 
-1.  Menyalakan Database (Xampp)
+1.  Menyalakan database (Xampp)
 
 2.  Composer install pada terminal
 
