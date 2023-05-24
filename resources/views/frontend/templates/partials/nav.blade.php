@@ -56,7 +56,7 @@ if ($user = auth()->user()) {
         <li class="pe-4">
             <a href="" class="text-light text-decoration-none d-flex">
                 <p class="me-2"><i class="bi bi-geo-alt-fill"></i></p>
-                <p>Jl. Letjen S.Parman No.1, Jakarta, 11440, ID</p>
+                <p>Jl. Raya Blega, Blega-Bangkalan, 69174, ID</p>
             </a>
         </li>
         <li class="pe-4">
