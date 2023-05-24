@@ -48,10 +48,10 @@ if ($user = auth()->user()) {
                     <a class="nav-link text-light " aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">profile</a>
+                    <a class="nav-link text-light" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">peraturan</a>
+                    <a class="nav-link text-light" href="#">Peraturan</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('homepage') }}" class="nav-link text-light">Koleksi Buku</a>
