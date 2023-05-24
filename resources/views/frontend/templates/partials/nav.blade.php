@@ -11,7 +11,7 @@ if ($user = auth()->user()) {
     <nav class="teal lighten-2">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="{{ asset('assets/logo/logo.png') }}"
+                <a href="#!" class="brand-logo"><img src="{{ asset('assets/logo/sipus.png') }}"
                         style="width: 60px;"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -84,19 +84,7 @@ if ($user = auth()->user()) {
     <div class="container-fluid d-flex justify-content-center flex-column my-2">
         <div class="d-flex">
             <a href="#!" class="brand-logo">
-                <img src="{{ asset('assets/logo/logo.png') }}" style="width: 80px;"></a>
-            <ul class="mx-2 list-unstyled  text-light">
-                <li class="text-uppercase font-monospace d-flex justify-content-around fw-bold">
-                    <h1>s</h1>
-                    <h1>i</h1>
-                    <h1>p</h1>
-                    <h1>u</h1>
-                    <h1>s</h1>
-                </li>
-                <li class="text-capitalize fw-bold">
-                    <p>digital library of sman 1 blega</p>
-                </li>
-            </ul>
+                <img src="{{ asset('assets/logo/sipus.png') }}" style="width: 350px;"></a>
         </div>
         <div class="w-full">
             <ul class="navbar-nav me-auto mb-lg-0 text-uppercase" style="font-size: 11px">
