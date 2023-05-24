@@ -5,7 +5,7 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 ## Contributors
 
 -   [Wildan Hafidz Mauludin](https://github.com/nikoshaa)
--   [Ahmad Bima Tristan Ibrahim](https://github.com/voltanz)
+-   [Ahmad Bima Tristan](https://github.com/voltanz)
 -   [Iemaduddin](https://github.com/Iemaduddin)
 -   [Ibnu Hajar Askholani](https://github.com/askholani)
 -   [Yuliyana Rahmawati](https://github.com/ylnrahma)
