@@ -2,19 +2,7 @@
     <div class="w-full d-flex justify-content-center align-items-center">
         <div class="d-flex p-2 mx-5">
             <a href="#!" class="brand-logo">
-                <img src="{{ asset('assets/logo/logo.png') }}" style="width: 60px;"></a>
-            <ul class="mx-2 list-unstyled text-light">
-                <li class="text-uppercase font-monospace d-flex justify-content-around fw-bold">
-                    <h3>s</h3>
-                    <h3>i</h3>
-                    <h3>p</h3>
-                    <h3>u</h3>
-                    <h3>s</h3>
-                </li>
-                <li class="text-capitalize fw-bold" style="font-size: 12px">
-                    <p>digital library of sman 1 blega</p>
-                </li>
-            </ul>
+                <img src="{{ asset('assets/logo/sipus.png') }}" style="width: 200px;"></a>
         </div>
         <p style="font-size: 11px">&copy; pusat
             komputer 2023 //

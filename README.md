@@ -10,30 +10,30 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 -   [Ibnu Hajar Askholani](https://github.com/askholani)
 -   [Yuliyana Rahmawati](https://github.com/ylnrahma)
 
-# Step-step
+## Step-step
 
-1.  git clone https://github.com/nikoshaa/sipus-digilib (pada terminal)
+1.  Git clone https://github.com/nikoshaa/sipus-digilib (pada terminal)
 
-2.  lakukan perubahan pada file contributor.txt
+2.  Lakukan perubahan pada file contributor.txt
 
-3.  git commit -m "pesan commit"
+3.  Git commit -m "pesan commit"
 
-4.  git push origin main
+4.  Git push origin main
 
-# Step menjalankan pada lokal komputer
+## Step menjalankan pada lokal komputer
 
-1.  menyalakan database (xampp)
+1.  Menyalakan database (Xampp)
 
-2.  composer install pada terminal
+2.  Composer install pada terminal
 
-3.  copy .env pada latihan web lanjut
+3.  Copy .env pada latihan web lanjut
 
-4.  buat database baru dengan nama sipus_digilib
+4.  Buat database baru dengan nama sipus_digilib
 
-5.  sesuaikan nama database di file .env
+5.  Sesuaikan nama database di file .env
 
-6.  jalankan perintah php artisan migrate
+6.  Jalankan perintah php artisan migrate
 
-7.  jalankan perintah php artisan db:seed
+7.  Jalankan perintah php artisan db:seed
 
-8.  jalankan perintah php artisan serve
+8.  Jalankan perintah php artisan serve
