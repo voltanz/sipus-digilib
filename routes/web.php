@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', 'User\BookController@index')->name('homepage');
+// Route::get('/', 'User\BookController@index')->name('homepage');
+Route::get('/', 'HomeController@landingPage')->name('homepage');
 Route::get('/book/{book}', 'User\BookController@show')->name('book.show');
 Route::post('/book/borrow', 'User\BookController@borrow')->name('book.borrow')->middleware('auth');
 
