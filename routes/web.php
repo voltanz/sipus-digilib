@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 
-Route::get('/', 'User\BookController@index')->name('homepage');
+// Route::get('/', 'User\BookController@index')->name('homepage');
+Route::get('/', 'HomeController@landingPage')->name('homepage');
 Route::get('/book/{book}', 'User\BookController@show')->name('book.show');
 Route::post('/book/borrow', 'User\BookController@borrow')->name('book.borrow')->middleware('auth');
 
@@ -27,6 +28,7 @@ Route::get('/transaksi', 'User\TransaksiController@index')->name('transaksi.inde
 Route::post('/transaksi', 'User\TransaksiController@store')->name('transaksi.store');
 Route::get('/detail/{id}', 'User\TransaksiController@detail_pinjam')->name('detail_pinjam');
 
+
 // route peraturan
 
 Route::prefix('/peraturan')->group(function () {
@@ -35,3 +37,4 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/pengembalian', [UserController::class, 'pengembalian'])->name('pengembalian');
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
 });
+

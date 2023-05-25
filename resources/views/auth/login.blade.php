@@ -17,7 +17,7 @@
                         <i class="bi bi-envelope-at-fill me-2 fs-2"></i>
                         <div class="position-relative w-100">
                             <input class="form-control" id="email" name="email" autocomplete="off"
-                                placeholder="sma1.belga@gmail.com" type="email" value="{{ old('email') }}">
+                                placeholder="sma1.blega@gmail.com" type="email" value="{{ old('email') }}">
                             @error('email')
                                 <span class="position-absolute top-100 register text-danger">{{ $message }}</span>
                             @enderror
@@ -30,7 +30,7 @@
                         <i class="bi bi-lock-fill me-2 fs-2"></i>
                         <div class="position-relative w-100">
                             <input class="form-control" id="password" name="password" type="password"
-                                placeholder="password" class="@error('password') invalid @enderror">
+                                placeholder="Password" class="@error('password') invalid @enderror">
                             @error('password')
                                 <span class="position-absolute top-100 register text-danger">
                                     {{ $message }}
@@ -42,7 +42,7 @@
                 </div>
                 <div class="d-flex flex-column  align-items-end text-capitalize">
                     <button type="submit" class="w-25 btn btn-primary text-light m-2">login</button>
-                    <a href="{{ route('password.request') }}" class="">Forgot Your Password?</a>
+                    <a href="{{ route('password.request') }}" class="">Forgot your Password?</a>
                 </div>
             </form>
         </div>
