@@ -20,7 +20,7 @@
                         &nbsp;<br>
                     </p>
                     <p class="lead mb48 mb-xs-32"><b>
-                            Selamat bergabung!
+                            Selamat Bergabung!
                         </b></p>
                 </div>
             </div>

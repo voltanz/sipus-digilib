@@ -1,5 +1,5 @@
 @extends('frontend.default')
-@section('title', 'Login')
+@section('title', 'Denda')
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
