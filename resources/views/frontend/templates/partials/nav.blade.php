@@ -7,8 +7,6 @@ if ($user = auth()->user()) {
 }
 ?>
 
-
-
 <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
@@ -73,6 +71,14 @@ if ($user = auth()->user()) {
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('homepage') }}" class="nav-link text-light" style="text-decoration:none">Koleksi Buku</a>
+                    <a class="nav-link text-light" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Peraturan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('homepage') }}" class="nav-link text-light">Koleksi Buku</a>
+
                 </li>
                 @guest
                     <li><a href="{{ route('login') }}" class="nav-link text-light" style="text-decoration:none">Login</a></li>
