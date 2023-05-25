@@ -56,7 +56,7 @@ if ($user = auth()->user()) {
         <li class="pe-4">
             <a href="" class="text-light text-decoration-none d-flex">
                 <p class="me-2"><i class="bi bi-geo-alt-fill"></i></p>
-                <p>Jl. Letjen S.Parman No.1, Jakarta, 11440, ID</p>
+                <p>Kedong, Rosep, Kec. Blega, Kabupaten Bangkalan, Jawa Timur, 69174, ID</p>
             </a>
         </li>
         <li class="pe-4">
@@ -94,8 +94,15 @@ if ($user = auth()->user()) {
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">profile</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">peraturan</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Peraturan</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('tataTertib') }}">Tata Tertib</a></li>
+                        <li><a class="dropdown-item" href="{{ route('peminjaman') }}">Peminjaman</a></li>
+                        <li><a class="dropdown-item" href="{{ route('pengembalian') }}">Pengembalian</a></li>
+                        <li><a class="dropdown-item" href="{{ route('denda') }}">Denda</a></li>
+                        <li><a class="dropdown-item" href="#">Keanggotaan</a></li>
+                      </ul>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('homepage') }}" class="nav-link text-light">Koleksi Buku</a>

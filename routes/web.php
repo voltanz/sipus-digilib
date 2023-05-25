@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
 
 Route::get('/', 'User\BookController@index')->name('homepage');
 Route::get('/book/{book}', 'User\BookController@show')->name('book.show');
@@ -25,3 +26,12 @@ Route::delete('/destroy', 'user\BookController@destroy')->name('delete');
 Route::get('/transaksi', 'User\TransaksiController@index')->name('transaksi.index');
 Route::post('/transaksi', 'User\TransaksiController@store')->name('transaksi.store');
 Route::get('/detail/{id}', 'User\TransaksiController@detail_pinjam')->name('detail_pinjam');
+
+// route peraturan
+
+Route::prefix('/peraturan')->group(function () {
+    Route::get('/tataTertib', [UserController::class, 'peraturan'])->name('tataTertib');
+    Route::get('/peminjaman', [UserController::class, 'peminjaman'])->name('peminjaman');
+    Route::get('/pengembalian', [UserController::class, 'pengembalian'])->name('pengembalian');
+    Route::get('/denda', [UserController::class, 'denda'])->name('denda');
+});
