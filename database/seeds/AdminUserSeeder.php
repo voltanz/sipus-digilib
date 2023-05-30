@@ -6,7 +6,7 @@ use App\User;
 class AdminUserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the databa
      *
      * @return void
      */

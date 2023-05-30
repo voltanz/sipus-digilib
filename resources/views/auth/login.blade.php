@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column  align-items-end text-capitalize">
-                    <button type="submit" class="w-25 btn btn-primary text-light m-2">login</button>
+                    <button type="submit" class="w-25 btn btn-primary text-light m-2">Masuk</button>
                     <a href="{{ route('password.request') }}" class="">Forgot your Password?</a>
                 </div>
             </form>
@@ -71,8 +71,8 @@
                         @enderror()
                     </div>
                 </div>
-                <a href="{{ route('password.request') }}" class="right">Forgot Your Password?</a>
-                <button type="submit" class="waves-effect waves-light btn teal lighten-2">Login</button>
+                <a href="{{ route('password.request') }}" class="right">Forgot your Password?</a>
+                <button type="submit" class="waves-effect waves-light btn teal lighten-2">Masuk</button>
             </form>
         </div> --}}
     </div>

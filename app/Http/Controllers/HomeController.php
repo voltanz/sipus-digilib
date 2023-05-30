@@ -9,11 +9,15 @@ use App\User;
 class HomeController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
+    public function landingPage()
+    {
+        return view('index');
+    }
     public function index()
     {
         $books = Auth()->user()->borrow;

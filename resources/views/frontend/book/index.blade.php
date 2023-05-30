@@ -1,5 +1,5 @@
 @extends('frontend.default')
-@section('title', 'Homepage')
+@section('title', 'Koleksi Buku')
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
         <h2 class="text-center text-capitalize">Koleksi buku</h2>
