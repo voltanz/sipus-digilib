@@ -26,14 +26,12 @@ class HomeController extends Controller
     public function index()
     {
         $books = Auth()->user()->borrow;
-
         return view('home', compact('books'));
     }
 
     public function profile()
     {
         $user = Auth()->user();
-
         return view('frontend.user.index', compact('user'));
     }
 

@@ -12,15 +12,13 @@
                     <h1 style="font-weight:bold">Situs Perpustakaan</h1>
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                     <h2 class="uppercase bold">SMA Negeri 1 Blega</h2>
-                    <p class="lead mb48 mb-xs-32">Situs ini ditujukan untuk seluruh Civitas Akademika SMA Negeri 1 Blega
-                        maupun masyarakat pengguna
-                        internet pada umumnya. Melalui situs ini diharapkan perpustakaan SMA Negeri 1 Blega dapat
-                        meningkatkan layanan dan mempermudah civitas akademika mencari literatur dalam
-                        proses belajar mengajar.
-                        &nbsp;<br>
+                    <p class="lead mb48 mb-xs-32">Situs ini ditujukan untuk seluruh Civitas Akademika SMA Negeri 1 Blega maupun masyarakat pengguna internet pada umumnya. 
+                    <br>
+                    Melalui situs ini diharapkan perpustakaan SMA Negeri 1 Blega dapat meningkatkan layanan dan mempermudah civitas akademika mencari literatur dalam proses belajar mengajar.
+                    &nbsp;<br>
                     </p>
                     <p class="lead mb48 mb-xs-32"><b>
-                            Selamat Bergabung!
+                            Selamat bergabung!
                         </b></p>
                 </div>
             </div>

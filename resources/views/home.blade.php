@@ -13,7 +13,6 @@
                             <p class="card-title"><b>{{ ucwords($book->title) }}</b></p>
                             <blockquote>
                                 <p>{{ $book->description }}</p>
-                                <p>Halllow</p>
                             </blockquote>
                         </div>
                     </div>
@@ -21,5 +20,4 @@
             @endforeach
         </div>
     </div>
-    <div>Hallow</div>
 @endsection

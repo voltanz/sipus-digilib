@@ -1,6 +1,5 @@
 ![sipus](https://github.com/nikoshaa/sipus-digilib/assets/93475727/b18890d1-152b-46ca-ad33-e0eb6c301daa)
 
-
 ## 🕮 Digital Library of SMAN 1 Blega
 
 Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus untuk menyediakan akses mudah dan praktis ke berbagai sumber daya pendidikan digital kepada siswa dan guru SMAN 1 Blega.
@@ -27,31 +26,19 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 
 ## 💫 Installation
 
-1.  Git clone `https://github.com/nikoshaa/sipus-digilib`
-
-2.  Lakukan perubahan pada file `contributor.txt`
-
-3.  Git commit -m `"pesan commit"`
-
-4.  Git push origin main
-
-## 🚀 Quick start
-
-1.  Menyalakan database `xampp`
-
-2.  Composer `install` pada terminal
-
-3.  Copy `.env` pada latihan web lanjut
-
-4.  Buat database baru dengan nama `sipus_digilib`
-
-5.  Sesuaikan nama database di file `.env`
-
-6.  Jalankan perintah `php artisan migrate`
-
-7.  Jalankan perintah `php artisan db:seed`
-
-8.  Jalankan perintah `php artisan serve`
+1.  Git fork `https://github.com/nikoshaa/sipus-digilib`
+2.  Git clone pada repo hasil fork
+3.  Composer `install` pada terminal
+4.  Copy `.env` pada latihan pada Jobsheet PWL
+5.  Running `xampp` dan buat database baru dengan nama `sipus_digilib`
+6.  Sesuaikan nama database di file `.env`
+7.  Jalankan perintah `php artisan migrate`
+8.  Jalankan perintah `php artisan db:seed`
+9.  Jalankan perintah `php artisan key:generate`
+10. Jalankan perintah `php artisan serve`
+11. Update kode program ke repo hasil fork `git push origin main(sesuaikan nama branch)`
+12. Buat request ke repo utama
+13. Tunggu pemilik repo melakukan merge pada kode yang telah dikerjakan
 
 ## 💳 License
 
