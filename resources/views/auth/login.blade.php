@@ -71,7 +71,7 @@
                         @enderror()
                     </div>
                 </div>
-                <a href="{{ route('password.request') }}" class="right">Forgot Your Password?</a>
+                <a href="{{ route('password.request') }}" class="right">Forgot your Password?</a>
                 <button type="submit" class="waves-effect waves-light btn teal lighten-2">Masuk</button>
             </form>
         </div> --}}
