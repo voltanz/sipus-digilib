@@ -32,7 +32,7 @@
                     <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                         <i class="fa fa-solid fa-address-card fa-3x text-dark mb-3"></i>
                         <h1 class="display-4 text-dark" data-toggle="counter-up"
-                            style="font-family: 'Raleway', sans-serif;">198</h1>
+                            style="font-family: 'Raleway', sans-serif;">{{ $user }}</h1>
                         <span class="fs-3 text-dark fw-bold">Anggota</span>
                         <hr class="bg-white w-25 mx-auto mb-0">
                     </div>
@@ -53,7 +53,7 @@
                     <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                         <i class="fa fa-solid fa-book fa-3x text-dark mb-3"></i>
                         <h1 class="display-4 text-dark" data-toggle="counter-up"
-                            style="font-family: 'Raleway', sans-serif;">102</h1>
+                            style="font-family: 'Raleway', sans-serif;">{{ $buku }}</h1>
                         <span class="fs-3 text-dark fw-bold">Buku</span>
                         <hr class="bg-white w-25 mx-auto mb-0">
                     </div>

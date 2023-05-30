@@ -17,7 +17,7 @@ style="
                     <div class="card-body">
                         <div class="text-center text-light">
                             <i class="bi bi-buildings fa-5x"></i>
-                            <h5 class="uppercase p-3"><b>FAKULTAS</b></h5>
+                            <h5 class="uppercase p-3"><b>JURUSAN</b></h5>
                         </div>
                         <p><a href='http://www.untar.ac.id/fe' style="text-decoration:none; color:#ffffff">Ilmu Pengetahuan Alam</a><br></p>
                         <p><a href='http://www.untar.ac.id/fh' style="text-decoration:none; color:#ffffff">Ilmu Pengetahuan Sosial</a><br></p>

@@ -49,7 +49,7 @@ if ($user = auth()->user()) {
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-0 text-uppercase" style="font-size: 12px">
                 <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" href="#" style="text-decoration:none">Home </a>
+                    <a class="nav-link text-light" aria-current="page" href="{{ route('homepage') }}" style="text-decoration:none">Home </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="text-decoration:none">Profile</a>
@@ -70,7 +70,7 @@ if ($user = auth()->user()) {
                       </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('homepage') }}" class="nav-link text-light" style="text-decoration:none">Koleksi Buku</a>
+                    <a href="{{ route('bookCollection') }}" class="nav-link text-light" style="text-decoration:none">Koleksi Buku</a>
                 </li>
                 </li>
                 @guest
