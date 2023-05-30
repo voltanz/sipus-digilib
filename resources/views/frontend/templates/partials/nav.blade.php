@@ -6,8 +6,33 @@ if ($user = auth()->user()) {
     $count = Borrow::where('user_id', $user->id)->count();
 }
 ?>
-
+@php
+    // $currentRoute = Route::current();
+    // $percobaan1 = $currentRoute->getName();
+    // // $percobaan2 = $currentRoute->getPath();
+    // $percobaan3 = $currentRoute->getAction();
+    // $percobaan4 = $currentRoute->parameters();
+    
+    // var_dump($percobaan1);
+    // // var_dump($percobaan2);
+    // var_dump($percobaan3);
+    // var_dump($percobaan4);
+    
+    // $currentRoute = Route::currentRouteName();
+    // var_dump($currentRoute);
+    
+    // $currentRoute = Route::parameters();
+    // var_dump($currentRoute);
+@endphp
+{{-- <p>{{ $percobaan1 }}</p> --}}
+{{-- <p>{{ $percobaan2 }}</p> --}}
+{{-- <p>
+    @foreach ($percobaan3 as $p3)
+        <span>{{$p3}}</span>
+    @endforeach --}}
+{{-- <p>{{ $percobaan4 }}</p> --}}
 <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
+
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
             <a href="" class="text-light text-decoration-none d-flex">
@@ -57,16 +82,18 @@ if ($user = auth()->user()) {
                     <a href="{{ route('homepage') }}" class="nav-link text-light">Koleksi Buku</a>
                 </li>
                 @guest
+                    {{-- tampil saat sebelum login --}}
                     <li><a href="{{ route('login') }}" class="nav-link text-light">Login</a></li>
                     @if (Route::has('register'))
                         <li><a href="{{ route('register') }}" class="nav-link text-light">Register</a></li>
                     @endif
                 @else
+                    {{-- tampil saat user sudah login --}}
                     <li>
                         <a href="{{ route('pinjam.index') }}" class="nav-link text-light"><i
                                 class="material-icons">shopping_basket</i>
-                            (
-                            {{ $count }} )</a>
+                            ({{ $count }})
+                        </a>
                     </li>
                     <ul id="dropdown2" class="dropdown-content">
                         <li><a href="{{ route('home.profile') }}" class="nav-link text-light">Profil</a></li>
@@ -80,7 +107,7 @@ if ($user = auth()->user()) {
                             @csrf
                         </form>
                     </ul>
-                    <li><a class="dropdown-trigger" href="#" data-target="dropdown2">
+                    <li><a class="dropdown-trigger text-decoration-none text-light" href="#" data-target="dropdown2">
                             {{ ucwords(Auth()->user()->name) }}<i class="material-icons right">arrow_drop_down</i></a>
                     </li>
                 @endguest
@@ -88,27 +115,3 @@ if ($user = auth()->user()) {
         </div>
     </div>
 </nav>
-
-{{-- <ul class="sidenav" id="mobile-demo">
-    <li><a href="{{ route('homepage') }}">Koleksi Buku</a></li>
-    <li><a href="badges.html">Layanan</a></li>
-    <li><a href="collapsible.html">Syarat & Ketentuan</a></li>
-    @guest
-        <li><a href="{{ route('login') }}">Login</a></li>
-        @if (Route::has('register'))
-            <li><a href="{{ route('register') }}">Register</a></li>
-        @endif
-    @else
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">{{ ucwords(Auth()->user()->name) }}<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">Profil</a></li>
-            <li><a href="#!">Peminjaman</a></li>
-            <li class="divider"></li>
-            <li><a href="#!"
-                    onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout</a>
-            </li>
-        </ul>
-    @endguest
-</ul> --}}
