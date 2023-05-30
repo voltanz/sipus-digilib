@@ -6,8 +6,33 @@ if ($user = auth()->user()) {
     $count = Borrow::where('user_id', $user->id)->count();
 }
 ?>
-
+@php
+    // $currentRoute = Route::current();
+    // $percobaan1 = $currentRoute->getName();
+    // // $percobaan2 = $currentRoute->getPath();
+    // $percobaan3 = $currentRoute->getAction();
+    // $percobaan4 = $currentRoute->parameters();
+    
+    // var_dump($percobaan1);
+    // // var_dump($percobaan2);
+    // var_dump($percobaan3);
+    // var_dump($percobaan4);
+    
+    // $currentRoute = Route::currentRouteName();
+    // var_dump($currentRoute);
+    
+    // $currentRoute = Route::parameters();
+    // var_dump($currentRoute);
+@endphp
+{{-- <p>{{ $percobaan1 }}</p> --}}
+{{-- <p>{{ $percobaan2 }}</p> --}}
+{{-- <p>
+    @foreach ($percobaan3 as $p3)
+        <span>{{$p3}}</span>
+    @endforeach --}}
+{{-- <p>{{ $percobaan4 }}</p> --}}
 <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
+
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
             <a href="https://www.google.com/maps/dir//sman+negeri+1+blega/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x2dd82102e9471ff5:0xb654904772599bb6?sa=X&ved=2ahUKEwiI7_Tmvpz_AhWqzzgGHcfZB3YQ9Rd6BAhJEAQ" class="text-light text-decoration-none d-flex">
@@ -74,16 +99,22 @@ if ($user = auth()->user()) {
                 </li>
                 </li>
                 @guest
+<<<<<<< HEAD
+                    {{-- tampil saat sebelum login --}}
+                    <li><a href="{{ route('login') }}" class="nav-link text-light">Login</a></li>
+=======
                     <li><a href="{{ route('login') }}" class="nav-link text-light" style="text-decoration:none">Login</a></li>
+>>>>>>> refs/remotes/origin/main
                     @if (Route::has('register'))
                         <li><a href="{{ route('register') }}" class="nav-link text-light" style="text-decoration:none">Register</a></li>
                     @endif
                 @else
+                    {{-- tampil saat user sudah login --}}
                     <li>
                         <a href="{{ route('pinjam.index') }}" class="nav-link text-light"><i
                                 class="material-icons">shopping_basket</i>
-                            (
-                            {{ $count }} )</a>
+                            ({{ $count }})
+                        </a>
                     </li>
                     <ul id="dropdown2" class="dropdown-content">
                         <li><a href="{{ route('transaksi.index') }}" class="nav-link text-light" style="text-decoration:none">Peminjaman</a></li>
@@ -96,7 +127,7 @@ if ($user = auth()->user()) {
                             @csrf
                         </form>
                     </ul>
-                    <li><a class="dropdown-trigger" href="#" data-target="dropdown2">
+                    <li><a class="dropdown-trigger text-decoration-none text-light" href="#" data-target="dropdown2">
                             {{ ucwords(Auth()->user()->name) }}<i class="material-icons right">arrow_drop_down</i></a>
                     </li>
                 @endguest
@@ -105,6 +136,8 @@ if ($user = auth()->user()) {
         </nav>
     </div>
 </nav>
+<<<<<<< HEAD
+=======
 
 {{-- <ul class="sidenav" id="mobile-demo">
     <li><a href="{{ route('homepage') }}">Koleksi Buku</a></li>
@@ -129,3 +162,4 @@ if ($user = auth()->user()) {
         </ul>
     @endguest
 </ul> --}}
+>>>>>>> refs/remotes/origin/main

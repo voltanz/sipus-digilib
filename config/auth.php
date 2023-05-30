@@ -14,7 +14,11 @@ return [
     */
 
     'defaults' => [
+        // Guard adalah mekanisme yang menangani otentikasi dalam Laravel.
+        // 'web', yang secara umum digunakan untuk otentikasi melalui sesi web.
         'guard' => 'web',
+        // menentukan penyedia otentikasi yang akan digunakan untuk mengatur reset password pengguna
+        // pengguna akan menggunakan tabel pengguna default untuk mengatur reset password.
         'passwords' => 'users',
     ],
 
@@ -70,7 +74,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent', // menggunakan driver eloquent yang merupakan default driver autentikasi Laravel.
-            // driver yang disediakan oleh Laravel, seperti database dan session, 
+            // driver yang disediakan oleh Laravel, seperti database dan session,
             'model' => App\User::class, // model yang digunakan sebagai autentikasi (mencari dan memverivikasi pengguna)
         ],
 
@@ -100,7 +104,7 @@ return [
             'provider' => 'users', // table user akan digunakan oleh laravle untuk melakukan autentikasi
             'table' => 'password_resets', // table untuk menyimpan token reset password
             //  Saat pengguna meminta reset password, Laravel akan menyimpan token reset password ke dalam tabel
-            'expire' => 60, // waktu kadaluarsa token resert password alam menit 
+            'expire' => 60, // waktu kadaluarsa token resert password alam menit
             'throttle' => 60, // waktu jeda yang harus diambil antara dua permintaan reset password
         ],
     ],

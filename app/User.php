@@ -11,6 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasRoles;
+    // use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -52,5 +53,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function transaksiDetail()
     {
         return $this->hasManyThrough(Detail_transaksi::class, Transaksi::class);
+    }
+
+    public function cobaaja () {
+        return "hai andi";
     }
 }
