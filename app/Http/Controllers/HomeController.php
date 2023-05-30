@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use App\User;
 
 class HomeController extends Controller
@@ -16,7 +19,9 @@ class HomeController extends Controller
 
     public function landingPage()
     {
-        return view('index');
+        $buku = Book::all()->count();
+        $user = User::all()->count();
+        return view('index', compact('user', 'buku'));
     }
     public function index()
     {

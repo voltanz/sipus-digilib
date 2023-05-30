@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 
-// Route::get('/', 'User\BookController@index')->name('homepage');
+Route::get('/book/collection', 'User\BookController@index')->name('bookCollection');
 Route::get('/', 'HomeController@landingPage')->name('homepage');
 Route::get('/book/{book}', 'User\BookController@show')->name('book.show');
 Route::post('/book/borrow', 'User\BookController@borrow')->name('book.borrow')->middleware('auth');
@@ -38,3 +38,8 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
 });
 
+Route::prefix('admin')->group(function () {
+    Route::get('/users', function () {
+        // Matches The "/admin/users" URL
+    });
+});
