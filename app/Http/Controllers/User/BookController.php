@@ -20,20 +20,8 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::paginate(8);
-        $coba2 = app(User::class);
-        $coba3 = $coba2->cobaaja();
-        // $coba1 = Auth::user();
-        // $coba1 = Auth::check();
-        // $coba1 = Auth()->user();
-        // $role = $coba1->guarded;
-        // $coba1 = $this->app->make('User');
-        $user = User::paginate();
         return view('frontend.book.index', [
             'books' => $books,
-            // 'user' => $user,
-            // 'coba1' => $coba1,
-            // 'role' => $role
-            'coba3' =>$coba3
         ]);
     }
 
