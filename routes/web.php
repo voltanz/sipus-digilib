@@ -43,3 +43,7 @@ Route::prefix('admin')->group(function () {
         // Matches The "/admin/users" URL
     });
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
