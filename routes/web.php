@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/book/collection', 'User\BookController@index')->name('bookCollection');
 Route::get('/', 'HomeController@landingPage')->name('homepage');
@@ -24,11 +25,11 @@ Route::get('/home/{user}/edit', 'HomeController@edit')->name('profile.edit')->mi
 Route::get('/pinjam', 'user\BookController@pinjam')->name('pinjam.index')->middleware('verified');
 Route::delete('/destroy', 'user\BookController@destroy')->name('delete');
 
-// route rofil
-Route::prefix('/profil')->group(function () {
-    Route::get('/Sejarah Perpustakaan', [ProfileController::class, 'Sejarah Perpustkaan'])->name('Sejarah Perpsutakaan');
-    Route::get('/Staff Perpustakaan', [ProfileController::class, 'Staff Perpustakaan'])->name('Staff Perpustkaan');
-    Route::get('/Visi Misi Perpustakaan', [ProfileController::class, 'Visi Misi Perpustakaan'])->name('Visi Misi Perpustakaan');
+// route profile
+Route::prefix('/profile')->group(function () {
+    Route::get('/sejarah', [ProfileController::class, 'profile'])->name('sejarah');
+    Route::get('/staff', [ProfileController::class, 'staff'])->name('staff');
+    Route::get('/vimis', [ProfileController::class, 'vimis'])->name('visiMisi');
 });
 
 //route transaksi

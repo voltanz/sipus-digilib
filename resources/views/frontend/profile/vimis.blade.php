@@ -3,12 +3,15 @@
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize">Visi Misi Perpustakaan</h2>
+        <h2 class="text-center text-capitalize">Visi Misi SMAN 1 BLEGA</h2>
     </div>
     <div class="container">
         <div class="row">
             <div class="col d-flex">
                 <div class="me-1">
+                <div class="containe-fluid py-5 d-flex flex-column align-items-center">
+                <h3 class="text-center text-capitalize">"SANTUN DAN BERPRESTASI"</h3>
+                </div>
                 <p>Perpustakaan SMAN 1 Blega mengemban tugas utama menunjang pelaksanaan Tri Dharma Perguruan Tinggi di SMAN 1 Blega 
                     (Pendidikan dan pengajaran,Penelitian danPengabdian kepada Masyarakat).
                     Dalam melaksanakan tugas utamanya,Perpustakaan perlu menyelaraskan dengan Visi dan Misi SMAN 1 Blega. 

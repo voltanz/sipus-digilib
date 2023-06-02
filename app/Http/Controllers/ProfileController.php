@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function sejarah(){
+    public function profile(){
         return view('frontend.profile.sejarah');
     }
 

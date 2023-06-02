@@ -57,11 +57,11 @@ if ($user = auth()->user()) {
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
                         role="button" aria-expanded="false" style="text-decoration:none">Profile</a>
                     <ul class="dropdown-menu dropdown-menu-dark" style="font-size: 12px">
-                        <li><a class="dropdown-item" href="#" style="text-decoration:none">Sejarah
+                        <li><a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah
+                                SMAN 1 BLEGA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
                                 Perpustakaan</a></li>
-                        <li><a class="dropdown-item" href="#" style="text-decoration:none">Visi Misi
-                                Perpustakaan</a></li>
-                        <li><a class="dropdown-item" href="#" style="text-decoration:none">Staf Perpustakaan</a>
+                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi-Misi SMAN 1 BLEGA</a>
                         </li>
                     </ul>
                 </li>

@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col d-flex">
                 <div class="me-2">
-                    <i class="bi bi-person-vcard-fill"></i>
+                <img class="public" src="img/bima.jpeg"><br><br>
                 </div>
                 <div class="me-1">
                 <h4>1. Ahmad Bima Tristan I.</h4>
@@ -18,7 +18,7 @@
             </div>
             <div class="col d-flex">
                 <div class="me-2">
-                    <i class="bi bi-file-text-fill"></i>
+                <img class="public" src="img/ibnu.jpeg"><br><br>
                 </div>
                 <div class="me-1">
                 <h4>2. Ibnu Hajar Askholani</h4>
@@ -27,18 +27,17 @@
             </div>
             <div class="col d-flex">
                 <div class="me-2">
-                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                <img class="public" src="img/didin.jpeg"><br><br>
                 </div>
-                <div>
+                <div class="me-1">
                 <h4>3. Iemaduddin</h4>
                 <p>Merupakan seorang petugas perpustakaan.</p>
                 </div>
             </div>
-        </div>
-        <div class="row pt-5">
+            <div class="row pt-5">
             <div class="col d-flex">
                 <div class="me-2">
-                    <i class="bi bi-book-half"></i>
+                <img class="public" src="img/wildan.jpeg"><br><br>
                 </div>
                 <div class="me-1">
                 <h4>4. Wildan Hafidz Mauludin</h4>
@@ -47,10 +46,10 @@
             </div>
             <div class="col d-flex">
                 <div class="me-2">
-                    <i class="bi bi-calendar2-event"></i>
+                <img class="public" src="img/rahma.jpeg"><br><br>
                 </div>
                 <div class="me-1">
-                <h4>5. Yuliyana Rahmawati/h4>
+                <h4>5. Yuliyana Rahmawati</h4>
                 <p>Merupakan seorang petugas perpustakaan.</p>
                 </div>
             </div>
