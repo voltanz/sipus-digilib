@@ -19,7 +19,6 @@ class HomeController extends Controller
 
     public function landingPage()
     {
-        // $role = Auth::user()->getRoleNames()->first();
         $buku = Book::all()->count();
         $user = User::all()->count();
         return view('index', compact('user', 'buku' ));

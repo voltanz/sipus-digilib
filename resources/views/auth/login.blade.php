@@ -2,7 +2,7 @@
 @section('title', 'Login')
 
 @section('content')
-    <div class="container py-5">
+    <div class="container py-5" style="height:100vh">
         @if (session('alert'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session('alert') }}

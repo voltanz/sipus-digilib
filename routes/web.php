@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
@@ -43,6 +44,8 @@ Route::prefix('admin')->group(function () {
         // Matches The "/admin/users" URL
     });
 });
+
+Route::get('/admin',[HomeController::class,'index'])->name('admin.dashboard');
 
 Auth::routes();
 

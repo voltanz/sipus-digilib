@@ -5,8 +5,6 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-use function PHPSTORM_META\map;
-
 class Book extends Model
 {
     use SoftDeletes;

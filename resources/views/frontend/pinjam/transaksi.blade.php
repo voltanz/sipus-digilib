@@ -14,7 +14,7 @@
                 @foreach ($borrow as $borrow)
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
-                        <td class="center">{{ $borrow->kode_pinjam }}</td>
+                        <td>{{ $borrow->kode_pinjam }}</td>
                         <td>
                             <button class="btn btn-dark">
                                 <a href="{{ route('detail_pinjam', $borrow) }}"
