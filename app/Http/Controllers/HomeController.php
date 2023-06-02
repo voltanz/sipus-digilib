@@ -11,12 +11,6 @@ use App\User;
 
 class HomeController extends Controller
 {
-
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
     public function landingPage()
     {
         $buku = Book::all()->count();
