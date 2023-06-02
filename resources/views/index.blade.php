@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- <p>{{ $role }}</p> --}}
-    <div class="main-container">
+    <div class="main-container" style="">
         <!-- Background image -->
         <section class="bg-image"
             style="

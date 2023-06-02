@@ -7,7 +7,6 @@ if ($user = auth()->user()) {
 }
 ?>
 <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
-
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
             <a href="https://www.google.com/maps/dir//sman+negeri+1+blega/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x2dd82102e9471ff5:0xb654904772599bb6?sa=X&ved=2ahUKEwiI7_Tmvpz_AhWqzzgGHcfZB3YQ9Rd6BAhJEAQ"
@@ -96,18 +95,22 @@ if ($user = auth()->user()) {
                             role="button" aria-expanded="false"
                             style="text-decoration:none">{{ ucwords(Auth()->user()->name) }}</a>
                         <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
-                            <li><a class="dropdown-item" href="#"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{{ route('transaksi.index') }}">Peminjaman</a>
-                            </li>
-                            @role('user')
+                            @role('admin')
+                                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">dashboard</a>
+                                </li>
+                            @endrole
+                            @role('!user')
+                                <li><a class="dropdown-item" href="{{ route('transaksi.index') }}">Peminjaman</a>
+                                </li>
                                 <li><a class="dropdown-item d-flex justify-content-between"
                                         href="{{ route('pinjam.index') }}">
                                         <span>favorite</span>
                                         <span>({{ $count }})</span></a>
                                 </li>
                             @endrole
+                            <li><a class="dropdown-item" href="#"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            </li>
                             <li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"
                                     style="text-decoration:none">

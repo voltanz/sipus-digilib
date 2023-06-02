@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -18,14 +17,17 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
+    protected $table = 'users';
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','nisn'
     ];
+
 
     /**
      * The attributes that should be hidden for arrays.
      *
-     * @var array
+     * @var arrayb
      */
     protected $hidden = [
         'password', 'remember_token',
@@ -53,9 +55,5 @@ class User extends Authenticatable implements MustVerifyEmail
     public function transaksiDetail()
     {
         return $this->hasManyThrough(Detail_transaksi::class, Transaksi::class);
-    }
-
-    public function cobaaja () {
-        return "hai andi";
     }
 }
