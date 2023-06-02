@@ -24,6 +24,13 @@ Route::get('/home/{user}/edit', 'HomeController@edit')->name('profile.edit')->mi
 Route::get('/pinjam', 'user\BookController@pinjam')->name('pinjam.index')->middleware('verified');
 Route::delete('/destroy', 'user\BookController@destroy')->name('delete');
 
+// route rofil
+Route::prefix('/profil')->group(function () {
+    Route::get('/Sejarah Perpustakaan', [ProfileController::class, 'Sejarah Perpustkaan'])->name('Sejarah Perpsutakaan');
+    Route::get('/Staff Perpustakaan', [ProfileController::class, 'Staff Perpustakaan'])->name('Staff Perpustkaan');
+    Route::get('/Visi Misi Perpustakaan', [ProfileController::class, 'Visi Misi Perpustakaan'])->name('Visi Misi Perpustakaan');
+});
+
 //route transaksi
 Route::get('/transaksi', 'User\TransaksiController@index')->name('transaksi.index');
 Route::post('/transaksi', 'User\TransaksiController@store')->name('transaksi.store');
