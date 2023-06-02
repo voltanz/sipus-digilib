@@ -99,7 +99,7 @@ if ($user = auth()->user()) {
                                 <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">dashboard</a>
                                 </li>
                             @endrole
-                            @role('!user')
+                            @role('user')
                                 <li><a class="dropdown-item" href="{{ route('transaksi.index') }}">Peminjaman</a>
                                 </li>
                                 <li><a class="dropdown-item d-flex justify-content-between"

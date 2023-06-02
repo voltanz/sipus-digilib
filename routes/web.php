@@ -31,7 +31,6 @@ Route::get('/detail/{id}', 'User\TransaksiController@detail_pinjam')->name('deta
 
 
 // route peraturan
-
 Route::prefix('/peraturan')->group(function () {
     Route::get('/tataTertib', [UserController::class, 'peraturan'])->name('tataTertib');
     Route::get('/peminjaman', [UserController::class, 'peminjaman'])->name('peminjaman');
@@ -41,7 +40,6 @@ Route::prefix('/peraturan')->group(function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/users', function () {
-        // Matches The "/admin/users" URL
     });
 });
 
