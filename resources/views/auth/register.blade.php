@@ -5,11 +5,14 @@
     <div class="container py-5" style="height:100vh">
         <div class="d-flex flex-column align-items-center">
             <h2 class="text-capitalize text-center mb-2">Registrasi</h2>
+
             <form class="w-50" action="{{ route('register') }}" method="POST">
                 @csrf
-                <div class="row mb-3 mb-3">
+
+                <div class="mb-3">
                     <div class="col d-flex align-items-center">
                         <i class="bi bi-person-circle fs-2 me-2"></i>
+
                         <div class="w-100 position-relative">
                             <input class="form-control h-full" id="first_name" name="name" autocomplete="off"
                                 placeholder="Your Name" value="{{ old('name') }}">
@@ -19,7 +22,6 @@
                             @enderror()
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row mb-3">
