@@ -9,7 +9,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form class="w-50" method="POST" action="{{ route('password.email') }}">
+            <form method="POST" class="w-50" action="{{ route('password.email') }}">
                 @csrf
                 <div class="row mb-3">
                     <div class="col d-flex align-items-center">
@@ -17,7 +17,7 @@
                             <i class="bi bi-envelope-at-fill me-2 fs-2"></i>
                         </label>
                         <div class="position-relative w-100">
-                            <input id="email" type="email" class="form-control name="email"
+                            <input id="email" type="email" class="form-control "name="email"
                                 value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')
                                 <span class="position-absolute top-100 register text-danger" role="alert">
@@ -30,7 +30,7 @@
 
                 <div class="d-flex justify-content-end">
                     <button type="submit" class="btn btn-primary w-25 text-light text-capitalize">
-                        {{ __('send reset link') }}
+                        {{ __('send reset link  ') }}
                     </button>
                 </div>
             </form>
