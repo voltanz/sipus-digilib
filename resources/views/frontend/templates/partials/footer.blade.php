@@ -19,8 +19,8 @@ style="
                             <i class="bi bi-buildings fa-5x"></i>
                             <h5 class="uppercase p-3"><b>JURUSAN</b></h5>
                         </div>
-                        <p><a href='http://www.untar.ac.id/fe' style="text-decoration:none; color:#ffffff">Ilmu Pengetahuan Alam</a><br></p>
-                        <p><a href='http://www.untar.ac.id/fh' style="text-decoration:none; color:#ffffff">Ilmu Pengetahuan Sosial</a><br></p>
+                        <p><a href='https://id.wikipedia.org/wiki/Ilmu_alam' style="text-decoration:none; color:#ffffff">Ilmu Pengetahuan Alam</a><br></p>
+                        <p><a href='https://id.wikipedia.org/wiki/Pendidikan_ilmu_pengetahuan_sosial' style="text-decoration:none; color:#ffffff">Ilmu Pengetahuan Sosial</a><br></p>
                     </div>
                   </div>
                 </div>
@@ -33,14 +33,14 @@ style="
                         </div>
                         <p><a href='http://bni.perpusnas.go.id' style="text-decoration:none; color:#ffffff">Bibliografi Nasional Indonesia</a><br>
                         </p>
-                        <p><a href='http://e-resources.pnri.go.id' style="text-decoration:none; color:#ffffff">e-Journal dan e-Book pnri</a><br>
+                        <p><a href='http://e-resources.pnri.go.id' style="text-decoration:none; color:#ffffff">e-Journal dan e-Book PNRI</a><br>
                         </p>
                         <p><a href='http://onesearch.id' style="text-decoration:none; color:#ffffff">Indonesia One Search</a><br></p>
                         <p><a href='http://kin.perpusnas.go.id' style="text-decoration:none; color:#ffffff">Katalog Induk Nasional</a><br></p>
-                        <p><a href='http://keanggotaan.perpusnas.go.id'style="text-decoration:none; color:#ffffff">Keanggotaan online Perpus
+                        <p><a href='http://keanggotaan.perpusnas.go.id'style="text-decoration:none; color:#ffffff">Keanggotaan Online Perpus
                                 Nasional</a><br></p>
-                        <p><a href='http://opac.perpusnas.go.id' style="text-decoration:none; color:#ffffff">Koleksi buku Perpusnas</a><br></p>
-                        <p><a href='http://perpusnas.go.id/koleksi ' style="text-decoration:none; color:#ffffff">Koleksi digital PerpusNas</a><br>
+                        <p><a href='http://opac.perpusnas.go.id' style="text-decoration:none; color:#ffffff">Koleksi Buku Perpusnas</a><br></p>
+                        <p><a href='http://perpusnas.go.id/koleksi ' style="text-decoration:none; color:#ffffff">Koleksi Digital Perpusnas</a><br>
                         </p>
                         <p><a href='http://perpusmitra.pnri.go.id' style="text-decoration:none; color:#ffffff">Website Perpustakaan Mitra</a><br>
                         </p>

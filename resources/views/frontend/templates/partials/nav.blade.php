@@ -10,13 +10,13 @@ if ($user = auth()->user()) {
 <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
-            <a href="" class="text-light text-decoration-none d-flex">
+            <a href="https://www.google.com/maps/dir//sman+1+blega/@-7.129874,112.9792957,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x2dd82102e9471ff5:0xb654904772599bb6!2m2!1d113.0493363!2d-7.1298793?entry=ttu" class="text-light text-decoration-none d-flex">
                 <p class="me-2"><i class="bi bi-geo-alt-fill"></i></p>
                 <p>Kedong, Rosep, Kec. Blega, Kabupaten Bangkalan, Jawa Timur, 69174, ID</p>
             </a>
         </li>
         <li class="pe-4">
-            <a href="" class="text-light text-decoration-none d-flex">
+            <a href="https://www.sman1blega.sch.id/" class="text-light text-decoration-none d-flex">
                 <p class="me-2">
                     <i class="bi bi-phone"></i>
                 </p>
@@ -27,7 +27,7 @@ if ($user = auth()->user()) {
             </a>
         </li>
         <li class="pe-4">
-            <a href="" class="text-light text-decoration-none d-flex">
+            <a href="https://www.sman1blega.sch.id/" class="text-light text-decoration-none d-flex">
                 <p class="me-2">
                     <i class="bi bi-envelope-at"></i>
                 </p>
@@ -59,7 +59,7 @@ if ($user = auth()->user()) {
                                 SMAN 1 BLEGA</a></li>
                         <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
                                 Perpustakaan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi-Misi SMAN 1 BLEGA</a>
+                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi Misi SMAN 1 BLEGA</a>
                         </li>
                     </ul>
                 </li>
