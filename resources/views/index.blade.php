@@ -1,8 +1,7 @@
 @extends('frontend.default')
 
 @section('content')
-    {{-- <p>{{ $roleNames }}</p> --}}
-    <div class="main-container" style="">
+    <div class="main-container">
         <!-- Background image -->
         <section class="bg-image"
             style="
@@ -14,18 +13,19 @@
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                     <h2 class="uppercase bold">SMA Negeri 1 Blega</h2>
                     <p class="lead mb48 mb-xs-32">Situs ini ditujukan untuk seluruh Civitas Akademika SMA Negeri 1 Blega
-                        maupun masyarakat pengguna internet pada umumnya.
-                        <br>
-                        Melalui situs ini diharapkan perpustakaan SMA Negeri 1 Blega dapat meningkatkan layanan dan
-                        mempermudah civitas akademika mencari literatur dalam proses belajar mengajar.
+                        maupun masyarakat pengguna
+                        internet pada umumnya. Melalui situs ini diharapkan perpustakaan SMA Negeri 1 Blega dapat
+                        meningkatkan layanan dan mempermudah civitas akademika mencari literatur dalam
+                        proses belajar mengajar.
                         &nbsp;<br>
                     </p>
                     <p class="lead mb48 mb-xs-32"><b>
-                            Selamat bergabung!
+                            Selamat Bergabung!
                         </b></p>
                 </div>
             </div>
         </section>
+
         <!-- Facts Start -->
         <section class="container-fluid facts my-3 py-3">
             <div class="container py-5">

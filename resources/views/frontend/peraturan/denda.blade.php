@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize">Denda Pengembalian Buku</h2>
+        <h2 class="text-center text-capitalize">Denda Pengembaian Buku</h2>
     </div>
     <div class="container">
         <div class="row">

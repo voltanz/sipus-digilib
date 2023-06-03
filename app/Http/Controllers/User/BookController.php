@@ -2,25 +2,23 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Book;
-use App\User;
 use App\Borrow;
 use App\Detail_transaksi;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Contracts\Foundation\Application;
-use Spatie\Permission\Traits\HasRoles;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 
 class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::paginate(8);
+
+        $books = Book::paginate(10);
         return view('frontend.book.index', [
-            'books' => $books,
+            'books' => $books
         ]);
     }
 
@@ -87,9 +85,5 @@ class BookController extends Controller
         $book->increment('qty');
 
         return redirect('pinjam')->with('success', 'Data Berhasil Dihapus');
-    }
-
-    public function app () {
-        echo "hai";
     }
 }
