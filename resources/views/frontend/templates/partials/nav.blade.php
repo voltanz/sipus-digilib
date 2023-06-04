@@ -70,7 +70,7 @@ if ($user = auth()->user()) {
                         <li><a class="dropdown-item" href="{{ route('peminjaman') }}">Peminjaman</a></li>
                         <li><a class="dropdown-item" href="{{ route('pengembalian') }}">Pengembalian</a></li>
                         <li><a class="dropdown-item" href="{{ route('denda') }}">Denda</a></li>
-                        <li><a class="dropdown-item" href="#">Keanggotaan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('keanggotaan') }}">Keanggotaan</a></li>
                       </ul>
                 </li>
                 <li class="nav-item">

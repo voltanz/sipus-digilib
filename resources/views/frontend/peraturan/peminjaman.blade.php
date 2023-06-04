@@ -24,7 +24,7 @@
                 </div>
                 <div class="me-1">
                 <h4>2. SURAT PENGANTAR</h4>
-                <p>Setiap pengunjung perpustakaan wajib bersama - sama menjaga ketertiban,ketenangan dan keamanan ruang perpustakaan.</p>
+                <p>Setiap pengunjung perpustakaan wajib bersama - sama menjaga ketertiban ,ketenangan dan keamanan ruang perpustakaan.</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="me-1">
                 <h4>5. LAMA PEMINJAMAN</h4>
-                <p>Setiap pengunjung wajib mengenakan pakaian yang sopan,rapi dan sepatutnya sesuai dengan
+                <p>Setiap pengunjung wajib mengenakan pakaian yang sopan, rapi dan sepatutnya sesuai dengan
                     ketentuan yang berlaku di 
                     SMAN 1 Blega.</p>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="me-1">
                 <h4>7. JAMINAN PEMINJAMAN</h4>
                 <p>Setiap pengunjung dilarang membawa segala
-                    jenis dan bentuk tas dan/atau kantong ke raung
+                    jenis dan bentuk tas atau kantong ke ruang
                     baca.</p>
                 </div>
             </div>

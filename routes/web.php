@@ -44,6 +44,7 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/peminjaman', [UserController::class, 'peminjaman'])->name('peminjaman');
     Route::get('/pengembalian', [UserController::class, 'pengembalian'])->name('pengembalian');
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
+    Route::get('/keangotaan', [UserController::class, 'keanggotaan'])->name('keanggotaan');
 });
 
 Route::prefix('admin')->group(function () {
