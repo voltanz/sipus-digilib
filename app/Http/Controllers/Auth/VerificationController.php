@@ -39,4 +39,14 @@ class VerificationController extends Controller
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
+
+    public function redirectPath()
+    {
+        return route('home');
+    }
+
+    public function verified ()
+    {
+        return redirect($this->redirectPath())->with('success', 'Email Anda telah diverifikasi.');
+    }
 }

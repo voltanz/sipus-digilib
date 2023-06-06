@@ -11,21 +11,29 @@ use App\User;
 
 class HomeController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     public function landingPage()
     {
         $buku = Book::all()->count();
         $user = User::all()->count();
-        return view('index', compact('user', 'buku' ));
+        return view('index', compact('user', 'buku'));
     }
     public function index()
     {
         $books = Auth()->user()->borrow;
+
         return view('home', compact('books'));
     }
 
     public function profile()
     {
         $user = Auth()->user();
+
         return view('frontend.user.index', compact('user'));
     }
 

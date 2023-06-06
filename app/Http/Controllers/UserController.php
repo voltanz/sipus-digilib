@@ -21,4 +21,8 @@ class UserController extends Controller
     public function denda() {
         return view('frontend.peraturan.denda');
     }
+
+     public function keanggotaan() {
+        return view('frontend.peraturan.keanggotaan');
+    }
 }

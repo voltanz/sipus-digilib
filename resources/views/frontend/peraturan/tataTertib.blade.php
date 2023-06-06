@@ -80,7 +80,7 @@
                 <div class="me-1">
                 <h4>7. TIDAK MEMBAWA TAS</h4>
                 <p>Setiap pengunjung dilarang membawa segala
-                    jenis dan bentuk tas dan/atau kantong ke raung
+                    jenis dan bentuk tas atau kantong ke ruang
                     baca.</p>
                 </div>
             </div>
@@ -90,9 +90,9 @@
                 </div>
                 <div class="me-1">
                 <h4>8. GUNAKAN TEMPAT PENITIPAN</h4>
-                <p>Segala jenis dan bentuk tas dan/atau
-                    kantong,jaket dan sejenisnya disimpan di tempat
-                    yang telah disediakan. (locker,almari,rak).</p>
+                <p>Segala jenis dan bentuk tas atau
+                    kantong, jaket dan sejenisnya disimpan di tempat
+                    yang telah disediakan. (locker, almari dan rak).</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -102,7 +102,7 @@
                 <div>
                 <h4>9. DILARANG MAKAN & MINUM</h4>
                 <p>Setiap pengunjung dilarang membawa
-                    makanan/minuman dan/atau makan/minum di
+                    makanan dan minuman atau makan dan minum di
                     ruang perpustakaan.</p>
                 </div>
             </div>
@@ -135,9 +135,9 @@
                 <div>
                 <h4>12. PENGEMBALIAN BUKU</h4>
                 <p>Setiap pengunjung dilarang mengembalikan
-                    sendiri buku yang sudah dibaca dan/atau batal
+                    sendiri buku yang sudah dibaca atau batal
                     dipinjam ke rak buku. Buku yang batal dipinjam
-                    dikembalikankepada petugas</p>
+                    dikembalikan kepada petugas.</p>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
                 <h4>13. PEMERIKSAAN</h4>
                 <p>Petugas berwenang memeriksa tas atau barang
                     yang dibawa pengunjung pada saat masuk
-                    dan/atau keluar perpustakaan.</p>
+                    atau keluar perpustakaan.</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -173,7 +173,7 @@
                 <h4>15. LAIN-LAIN</h4>
                 <p>Hal-hal lain yang belum diatur di dalam Tata
                     Tertib ini akan ditetapkan dan diumumkan
-                    kemudian</p>
+                    kemudian.</p>
                 </div>
             </div>
         </div>

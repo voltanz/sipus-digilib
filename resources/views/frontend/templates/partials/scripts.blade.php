@@ -17,9 +17,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></script>
 
-<script src="{{ asset('path/to/jquery.min.js') }}"></script>
-<script src="{{ asset('path/to/bootstrap.min.js') }}"></script>
-
 <script>
     M.AutoInit();
 </script>
