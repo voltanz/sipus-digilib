@@ -56,7 +56,7 @@
             <form action="{{ route('transaksi.store') }}" method="POST">
                 @csrf
                 <input type="hidden" name="id" value="{{ Auth()->user()->id }}">
-                <button type="submit" class="btn teal right">Simpan</button>
+                <button type="submit" class="btn btn-primary text-capitalize">simpan</button>
             </form>
         @endif
     </div>

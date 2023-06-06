@@ -1,34 +1,39 @@
 <?php
 
+use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\HomeController as DefaultsHomeController;
+use App\Http\Controllers\user\TransaksiController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 
-Route::get('/book/collection', 'User\BookController@index')->name('bookCollection');
-Route::get('/', 'HomeController@landingPage')->name('homepage');
-Route::get('/book/{book}', 'User\BookController@show')->name('book.show');
-Route::post('/book/borrow', 'User\BookController@borrow')->name('book.borrow')->middleware('auth');
 
-Route::get('/user', function () {
-    return view('/admin/user/index');
-});
+Route::get('/book/collection',[BookController::class,'index'])->name('bookCollection');
+
+Route::get('/',[DefaultsHomeController::class,'landingPage'])->name('homepage');
+
+Route::get('/book/{book}',[BookController::class,'show'])->name('book.show');
+
+Route::post('/book/borrow',[BookController::class,'borrow'])->name('book.borrow')->middleware('auth');
 
 Auth::routes(['verify' => true]); //  menghasilkan beberapa rute, termasuk rute untuk mengirimkan email verifikasi, verifikasi email dan menampilkan pesan setelah verifikasi sukses.
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
-Route::get('/home/profile', 'HomeController@profile')->name('home.profile')->middleware('verified');
-Route::get('/home/{user}/edit', 'HomeController@edit')->name('profile.edit')->middleware('verified');
+Route::get('/home', [HomeController::class,'index'])->name('home')->middleware('verified');
+
+Route::get('/home/profile', [HomeController::class,'profile'])->name('home.profile')->middleware('verified');
+
+Route::get('/home/{user}/edit', [HomeController::class,'edit'])->name('profile.edit')->middleware('verified');
 
 // route pinjam
-Route::get('/pinjam', 'user\BookController@pinjam')->name('pinjam.index')->middleware('verified');
-Route::delete('/destroy', 'user\BookController@destroy')->name('delete');
+Route::get('/pinjam', [BookController::class,'pinjam'])->name('pinjam.index')->middleware('verified');
+
+Route::delete('/destroy',[BookController::class,'destroy'])->name('delete');
 
 //route transaksi
-Route::get('/transaksi', 'User\TransaksiController@index')->name('transaksi.index');
-Route::post('/transaksi', 'User\TransaksiController@store')->name('transaksi.store');
-Route::get('/detail/{id}', 'User\TransaksiController@detail_pinjam')->name('detail_pinjam');
-
+Route::get('/transaksi',[TransaksiController::class,'index'])->name('transaksi.index');
+Route::post('/transaksi',[TransaksiController::class,'store'])->name('transaksi.store');
+Route::get('/detail/{id}',[TransaksiController::class,'detail_pinjam'])->name('detail_pinjam');
 
 // route peraturan
 Route::prefix('/peraturan')->group(function () {
@@ -38,12 +43,10 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
 });
 
-Route::prefix('admin')->group(function () {
-    Route::get('/users', function () {
-    });
-});
+// Route::prefix('/admin')->group(function () {
+//     Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('admin.buku.masih_dipinjam');
+// });
 
-Route::get('/admin',[HomeController::class,'index'])->name('admin.dashboard');
 
 Auth::routes();
 

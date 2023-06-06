@@ -1,7 +1,6 @@
 @extends('frontend.default')
 
 @section('content')
-    {{-- <p>{{ $roleNames }}</p> --}}
     <div class="main-container" style="">
         <!-- Background image -->
         <section class="bg-image"
