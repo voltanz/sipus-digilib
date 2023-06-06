@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Category;
+use Barryvdh\DomPDF\Facade\PDF;
 
 class HomeController extends Controller
 {
@@ -82,5 +83,11 @@ class HomeController extends Controller
     public function history()
     {
         return view('admin.borrow.history');
+    }
+
+    public function cetak_pdf () {
+        $cetak = Transaksi::all();
+        $pdf = PDF::loadview('admin.borrow.cetak_pdf',['cetak'=>$cetak]);
+        return $pdf->stream();
     }
 }

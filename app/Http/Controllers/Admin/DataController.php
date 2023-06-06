@@ -16,17 +16,6 @@ class DataController extends Controller
 {
     public function authors()
     {
-
-        // ->order(function ($query) {
-        //     if (request()->has('name')) {
-        //         $query->orderBy('name', 'asc');
-        //     }
-
-        //     if (request()->has('email')) {
-        //         $query->orderBy('email', 'desc');
-        //     }
-        // })
-
         $author = Author::query();
         return DataTables()
             ->of($author)
