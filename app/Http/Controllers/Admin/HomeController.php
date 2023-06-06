@@ -24,7 +24,8 @@ class HomeController extends Controller
         $buku = Book::all()->count();
         $user = User::all()->count();
         $dipinjam  = Detail_transaksi::where(['status' => 0])->count();
-        return view('admin.home', compact('dipinjam','user', 'buku', 'categories', 'grafik'));
+
+        return view('admin/home', compact('dipinjam', 'kembali', 'user', 'buku', 'categories', 'grafik'));
     }
 
     public function borrows()

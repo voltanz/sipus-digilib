@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -10,24 +11,20 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasRoles;
-    // use Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $table = 'users';
-
     protected $fillable = [
-        'name', 'email', 'password','nisn'
+        'name', 'email', 'password',
     ];
-
 
     /**
      * The attributes that should be hidden for arrays.
      *
-     * @var arrayb
+     * @var array
      */
     protected $hidden = [
         'password', 'remember_token',

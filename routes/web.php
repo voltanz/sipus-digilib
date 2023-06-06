@@ -7,6 +7,7 @@ use App\Http\Controllers\user\TransaksiController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get('/book/collection',[BookController::class,'index'])->name('bookCollection');
@@ -30,6 +31,13 @@ Route::get('/pinjam', [BookController::class,'pinjam'])->name('pinjam.index')->m
 
 Route::delete('/destroy',[BookController::class,'destroy'])->name('delete');
 
+// route profile
+Route::prefix('/profile')->group(function () {
+    Route::get('/sejarah', [ProfileController::class, 'profile'])->name('sejarah');
+    Route::get('/staff', [ProfileController::class, 'staff'])->name('staff');
+    Route::get('/vimis', [ProfileController::class, 'vimis'])->name('visiMisi');
+});
+
 //route transaksi
 Route::get('/transaksi',[TransaksiController::class,'index'])->name('transaksi.index');
 Route::post('/transaksi',[TransaksiController::class,'store'])->name('transaksi.store');
@@ -41,6 +49,7 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/peminjaman', [UserController::class, 'peminjaman'])->name('peminjaman');
     Route::get('/pengembalian', [UserController::class, 'pengembalian'])->name('pengembalian');
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
+    Route::get('/keangotaan', [UserController::class, 'keanggotaan'])->name('keanggotaan');
 });
 
 // Route::prefix('/admin')->group(function () {

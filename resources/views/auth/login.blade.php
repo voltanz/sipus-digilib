@@ -2,7 +2,7 @@
 @section('title', 'Login')
 
 @section('content')
-    <div class="container py-5" style="height:100vh">
+    <div class="container py-5">
         @if (session('alert'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session('alert') }}
@@ -71,7 +71,7 @@
                         @enderror()
                     </div>
                 </div>
-                <a href="{{ route('password.request') }}" class="right">Forgot your Password?</a>
+                <a href="{{ route('password.request') }}" class="right">Forgot Your Password?</a>
                 <button type="submit" class="waves-effect waves-light btn teal lighten-2">Masuk</button>
             </form>
         </div> --}}
