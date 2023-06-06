@@ -1,11 +1,10 @@
-@extends('admin/template/default')
+@extends('admin.template.default')
 @push('datatables')
-    <!-- data tables -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
-@endpush()
-@section('title', 'Penulis')
+@endpush
+
 @section('content')
     <div class="card mt-3">
         @if (session('success'))
@@ -17,23 +16,22 @@
             </div>
         @endif
         <div class="card-header">
-            <h3 class="card-title">Data Penulis</h3>
-            <a href="{{ route('admin.author.create') }}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>
-                Penulis</a>
+            <h3 class="card-title text-capitalize">daftar buku yang masih dipinjam</h3>
         </div>
         <div class="card-body">
-            <table id="dataTable" class="table table-bordered table-hover">
+            <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Penulis</th>
-                        <th>Opsi</th>
+                        <th>no</th>
+                        <th>judul</th>
+                        <th>kode</th>
                     </tr>
                 </thead>
+                <tbody>
+                </tbody>
             </table>
         </div>
     </div>
-
 @endsection
 @push('scripts')
     <!-- data tables -->
@@ -47,17 +45,17 @@
             $('#dataTable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.author.data') }}",
+                ajax: "{{ route('admin.buku.data.pinjam') }}",
                 columns: [{
                         data: 'DT_RowIndex',
                         orderable: false,
                         searchable: false
                     },
                     {
-                        data: 'name'
+                        data: 'title'
                     },
                     {
-                        data: 'action',
+                        data: 'kode_pinjam',
                     },
                 ],
             })

@@ -4,39 +4,42 @@ use App\Book;
 use App\Borrow;
 use Illuminate\Support\Facades\Route;
 use App\Detail_transaksi;
+use App\Http\Controllers\Admin\AuthorController;
+use App\Http\Controllers\Admin\DataController;
+use App\Http\Controllers\Admin\HomeController;
 use App\Transaksi;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 use App\User;
 
 // author routes
-Route::get('/', 'HomeController@index')->name('dashboard');
-Route::get('/author/data', 'DataController@authors')->name('author.data');
+Route::get('/', [HomeController::class,'index'])->name('dashboard');
+
+# Author
+// sumber data
+Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
+
 // simple author routes
-Route::resource('author', 'AuthorController');
+Route::resource('author', AuthorController::class);
+Route::get('/author', [AuthorController::class, 'index'])->name('author.index');
+Route::get('/author/create', [AuthorController::class,'create'])->name('author.create');
+Route::post('/author', [AuthorController::class,'store'])->name('author.store');
+Route::get('/author/{id}/edit', [AuthorController::class,'edit'])->name('author.edit');
+Route::patch('/author/{author}', [AuthorController::class,'update'])->name('author.update');
+Route::delete('/author/{id}', [AuthorController::class,'destroy'])->name('author.delete');
 
-// Route::get('/author', 'AuthorController@index')->name('author.index');
-// Route::get('/author/create', 'AuthorController@create')->name('author.create');
-// Route::post('/author', 'AuthorController@store')->name('author.store');
-// Route::get('/author/{id}/edit', 'AuthorController@edit')->name('author.edit');
-// Route::patch('/author/{author}', 'AuthorController@update')->name('author.update');
-// Route::delete('/author/{id}', 'AuthorController@destroy')->name('author.delete');
 // book routes
-
-Route::get('/book/data', 'DataController@books')->name('book.data');
+Route::get('/book/data', [DataController::class,'books'])->name('book.data');
 // simple book routes
-Route::resource('book', 'BookController');
+Route::resource('book', BookController::class);
+Route::get('/book', [BookController::class,'index'])->name('book.index');
+Route::get('/book/create', [BookController::class,'create'])->name('book.create');
+Route::post('/book', [BookController::class,'store'])->name('book.store');
+Route::patch('/book/{book}', [BookController::class,'update'])->name('book.update');
+Route::get('/book/{id}/edit', [BookController::class,'edit'])->name('book.edit');
+Route::delete('/book/{id}', [BookController::class,'destroy'])->name('book.destroy');
 
-// Route::get('/book', 'BookController@index')->name('book.index');
-// Route::get('/book/create', 'BookController@create')->name('book.create');
-// Route::post('/book', 'BookController@store')->name('book.store');
-// Route::patch('/book/{book}', 'BookController@update')->name('book.update');
-// Route::get('/book/{id}/edit', 'BookController@edit')->name('book.edit');
-// Route::delete('/book/{id}', 'BookController@destroy')->name('book.destroy');
 
-// user routes
-Route::get('/user/data', 'DataController@users')->name('user.data');
-Route::get('/user', 'UserController@index')->name('user.index');
 
 // borrow route
 Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');
@@ -76,11 +79,23 @@ Route::get('transaksi', function () {
                 return '<span class="badge bg-warning">Belum Kembali</span>';
             }
         })
-        ->addColumn('admin', function ($model) {
-            return $model->admin_id;
-        })
+        // ->addColumn('admin', function ($model) {
+        //     return $model->admin_id;
+        // })
         ->rawColumns(['cover', 'tgl_pengembalian'])
         ->toJson();
 })->name('transaksi.history');
 
 Route::get('/transaksi/history', 'HomeController@history')->name('history');
+
+#menu dashboard
+Route::get('/buku/data-dipinjam', [DataController::class,'masih_dipinjam'])->name('buku.data.pinjam');
+    Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('buku.masih_dipinjam');
+
+    // user routes
+Route::get('/user/data', 'DataController@users')->name('user.data');
+Route::get('/user', 'UserController@index')->name('user.index');
+
+
+#sidebar
+// author

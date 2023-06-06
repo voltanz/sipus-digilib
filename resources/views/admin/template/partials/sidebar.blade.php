@@ -11,22 +11,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('admin.user.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                        Users
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('admin.book.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-book"></i>
-                    <p>
-                        Buku
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="{{ route('admin.author.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
@@ -46,7 +30,6 @@
                     <p>Report</p>
                 </a>
             </li>
-            <li class="nav-header">OTHER</li>
             <li class="nav-item">
                 <a href="{{ route('admin.history') }}" class="nav-link">
                     <i class="nav-icon fas fa-server"></i>
