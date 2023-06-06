@@ -96,6 +96,7 @@ Route::get('/buku/data-dipinjam', [DataController::class,'masih_dipinjam'])->nam
 Route::get('/user/data', 'DataController@users')->name('user.data');
 Route::get('/user', 'UserController@index')->name('user.index');
 
+Route::get('/cetak-peminjam', [HomeController::class,'cetak_pdf'])->name('cetak_pdf');
 
 #sidebar
 // author
