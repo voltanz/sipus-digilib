@@ -20,7 +20,6 @@ Route::post('/book/borrow',[BookController::class,'borrow'])->name('book.borrow'
 
 Auth::routes(['verify' => true]); //  menghasilkan beberapa rute, termasuk rute untuk mengirimkan email verifikasi, verifikasi email dan menampilkan pesan setelah verifikasi sukses.
 
-Route::get('/home', [HomeController::class,'index'])->name('home')->middleware('verified');
 
 Route::get('/home/profile', [HomeController::class,'profile'])->name('home.profile')->middleware('verified');
 
@@ -59,4 +58,3 @@ Route::prefix('/peraturan')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
