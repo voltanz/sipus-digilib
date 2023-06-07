@@ -5,7 +5,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-capitalize" data-widget="pushmenu" href="{{ route('home') }}" role="button">home</a>
+            <a class="nav-link text-capitalize" href="/" role="button">home</a>
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">
