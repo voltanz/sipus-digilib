@@ -35,7 +35,7 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 
 4.  Git commit -m `"pesan commit"`
 
-5.  Git push origin main
+5.  Git push origin `master`
 
 ## 🚀 Quick start
 
