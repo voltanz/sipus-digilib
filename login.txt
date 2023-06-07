@@ -1,3 +1,0 @@
-admin
-email: admin@perpus.com
-pass: 12345678
