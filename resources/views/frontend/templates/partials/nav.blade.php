@@ -112,11 +112,10 @@ if ($user = auth()->user()) {
                                 <li><a href="{{ route('transaksi.index') }}" class="nav-link text-light"
                                         style="text-decoration:none">Peminjaman</a></li>
                                 <li class="divider"></li>
+                                <li><a href="{{ route('pinjam.index') }}" class="nav-link text-light"
+                                        style="text-decoration:none">favorite</a></li>
+                                <li class="divider"></li>
                             @endrole
-
-                            <li><a href="{{ route('pinjam.index') }}" class="nav-link text-light"
-                                    style="text-decoration:none">favorite</a></li>
-                            <li class="divider"></li>
                             <li><a href="#!" class="nav-link text-light"
                                     onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
