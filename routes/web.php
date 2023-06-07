@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\User\BookController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\HomeController as DefaultsHomeController;
 use App\Http\Controllers\user\TransaksiController;

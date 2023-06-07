@@ -7,7 +7,7 @@ use App\Detail_transaksi;
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\User\BookController;
 use App\Transaksi;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
