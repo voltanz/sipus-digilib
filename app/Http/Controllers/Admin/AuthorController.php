@@ -27,7 +27,6 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        //
         return view('admin/author/create');
     }
 
@@ -39,7 +38,6 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $request->validate(['name' => 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
 
         Author::create($request->only('name'));
@@ -65,7 +63,6 @@ class AuthorController extends Controller
      */
     public function edit($id)
     {
-        //
         $author = DB::table('authors')->where('id', $id)->get()->first();
         return view('admin/author/edit', ['author' => $author]);
     }
@@ -79,7 +76,6 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        //
         $request->validate([
             'name' => 'required|min:3'
         ], [
@@ -105,7 +101,6 @@ class AuthorController extends Controller
     {
         //
         DB::table('authors')->where('id', '=', $id)->delete();
-
         return redirect('admin/author')->with('success', 'Data Berhasil Di Hapus');
     }
 }
