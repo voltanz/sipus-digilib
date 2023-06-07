@@ -35,6 +35,19 @@
                     </div>
                 </div>
 
+                <div class="row mb-3">
+                    <div class="col d-flex align-items-center">
+                        <i class="bi bi-book-fill me-2 fs-2"></i>
+                        <div class="position-relative w-100">
+                            <input class="form-control" id="nisn" name="nisn" autocomplete="off"
+                                placeholder="1122334455" type="nisn" value="{{ old('nisn') }}">
+                            @error('nisn')
+                                <span class="position-absolute top-100 register text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
                 <div class=" row mb-3">
                     <div class="col d-flex align-items-center">
                         <i class="bi bi-lock-fill me-2 fs-2"></i>
