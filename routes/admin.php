@@ -25,26 +25,27 @@ Route::get('/author/data', [DataController::class,'authors'])->name('author.data
 // Route::resource('author', AuthorController::class)->names([
 //     'index' => 'author.index'
 // ]);
-
-Route::get('/author', [AuthorController::class, 'index'])->name('author.index');
-Route::get('/author/create', [AuthorController::class,'create'])->name('author.create');
-Route::post('/author', [AuthorController::class,'store'])->name('author.store');
-Route::get('/author/{id}/edit', [AuthorController::class,'edit'])->name('author.edit');
-Route::patch('/author/{author}', [AuthorController::class,'update'])->name('author.update');
-Route::delete('/author/{id}', [AuthorController::class,'destroy'])->name('author.delete');
+Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
+    'index' =>'author.index',
+    'create' =>'author.create',
+    'store' => 'author.edit',
+    'edit' => 'author.edit',
+    'update' => 'author.update',
+    'destroy' => 'author.delete'
+]);
 
 // book routes
+# sumber data
 Route::get('/book/data', [DataController::class,'books'])->name('book.data');
 // simple book routes
-// Route::resource('book', BookController::class);
-Route::get('/book', [BookController::class,'index'])->name('book.index');
-Route::get('/book/create', [BookController::class,'create'])->name('book.create');
-Route::post('/book', [BookController::class,'store'])->name('book.store');
-Route::patch('/book/{book}', [BookController::class,'update'])->name('book.update');
-Route::get('/book/{id}/edit', [BookController::class,'edit'])->name('book.edit');
-Route::delete('/book/{id}', [BookController::class,'destroy'])->name('book.destroy');
-
-
+Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
+    'index' => 'book.index',
+    'create' => 'book.create',
+    'store' => 'book.store',
+    'update'=>'book.update',
+    'edit'=>'book.edit',
+    'destroy'=>'book.destroy'
+]);
 
 // borrow route
 Route::get('/borrow/data', [DataController::class,'borrows'])->name('borrow.data');
