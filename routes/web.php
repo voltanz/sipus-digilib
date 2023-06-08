@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\User\BookController;
-use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\HomeController as DefaultsHomeController;
 use App\Http\Controllers\user\TransaksiController;
 use Illuminate\Support\Facades\Route;
@@ -50,11 +49,6 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
     Route::get('/keangotaan', [UserController::class, 'keanggotaan'])->name('keanggotaan');
 });
-
-// Route::prefix('/admin')->group(function () {
-//     Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('admin.buku.masih_dipinjam');
-// });
-
 
 Auth::routes();
 

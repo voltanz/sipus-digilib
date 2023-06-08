@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Author;
 use Illuminate\Support\Facades\DB;
 
+
 class AuthorController extends Controller
 {
     /**
@@ -16,8 +17,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin/author/index');
+        return view('admin.author.index');
     }
 
     /**
@@ -27,7 +27,7 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        return view('admin/author/create');
+        return view('admin.author.create');
     }
 
     /**
@@ -76,19 +76,12 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        $request->validate([
-            'name' => 'required|min:3'
-        ], [
-            'name.required' => 'Kolom tidak boleh kosong',
-            'name.min'      => 'Minimal 3 karakter'
+        Author::where('id', $author->id)
+        ->update([
+            'name' => $request->name,
         ]);
 
-        Author::where('id', $author->id)
-            ->update([
-                'name' => $request->name,
-            ]);
-
-        return redirect('admin/author')->with('success', 'Data Berhasil Di update');
+    return redirect('admin/author')->with('success', 'Data Berhasil Di update');
     }
 
     /**
@@ -99,8 +92,7 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        //
-        DB::table('authors')->where('id', '=', $id)->delete();
+        Author::where('id','=',$id)->delete();
         return redirect('admin/author')->with('success', 'Data Berhasil Di Hapus');
     }
 }
