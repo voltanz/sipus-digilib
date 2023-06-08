@@ -12,16 +12,14 @@
         <div class="row">
             <div class="col-6">
                 <div class="me-2">
-                <h3><b>DIGILIB SIPUS</b></h3><br>
-                <p class="text-left" style="font-size: 15px;">Digital Library of SMA Negeri 1 Blega</p>
-                <hr />
-                <p class="text-left" style="font-size: 15px;">Kedong, Rosep, Kec. Blega, Kabupaten Bangkalan, Jawa Timur, 69174, ID</p>
+                <h3><b>Digilib SIPUS</b></h3><br>
+                <p class="text-left" style="font-size: 15px;">Digital Library of SMA Negeri 1 Blega</p><br>
+                <hr /><br>
+                <p class="text-left" style="font-size: 15px;">Kedong, Rosep, Kec. Blega, Kabupaten Bangkalan, Jawa Timur, 69174, ID</p><br>
                 <hr />
                 <p class="text-left" style="font-size: 15px;">E: perpus@sman1blega.ac.id</p>
                 <p class="text-left" style="font-size: 15px;">P: (021) 56958721 ext. 1000</p>
-                <p class="text-left" style="font-size: 15px;">P: (021) 56958721</p>
-                <h4><b></b></h4>
-                <br><br>
+                <p class="text-left" style="font-size: 15px;">P: (021) 56958721</p><br><br>
               </div>
             </div>
             <div class="col-6">
