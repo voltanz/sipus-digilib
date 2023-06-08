@@ -10,7 +10,7 @@
             <div class="col-6">
                 <section class="bg-image"
     style="background-image: url('{{ asset('assets/cover/red.jpg') }}');
-        height: 55vh">
+        height: 40vh">
         <div class="container">
             <div class="row pt-5 pb-5">
                 <div class="col-12 text-light">
@@ -31,7 +31,7 @@
                 <section class="bg-image"
     style="
         background-image: url('{{ asset('assets/cover/red.jpg') }}');
-        height: 55vh">
+        height: 40vh">
         <div class="container">
             <div class="row pt-5 pb-5">
                 <div class="col-12 text-light">
