@@ -20,7 +20,7 @@
                 <p style="font-size:1.5rem">07.00 - 10.30 WIB</p>
                 <br><br>
                 <h4 style="color:red"><b>SABTU - MINGGU TUTUP</b></h4>
-                <h4><b>------------------------------------------------------</b></h4>
+                <hr />
                 <br><br>
               </div>
             </div>

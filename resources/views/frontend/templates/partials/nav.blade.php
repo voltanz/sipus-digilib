@@ -77,9 +77,21 @@ if ($user = auth()->user()) {
                         <li><a class="dropdown-item" href="{{ route('keanggotaan') }}">Keanggotaan</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false" style="text-decoration:none">Publikasi</a>
+                    <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
+                        <li><a class="dropdown-item" href="https://jurnaldikbud.kemdikbud.go.id/">Jurnal Kemendikbud</a></li>
+                        <li><a class="dropdown-item" href="https://repositori.kemdikbud.go.id/">Repository Kemendikbud</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a href="{{ route('bookCollection') }}" class="nav-link text-light"
                         style="text-decoration:none">Koleksi Buku</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="https://www.sman1blega.sch.id/" class="nav-link text-light"
+                        style="text-decoration:none">| Situs Utama | </a>
                 </li>
                 </li>
                 @guest

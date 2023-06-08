@@ -52,5 +52,11 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/keangotaan', [UserController::class, 'keanggotaan'])->name('keanggotaan');
 });
 
+// route publikasi
+Route::prefix('/publikasi')->group(function () {
+    Route::get('/jurnal', [ProfileController::class, 'jurnal'])->name('jurnal');
+    Route::get('/repo', [ProfileController::class, 'repo'])->name('repo');
+});
+
 Auth::routes();
 
