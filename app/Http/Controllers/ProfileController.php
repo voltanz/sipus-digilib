@@ -21,4 +21,8 @@ class ProfileController extends Controller
     public function jam() {
         return view('frontend.profile.jam');
     }
+
+    public function kontak() {
+        return view('frontend.profile.kontak');
+    }
 }

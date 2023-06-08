@@ -13,9 +13,7 @@
                 </div>
                 <div class="me-1">
                 <h4>1. KARTU ANGGOTA</h4>
-                <p>Setiap pengunjung perpustakaan diwajibkan
-                    mentaati semua peraturan dan prosedur yang
-                    berlaku.</p>
+                <p>Memiliki Kartu Anggota Perpustakaan SMA Negeri 1 Blega.</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -24,7 +22,7 @@
                 </div>
                 <div class="me-1">
                 <h4>2. SURAT PENGANTAR</h4>
-                <p>Setiap pengunjung perpustakaan wajib bersama - sama menjaga ketertiban ,ketenangan dan keamanan ruang perpustakaan.</p>
+                <p>Bagi siswa atau masyarakat umum dari luar SMA Negeri 1 Blega hanya diperbolehkan membaca di perpustakaan dengan menunjukkan surat pengantar atau keterangan dari institusi pendidikan tinggi lain, instansi dan identitas resmi.</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -33,8 +31,7 @@
                 </div>
                 <div>
                 <h4>3. MENAATI PERATURAN</h4>
-                <p>Setiap pengunjung diwajibkan menjaga
-                    kebersihan demi kenyamanan bersama.</p>
+                <p>Mentaati Peraturan dan Tata Tertib Perpustakaan.</p>
                 </div>
             </div>
         </div>
@@ -45,8 +42,7 @@
                 </div>
                 <div class="me-1">
                 <h4>4. 2 BUKU CUKUP</h4>
-                <p>Setiap pengunjung diwajibkan membuang
-                    sampah di tempat sampah yang telah disediakan.</p>
+                <p>Setiap Anggota hanya berhak meminjam paling banyak dua (2) judul buku berbeda.</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -55,9 +51,7 @@
                 </div>
                 <div class="me-1">
                 <h4>5. LAMA PEMINJAMAN</h4>
-                <p>Setiap pengunjung wajib mengenakan pakaian yang sopan, rapi dan sepatutnya sesuai dengan
-                    ketentuan yang berlaku di 
-                    SMAN 1 Blega.</p>
+                <p>Jangka waktu peminjaman selama satu (1) minggu.</p>
                 </div>
             </div>
             <div class="col d-flex">
@@ -66,9 +60,7 @@
                 </div>
                 <div>
                 <h4>6. PERPANJANGAN PINJAMAN</h4>
-                <p>Setiap pengunjung hanya diperbolehkan
-                    membawa catatan atau lembar kertas catatan di
-                    ruang baca.</p>
+                <p>Peminjaman buku dapat diperpanjang satu (1) minggu berikutnya.</p>
                 </div>
             </div>
         </div>
@@ -79,9 +71,7 @@
                 </div>
                 <div class="me-1">
                 <h4>7. JAMINAN PEMINJAMAN</h4>
-                <p>Setiap pengunjung dilarang membawa segala
-                    jenis dan bentuk tas atau kantong ke ruang
-                    baca.</p>
+                <p>Peminjaman buku untuk keperluan pembuatan foto copy sebagian materi/isi buku wajib menyerahkan jaminan berupa Kartu Anggota dan Kartu Tanda Penduduk,Kartu Identitas lain. Jangka waktu peminjaman paling lama dua (2) jam dan harus dikembalikan pada hari dan tanggal yang sama.. Keterlambatan pengembalian akan dikenakan sanksi denda sebesar Rp 2.500,00 (dua ribu lima ratus rupiah) setiap keterlambatan satu (1) jam.</p>
                 </div>
             </div>
             <div class="col d-flex">

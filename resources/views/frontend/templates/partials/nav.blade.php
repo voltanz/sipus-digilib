@@ -59,15 +59,11 @@ if ($user = auth()->user()) {
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
                         role="button" aria-expanded="false" style="text-decoration:none">Profile</a>
                     <ul class="dropdown-menu dropdown-menu-dark" style="font-size: 12px">
-                        <li><a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah
-                                SMAN 1 BLEGA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
-                                Perpustakaan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi
-                                Misi SMAN 1 BLEGA</a>
-                        </li>
-                        <li><a class="dropdown-item" href="{{ route('jamPelayanan') }}" style="text-decoration:none">Jam Pelayanan Perpustakaan</a>
-                        </li>
+                        <li><a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah SMA Negeri 1 BLEGA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff Perpustakaan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi Misi SMA Negeri 1 BLEGA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('jamPelayanan') }}" style="text-decoration:none">Jam Pelayanan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('kontak') }}" style="text-decoration:none">Kontak</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -107,7 +103,7 @@ if ($user = auth()->user()) {
                             style="text-decoration:none">{{ ucwords(Auth()->user()->name) }}</a>
                         <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
                             @role('admin')
-                                <li><a href="/admin" class="nav-link text-light" style="text-decoration:none">dashboard</a>
+                                <li><a href="/admin" class="nav-link text-light" style="text-decoration:none">Dashboard</a>
                                 </li>
                                 <li class="divider"></li>
                             @endrole
