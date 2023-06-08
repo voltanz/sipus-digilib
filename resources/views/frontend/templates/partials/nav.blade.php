@@ -65,6 +65,8 @@ if ($user = auth()->user()) {
                         <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi
                                 Misi SMAN 1 BLEGA</a>
                         </li>
+                        <li><a class="dropdown-item" href="{{ route('jamPelayanan') }}" style="text-decoration:none">Jam Pelayanan Perpustakaan</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
