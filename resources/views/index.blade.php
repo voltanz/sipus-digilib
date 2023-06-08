@@ -1,56 +1,77 @@
 @extends('frontend.default')
 
 @section('content')
-    <div class="main-container" style="">
-        <!-- Background image -->
-        <section class="bg-image"
-            style="
-                background-image: url('{{ asset('assets/logo/perpus.png') }}');
-                height: 85vh">
-            <div class="text-left" style="padding-left:1000px; padding-top:200px; padding-right:200px; ">
-                <div class="overlay-content align-items-end text-white text-light fw-bold">
-                    <h1 style="font-weight:bold">Situs Perpustakaan</h1>
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                    <h2 class="uppercase bold">SMA Negeri 1 Blega</h2>
-                    <p class="lead mb48 mb-xs-32">Situs ini ditujukan untuk seluruh Civitas Akademika SMA Negeri 1 Blega
-                        maupun masyarakat pengguna internet pada umumnya.
-                        <br>
-                        Melalui situs ini diharapkan perpustakaan SMA Negeri 1 Blega dapat meningkatkan layanan dan
-                        mempermudah civitas akademika mencari literatur dalam proses belajar mengajar.
-                        &nbsp;<br>
-                    </p>
-                    <p class="lead mb48 mb-xs-32"><b>
-                            Selamat bergabung!
-                        </b></p>
+    <div class="main-container"
+        style="background-image: url({{ asset('assets/logo/perpus.png') }});
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top:5rem;
+    padding-bottom:4rem;">
+        <div class="jumbotron jumbotron-fluid mb-5">
+            <div class="container-fluid" style="padding-left:5rem; padding-right:5rem">
+                <div class="row pt-5 pb-5">
+                    <div class="col-lg-6">
+                        <iframe width="660" height="370" src="https://www.youtube.com/embed/VogR3q2HMW8?autoplay=1&mute=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pt-5">
+                            <div class="overlay-content text-white text-light fw-bold">
+                                <h1 style="font-weight:bold">Situs Perpustakaan</h1>
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <h2 class="uppercase bold">SMA Negeri 1 Blega</h2>
+                                <p class="lead mb48 mb-xs-32">Situs ini ditujukan untuk seluruh Civitas Akademika SMA Negeri
+                                    1 Blega
+                                    maupun masyarakat pengguna internet pada umumnya.
+                                    <br>
+                                    Melalui situs ini diharapkan perpustakaan SMA Negeri 1 Blega dapat meningkatkan layanan
+                                    dan
+                                    mempermudah civitas akademika mencari literatur dalam proses belajar mengajar.
+                                    &nbsp;<br>
+                                </p>
+                                <p class="lead mb48 mb-xs-32"><b>
+                                        Selamat bergabung!
+                                    </b></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        </div>
-    </section>
 
+            </div>
+        </div>
+    </div>
     <!-- Facts Start -->
     <section class="container-fluid facts my-3 py-3">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-solid fa-address-card fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">{{ $user }}</h1>
+                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
+                        {{ $user }}</h1>
                     <span class="fs-3 text-dark fw-bold">Anggota</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-duotone fa-users fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">63</h1>
+                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">63
+                    </h1>
                     <span class="fs-3 text-dark fw-bold">Guru</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">8</h1>
+                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">8
+                    </h1>
                     <span class="fs-3 text-dark fw-bold">Staf</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fa fa-solid fa-book fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">{{ $buku }}</h1>
+                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
+                        {{ $buku }}</h1>
                     <span class="fs-3 text-dark fw-bold">Buku</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
@@ -71,32 +92,44 @@
                     <h6 class="uppercase">KOLEKSI BUKU TERBARU</h6>
                     <ul>
                         <li>1. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165784'>Biology : a Global
-                                Approach. 12th ed.2021</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Kedokteran - Update
+                                Approach. 12th ed.2021</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Kedokteran - Update
                                 : 11/04/2023</span></li>
                         <li>2. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165785'>Krauses and Mahans :
-                                Food and the Nutrition Care Process. 15...</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Kedokteran - Update
+                                Food and the Nutrition Care Process. 15...</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Kedokteran -
+                                Update
                                 : 11/04/2023</span></li>
                         <li>3. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165783'>Voets principles of
-                                biochemistry. Global edition. Book 2. 20...</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Kedokteran - Update
+                                biochemistry. Global edition. Book 2. 20...</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Kedokteran -
+                                Update
                                 : 11/04/2023</span></li>
                         <li>4. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165767'>50 years of dedication
-                                for Indonesia</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                                for Indonesia</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
                         <li>5. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165767'>50 years of dedication
-                                for Indonesia</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                                for Indonesia</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
                         <li>6. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165779'>52 inspirasi desain
-                                kitchen set untuk ruang terbatas</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Desain Interior -
+                                kitchen set untuk ruang terbatas</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Desain Interior -
                                 Update : 10/04/2023</span></li>
-                        <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>Anjing</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                        <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>Anjing</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
-                        <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>Anjing</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                        <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>Anjing</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
                         <li>9. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165769'>Buku panduan praktik
-                                teknologi kultur jaringan di laboratori...</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                                teknologi kultur jaringan di laboratori...</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
                         <li>10. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165769'>Buku panduan praktik
-                                teknologi kultur jaringan di laboratori...</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                                teknologi kultur jaringan di laboratori...</a><br><span
+                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
                     </ul>
                 </div>
@@ -137,4 +170,4 @@
             </div>
         </div>
     </section>
-    @endsection
+@endsection
