@@ -17,4 +17,8 @@ class ProfileController extends Controller
     public function vimis() {
         return view('frontend.profile.vimis');
     }
+
+    public function jam() {
+        return view('frontend.profile.jam');
+    }
 }

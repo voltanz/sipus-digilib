@@ -35,6 +35,7 @@ Route::prefix('/profile')->group(function () {
     Route::get('/sejarah', [ProfileController::class, 'profile'])->name('sejarah');
     Route::get('/staff', [ProfileController::class, 'staff'])->name('staff');
     Route::get('/vimis', [ProfileController::class, 'vimis'])->name('visiMisi');
+    Route::get('/jam', [ProfileController::class, 'jam'])->name('jamPelayanan');
 });
 
 //route transaksi
