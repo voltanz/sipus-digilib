@@ -1,9 +1,8 @@
-<section class="bg-image p-5"
-style="
-    background-image: url('{{ asset('assets/logo/background.jpg') }}');
-    background-size: 100vw 100vh;
-    height: 6   0vh;
-    weight: 100vh">
+<section class="bg-image p-5 w-100"
+style="background-image: url({{ asset('assets/logo/background.jpg') }});
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;">
 
     <div class="container text-light">
         <div class="row p-2 fs-5 text-light fw-bold">

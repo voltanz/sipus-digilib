@@ -43,6 +43,7 @@ if ($user = auth()->user()) {
         <a href="#!" class="brand-logo">
             <img class="mt-3 mb-3" src="{{ asset('assets/logo/sipus.png') }}" style="width: 350px;"></a>
     </div>
+    
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-full fw-bold">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
