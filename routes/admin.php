@@ -1,4 +1,5 @@
 <?php
+namespace App\Http\Controllers\Admin;
 
 use App\Book;
 use App\Borrow;
@@ -21,7 +22,10 @@ Route::get('/', [HomeController::class,'index'])->name('dashboard');
 Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
 
 // simple author routes
-Route::resource('author', AuthorController::class);
+// Route::resource('author', AuthorController::class)->names([
+//     'index' => 'author.index'
+// ]);
+
 Route::get('/author', [AuthorController::class, 'index'])->name('author.index');
 Route::get('/author/create', [AuthorController::class,'create'])->name('author.create');
 Route::post('/author', [AuthorController::class,'store'])->name('author.store');
@@ -32,7 +36,7 @@ Route::delete('/author/{id}', [AuthorController::class,'destroy'])->name('author
 // book routes
 Route::get('/book/data', [DataController::class,'books'])->name('book.data');
 // simple book routes
-Route::resource('book', BookController::class);
+// Route::resource('book', BookController::class);
 Route::get('/book', [BookController::class,'index'])->name('book.index');
 Route::get('/book/create', [BookController::class,'create'])->name('book.create');
 Route::post('/book', [BookController::class,'store'])->name('book.store');
@@ -43,10 +47,10 @@ Route::delete('/book/{id}', [BookController::class,'destroy'])->name('book.destr
 
 
 // borrow route
-Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');
-Route::get('/borrow', 'HomeController@borrows')->name('borrow.index');
-Route::get('/borrow/detail/{id}', 'HomeController@detail')->name('borrow.detail');
-Route::post('/update', 'HomeController@update')->name('borrow.update');
+Route::get('/borrow/data', [DataController::class,'borrows'])->name('borrow.data');
+Route::get('/borrow', [HomeController::class,'borrows'])->name('borrow.index');
+Route::get('/borrow/detail/{id}', [HomeController::class,'detail'])->name('borrow.detail');
+Route::post('/update', [HomeController::class.'update'])->name('borrow.update');
 
 // history route
 Route::get('transaksi', function () {
@@ -80,24 +84,18 @@ Route::get('transaksi', function () {
                 return '<span class="badge bg-warning">Belum Kembali</span>';
             }
         })
-        // ->addColumn('admin', function ($model) {
-        //     return $model->admin_id;
-        // })
         ->rawColumns(['cover', 'tgl_pengembalian'])
         ->toJson();
 })->name('transaksi.history');
 
-Route::get('/transaksi/history', 'HomeController@history')->name('history');
+Route::get('/transaksi/history', [HomeController::class,'history'])->name('history');
 
 #menu dashboard
 Route::get('/buku/data-dipinjam', [DataController::class,'masih_dipinjam'])->name('buku.data.pinjam');
     Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('buku.masih_dipinjam');
 
     // user routes
-Route::get('/user/data', 'DataController@users')->name('user.data');
-Route::get('/user', 'UserController@index')->name('user.index');
+Route::get('/user/data', [DataController::class,'users'])->name('user.data');
+Route::get('/user', [UserController::class,'index'])->name('user.index');
 
 Route::get('/cetak-peminjam', [HomeController::class,'cetak_pdf'])->name('cetak_pdf');
-
-#sidebar
-// author
