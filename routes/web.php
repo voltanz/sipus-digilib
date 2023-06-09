@@ -34,6 +34,8 @@ Route::prefix('/profile')->group(function () {
     Route::get('/sejarah', [ProfileController::class, 'profile'])->name('sejarah');
     Route::get('/staff', [ProfileController::class, 'staff'])->name('staff');
     Route::get('/vimis', [ProfileController::class, 'vimis'])->name('visiMisi');
+    Route::get('/jam', [ProfileController::class, 'jam'])->name('jamPelayanan');
+    Route::get('/kontak', [ProfileController::class, 'kontak'])->name('kontak');
 });
 
 //route transaksi
@@ -48,6 +50,12 @@ Route::prefix('/peraturan')->group(function () {
     Route::get('/pengembalian', [UserController::class, 'pengembalian'])->name('pengembalian');
     Route::get('/denda', [UserController::class, 'denda'])->name('denda');
     Route::get('/keangotaan', [UserController::class, 'keanggotaan'])->name('keanggotaan');
+});
+
+// route publikasi
+Route::prefix('/publikasi')->group(function () {
+    Route::get('/jurnal', [ProfileController::class, 'jurnal'])->name('jurnal');
+    Route::get('/repo', [ProfileController::class, 'repo'])->name('repo');
 });
 
 Auth::routes();

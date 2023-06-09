@@ -27,13 +27,15 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 
 ## 💫 Installation
 
-1.  Git clone `https://github.com/nikoshaa/sipus-digilib`
+1.  Baca Dokumentasi Fork Up to Date `https://gist.github.com/JeffCost/3843711`
 
-2.  Lakukan perubahan pada file `contributor.txt`
+2.  Git clone `https://github.com/nikoshaa/sipus-digilib`
 
-3.  Git commit -m `"pesan commit"`
+3.  Lakukan perubahan pada file `contributor.txt`
 
-4.  Git push origin main
+4.  Git commit -m `"pesan commit"`
+
+5.  Git push origin `master`
 
 ## 🚀 Quick start
 

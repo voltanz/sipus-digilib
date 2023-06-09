@@ -43,6 +43,7 @@ if ($user = auth()->user()) {
         <a href="#!" class="brand-logo">
             <img class="mt-3 mb-3" src="{{ asset('assets/logo/sipus.png') }}" style="width: 350px;"></a>
     </div>
+    
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-full fw-bold">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,13 +59,11 @@ if ($user = auth()->user()) {
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
                         role="button" aria-expanded="false" style="text-decoration:none">Profile</a>
                     <ul class="dropdown-menu dropdown-menu-dark" style="font-size: 12px">
-                        <li><a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah
-                                SMAN 1 BLEGA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
-                                Perpustakaan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi
-                                Misi SMAN 1 BLEGA</a>
-                        </li>
+                        <li><a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah SMA Negeri 1 BLEGA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff Perpustakaan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi Misi SMA Negeri 1 BLEGA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('jamPelayanan') }}" style="text-decoration:none">Jam Pelayanan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('kontak') }}" style="text-decoration:none">Kontak</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -78,9 +77,21 @@ if ($user = auth()->user()) {
                         <li><a class="dropdown-item" href="{{ route('keanggotaan') }}">Keanggotaan</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false" style="text-decoration:none">Publikasi</a>
+                    <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
+                        <li><a class="dropdown-item" href="https://jurnaldikbud.kemdikbud.go.id/">Jurnal Kemendikbud</a></li>
+                        <li><a class="dropdown-item" href="https://repositori.kemdikbud.go.id/">Repository Kemendikbud</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a href="{{ route('bookCollection') }}" class="nav-link text-light"
                         style="text-decoration:none">Koleksi Buku</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="https://www.sman1blega.sch.id/" class="nav-link text-light"
+                        style="text-decoration:none">| Situs Utama | </a>
                 </li>
                 </li>
                 @guest
@@ -104,7 +115,7 @@ if ($user = auth()->user()) {
                             style="text-decoration:none">{{ ucwords(Auth()->user()->name) }}</a>
                         <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
                             @role('admin')
-                                <li><a href="/admin" class="nav-link text-light" style="text-decoration:none">dashboard</a>
+                                <li><a href="/admin" class="nav-link text-light" style="text-decoration:none">Dashboard</a>
                                 </li>
                                 <li class="divider"></li>
                             @endrole
@@ -113,7 +124,7 @@ if ($user = auth()->user()) {
                                         style="text-decoration:none">Peminjaman</a></li>
                                 <li class="divider"></li>
                                 <li><a href="{{ route('pinjam.index') }}" class="nav-link text-light"
-                                        style="text-decoration:none">favorite</a></li>
+                                        style="text-decoration:none">Favorite</a></li>
                                 <li class="divider"></li>
                             @endrole
                             <li><a href="#!" class="nav-link text-light"
