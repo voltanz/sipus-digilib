@@ -6,7 +6,7 @@
 <form id="deleteForm" action="book/{{$id}}" method="POST" class="d-inline">
     @csrf
     @method('DELETE')
-    <button type="submit" id="tombol" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm">
+    <button type="submit" id="tombol" onclick="return confirm('Apakah kamu yakin?')" class="btn btn-danger btn-sm">
         <i class=" fas fa-trash">
         </i>
         Delete

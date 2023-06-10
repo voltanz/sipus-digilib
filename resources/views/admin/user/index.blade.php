@@ -7,7 +7,7 @@
 
 @endpush()
 
-@section('title','Daftar User')
+@section('title','User')
 
 @section('content')
 
@@ -22,7 +22,6 @@
     @endif
     <div class="card-header">
         <h3 class="card-title">Data User</h3>
-        <a href="" class="btn btn-primary float-right"><i class="fa fa-plus"></i> User</a>
     </div>
     <div class="card-body">
         <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">
@@ -42,7 +41,6 @@
     <!-- /.card-body -->
 </div>
 @endsection
-
 @push('scripts')
 <!-- data tables -->
 <script src="{{asset('assets/plugins/datatables/jquery.datatables.min.js') }}"></script>

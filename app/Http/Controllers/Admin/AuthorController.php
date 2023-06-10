@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use App\Author;
 use Illuminate\Support\Facades\DB;
 
-
-
 class AuthorController extends Controller
 {
     /**
