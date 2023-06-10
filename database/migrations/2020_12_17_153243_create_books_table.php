@@ -13,9 +13,11 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
+        if(!Schema::hasTable('books')) {
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->text('description');
             $table->string('cover');
@@ -25,7 +27,11 @@ class CreateBooksTable extends Migration
             $table->foreign('author_id')->references('id')->on('authors')
                 ->onUpdate('CASCADE')
                 ->onDelete('CASCADE');
+
+                $table->foreign('category_id')->references('id')->on('categories')->onUpdate('CASCADE')
+                ->onDelete('CASCADE');
         });
+    };
     }
 
     /**

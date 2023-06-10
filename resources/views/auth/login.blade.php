@@ -9,7 +9,7 @@
             </div>
         @endif
         <div class="d-flex align-items-center  flex-column">
-            <h2 class="center">Form Login</h2>
+            <h2 class="center mb-4">Form Login</h2>
             <form class="w-50" action="{{ route('login') }}" method="POST">
                 @csrf
                 <div class="row mb-3">
