@@ -11,7 +11,7 @@
     <div class="container"><br>
         <div class="row">
             <div class="col-6">
-                <div class="me-2">
+                <div class="me-2" style="padding: 30px;">
                 <h3><b>Jam Pelayanan Perpustakaan SMA Negeri 1 BLEGA :</b></h3><br>
                 <h4 style="color:blue"><b>SENIN - KAMIS</b></h4>
                 <p style="font-size:1.5rem">07.00 - 14.00 WIB</p>
