@@ -5,6 +5,10 @@
 <div class="containe-fluid py-5 d-flex flex-column align-items-center">
     <h2 class="text-center text-capitalize">Staff Perpustakaan</h2>
 </div>
+<center>
+    <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
+    </center>
+    <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
 <div class="container">
     <div class="row">
         <div class="col-4">
@@ -13,8 +17,8 @@
             <img src="{{ asset('assets/dist/img/wildan.png') }}" style="width: 200px;"></a>
             </div>
             <div class="me-1">
-                <h4>1. Wildan Hafidz Mauludin.</h4>
-                <p>Merupakan seorang Kepala Perpustakaan</p>
+                <h4>Wildan Hafidz Mauludin</h4>
+                <p>Kepala Perpustakaan</p>
             </div>
             </center>
         </div>
@@ -24,8 +28,8 @@
             <img src="{{ asset('assets/dist/img/ibnu.png') }}" style="width: 200px;"></a>
             </div>
             <div class="me-1">
-                <h4>2. Ibnu Hajar Askholani</h4>
-                <p>Merupakan seorang Asisten Kepala Perpustakaan.</p>
+                <h4>Ibnu Hajar Askholani</h4>
+                <p>Asisten Kepala Perpustakaan</p>
             </div>
             </center>
         </div>
@@ -35,8 +39,8 @@
             <img src="{{ asset('assets/dist/img/didin.png') }}" style="width: 200px;"></a>
             </div>
             <div class="me-1">
-                <h4>3. Iemaduddin</h4>
-                <p>Merupakan seorang Asisten Kepala Perpustakaan.</p>
+                <h4>Iemaduddin</h4>
+                <p>Asisten Kepala Perpustakaan</p>
             </div>
             </center>
         </div>
@@ -48,8 +52,8 @@
                 <img src="{{ asset('assets/dist/img/bima.png') }}" style="width: 200px;"></a>
                 </div>
                 <div class="me-1">
-                    <h4>4. Ahmad Bima Tristan I.</h4>
-                    <p>Merupakan seorang petugas Teknisi Perpustakaan.</p>
+                    <h4>Ahmad Bima Tristan I</h4>
+                    <p>Teknisi Perpustakaan</p>
                 </div>
                 </center>
             </div>
@@ -59,11 +63,12 @@
                 <img src="{{ asset('assets/dist/img/ylrahma.png') }}" style="width: 200px;"></a>
                 </div>
                 <div class="me-1">
-                    <h4>5. Yuliyana Rahmawati</h4>
-                    <p>Merupakan seorang petugas Administrasi Perpustakaan.</p>
+                    <h4>Yuliyana Rahmawati</h4>
+                    <p>Administrasi Perpustakaan</p>
                 </div>
                 </center>
             </div>
         </div>
-</div>
+        <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
+    </div>
     @endsection

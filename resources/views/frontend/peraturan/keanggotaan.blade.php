@@ -5,6 +5,10 @@
     <div class="container-fluid py-5 d-flex flex-column align-items-center">
         <h2 class="text-center text-capitalize">::Keanggotaan::</h2>
     </div>
+    <center>
+    <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
+    </center>
+    <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
     <div class="row pt-5 pb-5">
         <div class="col-6">
             <section class="bg-image"
