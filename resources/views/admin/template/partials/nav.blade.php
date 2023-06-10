@@ -20,7 +20,7 @@
                         <img src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Avatar"
                             class="img-size-50 mr-3 img-circle">
                         <div class="media-body">
-                            <p> {{ auth()->user()->Name }}</p>
+                            <p> {{ auth()->user()->name }}</p>
                         </div>
                     </div>
                 </a>
