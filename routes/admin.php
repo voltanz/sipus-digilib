@@ -1,18 +1,11 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
-use App\Book;
-use App\Borrow;
 use Illuminate\Support\Facades\Route;
-use App\Detail_transaksi;
-use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\User\BookController;
-use App\Transaksi;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
-use App\User;
 
 // author routes
 Route::get('/', [HomeController::class,'index'])->name('dashboard');
@@ -20,11 +13,7 @@ Route::get('/', [HomeController::class,'index'])->name('dashboard');
 # Author
 // sumber data
 Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
-
-// simple author routes
-// Route::resource('author', AuthorController::class)->names([
-//     'index' => 'author.index'
-// ]);
+// routes
 Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
     'index' =>'author.index',
     'create' =>'author.create',
@@ -37,7 +26,7 @@ Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names
 // book routes
 # sumber data
 Route::get('/book/data', [DataController::class,'books'])->name('book.data');
-// simple book routes
+// routes
 Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
     'index' => 'book.index',
     'create' => 'book.create',

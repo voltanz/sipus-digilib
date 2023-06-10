@@ -119,7 +119,7 @@ if ($user = auth()->user()) {
                                 </li>
                                 <li class="divider"></li>
                             @endrole
-                            @role('!admin')
+                            @role('user||null')
                                 <li><a href="{{ route('transaksi.index') }}" class="nav-link text-light"
                                         style="text-decoration:none">Peminjaman</a></li>
                                 <li class="divider"></li>
