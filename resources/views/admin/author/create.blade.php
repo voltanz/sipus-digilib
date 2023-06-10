@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-info   ">Simpan</button>
+                <button type="submit" class="btn btn-info">Simpan</button>
             </div>
         </form>
     </div>
