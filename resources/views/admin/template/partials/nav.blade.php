@@ -5,7 +5,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-capitalize" href="/" role="button">home</a>
+            <a class="nav-link text-capitalize" href="/" role="button">Home</a>
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -20,7 +20,7 @@
                         <img src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Avatar"
                             class="img-size-50 mr-3 img-circle">
                         <div class="media-body">
-                            <p> {{ auth()->user()->name }}</p>
+                            <p> {{ auth()->user()->Name }}</p>
                         </div>
                     </div>
                 </a>

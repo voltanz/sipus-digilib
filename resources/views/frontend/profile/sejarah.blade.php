@@ -5,6 +5,10 @@
 <div class="containe-fluid py-5 d-flex flex-column align-items-center">
     <h2 class="text-center text-capitalize">Sejarah SMA Negeri 1 Blega</h2>
 </div>
+    <center>
+    <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
+    </center>
+    <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
 <div class="container">
     <div class="row">
         <div class="col d-flex">
@@ -15,8 +19,7 @@
                     Pada masa itu, upaya untuk melanjutkan pendidikan harus menempuh jarak yang cukup jauh dan memakan waktu yang lama untuk menuju ke Kota atau Kabupaten Bangkalan. </p>
                 <p class="text-center" style="font-size: 18px;">Berdirinya SMA Negeri 1 Blega juga bertujuan sebagai upaya memfasilitasi serta merealisasikan potensi dan animo masyarakat,
                     khususnya Blega dan sekitarnya dalam melanjutkan studi dari tingkat SLTP ke jenjang SLTA. Sehingga kemudian tercetuslah ide dari Bapak Suhan As dan rekan-rekannya untuk membuat permohonan pendirian SMA kepada Kepala Kantor Wilayah Departemen Pendidikan dan Kebudayaan Provinsi Jawa Timur.</p>
-                <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-                </div>
+                <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
                     <div class="icon">
                         <i class="ion ion-arrow-up-a"></i>
                     </div>
-                    <a href="{{ route('admin.buku.masih_dipinjam') }}" class="small-box-footer">more info <i
+                    <a href="{{ route('admin.buku.masih_dipinjam') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <div class="small-box bg-success bg-gradient">
                     <div class="inner">
                         <h3>{{ $user }}</h3>
-                        <p>jumlah pengguna</p>
+                        <p>Jumlah Pengguna</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
@@ -40,7 +40,7 @@
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">
                         <h3>{{ $buku }}</h3>
-                        <p>jumlah buku</p>
+                        <p>Jumlah Buku</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-ios-book"></i>
