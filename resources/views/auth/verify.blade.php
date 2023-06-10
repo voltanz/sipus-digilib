@@ -3,7 +3,7 @@
 @section('content')
     <div class="container py-5" style="height: 100vh">
         <div class="d-flex align-items-center  flex-column">
-            <h2 class="center">{{ __('Verify Your Email Address') }}</h2>
+            <h2 class="center mb-4">{{ __('Verify Your Email Address') }}</h2>
             <div class="card-body">
                 @if (session('resent'))
                     <div class="alert alert-success" role="alert">

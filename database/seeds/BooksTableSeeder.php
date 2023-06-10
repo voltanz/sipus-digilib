@@ -1,7 +1,7 @@
 <?php
 
+use Faker\Factory;
 use Illuminate\Database\Seeder;
-
 class BooksTableSeeder extends Seeder
 {
     /**
