@@ -3,12 +3,12 @@
 
 @section('content')
     <div class="container-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize">::Denda::</h2>
+        <h2 class="text-center text-capitalize py-3">::Denda::</h2>
     </div>
     <center>
     <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
     </center>
-    <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
+    <div class="container-fluid py-5 d-flex flex-column align-items-center"></div>
     <div class="container">
         <div class="row pt-5 pb-5">
             <div class="col-6">
@@ -36,7 +36,7 @@
     style="
         background-image: url('{{ asset('assets/cover/red.jpg') }}');
         height: 40vh">
-        <div class="container">
+        <div class="container" style="padding-bottom: 10rem">
             <div class="row pt-5 pb-5">
                 <div class="col-12 text-light">
                     <center>
@@ -53,13 +53,13 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="padding-bottom: 8rem">
         <div class="row pt-5 pb-5">
             <div class="col-4">
                 <center>
                 <h2 style="font-size:3.5rem">3</h2>
                 </center>
-                <p style="margin-bottom: 65%"><br>Pengembalian pinjaman buku dalam keadaan
+                <p><br>Pengembalian pinjaman buku dalam keadaan
                     rusak, sobek, kotor atau hilang sebagian halaman dikenakan
                     sanksi perbaikan. Biaya perbaikan ditanggung peminjam.</p>
             </div>
