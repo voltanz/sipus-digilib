@@ -48,7 +48,7 @@
                     <i class="bi bi-hand-thumbs-up-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
-                <h4>3. MENAATI PERATURAN</h4>
+                <h4>4. MENAATI PERATURAN</h4>
                 <p>Mentaati Peraturan dan Tata Tertib Perpustakaan.</p>
                 </div>
             </div>
