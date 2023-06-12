@@ -3,14 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Author;
 use App\Book;
 use App\User;
-use App\Borrow;
-use App\Detail_transaksi;
 use App\Transaksi;
 use Yajra\DataTables\Facades\DataTables;
+use Spatie\Permission\Models\Role;
 
 class DataController extends Controller
 {
@@ -74,8 +72,7 @@ class DataController extends Controller
 
     public function users()
     {
-        $users = User::orderBy('name', 'ASC');
-
+        $users =Role::find(2)->users();
         return DataTables()->of($users)
             ->addIndexColumn()
             ->addColumn('action', "admin.user.action")

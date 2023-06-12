@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+
+
 
 class UserController extends Controller
 {
@@ -16,10 +19,13 @@ class UserController extends Controller
      */
     public function index()
     {
+        //
         return view('admin.user.index');
     }
 
+
      /**
+
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -51,7 +57,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view ('admin.user.show',compact('user'));
     }
 
     /**
@@ -60,10 +67,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id )
     {
-        $user = DB::table('user')->where('id', $id)->get()->first();
-        return view('admin.user.edit', ['user' => $user]);
+        $user = User::find($id);
+        return view('admin.user.edit', compact('user'));
     }
 
     /**
@@ -73,13 +80,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, User $user)
     {
         User::where('id', $user->id)
         ->update([
             'name' => $request->name,
+            'email'=>$request->email
         ]);
-
     return redirect('admin/user')->with('success', 'Data Berhasil Di Update');
     }
 
