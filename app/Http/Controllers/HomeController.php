@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
 use App\User;
 
 class HomeController extends Controller
@@ -20,7 +21,7 @@ class HomeController extends Controller
     public function landingPage()
     {
         $buku = Book::all()->count();
-        $user = User::all()->count();
+        $user = Role::find(2)->users()->count();
         return view('index', compact('user', 'buku'));
     }
     public function index()

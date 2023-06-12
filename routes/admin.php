@@ -17,7 +17,7 @@ Route::get('/author/data', [DataController::class,'authors'])->name('author.data
 Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
     'index' =>'author.index',
     'create' =>'author.create',
-    'store' => 'author.edit',
+    'store' => 'author.store',
     'edit' => 'author.edit',
     'update' => 'author.update',
     'destroy' => 'author.delete'
@@ -84,8 +84,13 @@ Route::get('/transaksi/history', [HomeController::class,'history'])->name('histo
 Route::get('/buku/data-dipinjam', [DataController::class,'masih_dipinjam'])->name('buku.data.pinjam');
     Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('buku.masih_dipinjam');
 
-    // user routes
+// user
+// sumber data
 Route::get('/user/data', [DataController::class,'users'])->name('user.data');
-Route::get('/user', [UserController::class,'index'])->name('user.index');
+
+Route::resource('user','\App\Http\Controllers\Admin\UserController')->names([
+    'index'=>'user.index',
+]);
+
 
 Route::get('/cetak-peminjam', [HomeController::class,'cetak_pdf'])->name('cetak_pdf');
