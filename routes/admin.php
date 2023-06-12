@@ -10,19 +10,6 @@ use Illuminate\Support\Facades\DB;
 // author routes
 Route::get('/', [HomeController::class,'index'])->name('dashboard');
 
-# Author
-// sumber data
-Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
-// routes
-Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
-    'index' =>'author.index',
-    'create' =>'author.create',
-    'store' => 'author.store',
-    'edit' => 'author.edit',
-    'update' => 'author.update',
-    'destroy' => 'author.delete'
-]);
-
 // book routes
 # sumber data
 Route::get('/book/data', [DataController::class,'books'])->name('book.data');
@@ -84,13 +71,30 @@ Route::get('/transaksi/history', [HomeController::class,'history'])->name('histo
 Route::get('/buku/data-dipinjam', [DataController::class,'masih_dipinjam'])->name('buku.data.pinjam');
     Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('buku.masih_dipinjam');
 
-// user
+    # Author
+// sumber data
+Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
+// routes
+Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
+    'index' =>'author.index',
+    'create' =>'author.create',
+    'store' => 'author.store',
+    'edit' => 'author.edit',
+    'update' => 'author.update',
+    'destroy' => 'author.delete'
+]);
+
+# user
 // sumber data
 Route::get('/user/data', [DataController::class,'users'])->name('user.data');
 
 Route::resource('user','\App\Http\Controllers\Admin\UserController')->names([
     'index'=>'user.index',
+    'detail'=>'user.detail',
+    'edit'=>'user.edit',
+    'destroy'=>'user.delete',
+    'create'=>'user.create',
+    'show'=>'user.show'
 ]);
-
 
 Route::get('/cetak-peminjam', [HomeController::class,'cetak_pdf'])->name('cetak_pdf');
