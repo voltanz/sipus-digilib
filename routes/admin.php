@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
 // author routes
 Route::get('/', [HomeController::class,'index'])->name('dashboard');
-
 // book routes
 # sumber data
 Route::get('/book/data', [DataController::class,'books'])->name('book.data');

@@ -12,9 +12,9 @@
         <div class="row">
             <div class="col-6">
                 <div class="me-2">
-                <h3><b>Digilib SIPUS</b></h3><br>
+                <h3><b>Digilib SIPUS</b></h3><br><br>
                 <p class="text-left" style="font-size: 15px;">Digital Library of SMA Negeri 1 Blega</p><br>
-                <hr /><br>
+                <hr /><br><br>
                 <p class="text-left" style="font-size: 15px;">Kedong, Rosep, Kec. Blega, Kabupaten Bangkalan, Jawa Timur, 69174, ID</p><br>
                 <hr />
                 <p class="text-left" style="font-size: 15px;">E: perpus@sman1blega.ac.id</p>

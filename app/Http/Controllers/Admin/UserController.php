@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
+
+
 class UserController extends Controller
 {
     /**
@@ -21,14 +23,16 @@ class UserController extends Controller
         return view('admin.user.index');
     }
 
-    /**
+
+     /**
+
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -39,7 +43,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['name'=> 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
+
+        User::create($request->only('name'));
+        return redirect()->route('admin.user.index')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -73,6 +80,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, User $user)
     {
         User::where('id', $user->id)

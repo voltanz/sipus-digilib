@@ -2,12 +2,11 @@
 
 use App\Http\Controllers\User\BookController;
 use App\Http\Controllers\HomeController as DefaultsHomeController;
-use App\Http\Controllers\user\TransaksiController;
+use App\Http\Controllers\User\TransaksiController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
-
 
 Route::get('/book/collection',[BookController::class,'index'])->name('bookCollection');
 
@@ -59,4 +58,3 @@ Route::prefix('/publikasi')->group(function () {
 });
 
 Auth::routes();
-

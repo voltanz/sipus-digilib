@@ -2,8 +2,6 @@
 
 @section('title','Tambah Penulis')
 
-
-
 @section('content')
 
 <div class="col-md-6 mt-3">
@@ -14,7 +12,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form method="POST" action="{{ route('admin.author.store') }}">
+        <form method="POST" action="{{ route('admin.author.index') }}">
             @csrf
             <div class="card-body">
                 <div class="form-group">
@@ -26,7 +24,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-info   ">Simpan</button>
+                <button type="submit" class="btn btn-info">Simpan</button>
             </div>
         </form>
     </div>

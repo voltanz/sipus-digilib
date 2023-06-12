@@ -3,12 +3,16 @@
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize">Peminjaman</h2>
+        <h2 class="text-center text-capitalize py-3">::Peminjaman::</h2>
     </div>
-    <div class="container">
+    <center>
+    <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
+    </center>
+    <div class="container-fluid py-5 d-flex flex-column align-items-center"></div>
+    <div class="container" style="padding-bottom: 8rem">
         <div class="row">
             <div class="col d-flex">
-                <div class="me-2">
+                <div style="padding-right: 15px">
                     <i class="bi bi-person-vcard-fill"></i>
                 </div>
                 <div class="me-1">
@@ -17,8 +21,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-file-text-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-file-text-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>2. SURAT PENGANTAR</h4>
@@ -26,8 +30,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-hand-thumbs-up-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
                 <h4>3. MENAATI PERATURAN</h4>
@@ -37,8 +41,8 @@
         </div>
         <div class="row pt-5">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-book-half"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-book-half" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>4. 2 BUKU CUKUP</h4>
@@ -46,8 +50,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-calendar2-event"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-calendar2-event" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>5. LAMA PEMINJAMAN</h4>
@@ -55,8 +59,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-calendar2-week-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-calendar2-week-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
                 <h4>6. PERPANJANGAN PINJAMAN</h4>
@@ -66,17 +70,21 @@
         </div>
         <div class="row pt-5 pb-5">
             <div class="col-4 d-flex">
-                <div class="me-2">
-                    <i class="bi bi-file-earmark-break-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-file-earmark-break-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>7. JAMINAN PEMINJAMAN</h4>
-                <p>Peminjaman buku untuk keperluan pembuatan foto copy sebagian materi/isi buku wajib menyerahkan jaminan berupa Kartu Anggota dan Kartu Tanda Penduduk,Kartu Identitas lain. Jangka waktu peminjaman paling lama dua (2) jam dan harus dikembalikan pada hari dan tanggal yang sama.. Keterlambatan pengembalian akan dikenakan sanksi denda sebesar Rp 2.500,00 (dua ribu lima ratus rupiah) setiap keterlambatan satu (1) jam.</p>
+                <p>Peminjaman buku untuk keperluan pembuatan foto copy sebagian materi/isi buku wajib 
+                    menyerahkan jaminan berupa Kartu Anggota dan Kartu Tanda Penduduk,Kartu Identitas lain. 
+                    Jangka waktu peminjaman paling lama dua (2) jam dan harus dikembalikan pada hari dan tanggal yang sama. 
+                    Keterlambatan pengembalian akan dikenakan sanksi denda sebesar Rp 2.500,00 (dua ribu lima ratus rupiah) 
+                    setiap keterlambatan satu (1) jam.</p>
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-pencil-square"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-pencil-square" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>8. LAIN - LAIN</h4>

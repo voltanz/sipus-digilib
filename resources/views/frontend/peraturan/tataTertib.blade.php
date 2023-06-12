@@ -3,13 +3,17 @@
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize">Tata Tertib Perpustakaan</h2>
+        <h2 class="text-center text-capitalize py-3">::Tata Tertib Perpustakaan::</h2>
     </div>
-    <div class="container">
+    <center>
+    <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
+    </center>
+    <div class="container-fluid py-5 d-flex flex-column align-items-center"></div>
+    <div class="container" style="padding-bottom: 8rem">
         <div class="row">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-hand-thumbs-up"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-hand-thumbs-up" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>1. TAAT PERATURAN</h4>
@@ -19,8 +23,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="fs-4 bi bi-volume-off-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="fs-4 bi bi-volume-off-fill" style="font-size: 8rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>2. TENANG & TERTIB</h4>
@@ -28,8 +32,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-recycle"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-recycle" style="font-size: 1.4rem;"></i>
                 </div>
                 <div>
                 <h4>3. MENJAGA KEBERSIHAN</h4>
@@ -40,8 +44,8 @@
         </div>
         <div class="row pt-5">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-trash2-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-trash2-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>4. BEBAS SAMPAH</h4>
@@ -50,8 +54,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="fs-5 bi bi-person-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="fs-5 bi bi-person-fill" style="font-size: 1.4rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>5. SOPAN & RAPIH</h4>
@@ -61,8 +65,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="fs-5 bi bi-list-ul"></i>
+                <div style="padding-right: 15px">
+                    <i class="fs-5 bi bi-list-ul" style="font-size: 1.4rem;"></i>
                 </div>
                 <div>
                 <h4>6. HANYA MEMBAWA CATATAN</h4>
@@ -74,8 +78,8 @@
         </div>
         <div class="row pt-5">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-handbag-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-handbag-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>7. TIDAK MEMBAWA TAS</h4>
@@ -85,8 +89,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-archive-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-archive-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>8. GUNAKAN TEMPAT PENITIPAN</h4>
@@ -96,8 +100,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-cup-hot-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-cup-hot-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
                 <h4>9. DILARANG MAKAN & MINUM</h4>
@@ -109,8 +113,8 @@
         </div>
         <div class="row pt-5">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-slash-circle"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-slash-circle" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>10. DILARANG MEROKOK</h4>
@@ -119,8 +123,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-save-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-save-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>11. MENJAGA PROPERTI</h4>
@@ -129,8 +133,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-book-half"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-book-half" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
                 <h4>12. PENGEMBALIAN BUKU</h4>
@@ -143,8 +147,8 @@
         </div>
         <div class="row pt-5 pb-5">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-eye"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-eye" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>13. PEMERIKSAAN</h4>
@@ -154,20 +158,20 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-exclamation-triangle-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-exclamation-triangle-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>14. SANKSI</h4>
                 <p>Pelanggaran atas Tata Tertib akan dikenakan
-                    sanksi sesuai dengan prosedur dan ketentuan
+                    sanksi     sesuai dengan prosedur dan ketentuan
                     yang berlaku di lingkungan 
                     SMAN 1 Blega.</p>
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-pencil-square"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-pencil-square" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
                 <h4>15. LAIN-LAIN</h4>

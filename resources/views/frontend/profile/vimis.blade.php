@@ -24,8 +24,7 @@
                 <p class="text-center" style="font-size: 18px;">Seiring dengan meningkatnya kebutuhan informasi ilmiah serta pesatnya perkembangan Ilmu Pengetahuan,
                     maka Perpustakaan terus berupaya mengembangkan diri dan berusaha untuk meningkatkan mutu layanannya.
                     Berkaitan dengan upaya tersebut, Perpustakaan telah mendapatkan dukungan penuh dari UPT Perpustakaan SMAN 1 Blega.</p>
-                <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-                </div>
+                <div class="containe-fluid py-5 d-flex flex-column align-items-center"></div>
             </div>
         </div>
     </div>
