@@ -54,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="{{ route('profile.edit',$user) }}" class="btn teal"><i class="material-icons">edit</i></a>
+                    <a href="{{ route('profile.edit',$user) }}" class="btn teal"><i class="material-icons">Edit</i></a>
                 </div>
             </div>
         </div>

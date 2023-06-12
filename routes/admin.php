@@ -2,8 +2,11 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AuthorController;
+use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
@@ -12,6 +15,7 @@ Route::get('/', [HomeController::class,'index'])->name('dashboard');
 
 # Author
 // sumber data
+Route::post('/admin/authors', [AuthorController::class, 'store'])->name('admin.author.store');
 Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
 // routes
 Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
@@ -22,6 +26,15 @@ Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names
     'update' => 'author.update',
     'destroy' => 'author.delete'
 ]);
+
+# User
+// sumber data
+
+Route::get('/user/data', [DataController::class,'users'])->name('user.data');
+
+// routes
+Route::get('/user/data', [DataController::class,'users'])->name('user.data');
+Route::get('/user/detail/{id}', [HomeController::class,'detail'])->name('user.detail');
 
 // book routes
 # sumber data

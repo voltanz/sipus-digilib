@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\User;
+use Illuminate\Support\Facades\DB;
+
+
 class UserController extends Controller
 {
     /**
@@ -17,15 +21,16 @@ class UserController extends Controller
         return view('admin.user.index');
     }
 
-    /**
+
+     /**
+
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
-        return view ('admin.user.create');
+        return view('admin.user.create');
     }
 
     /**
@@ -36,7 +41,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['name'=> 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
+
+        User::create($request->only('name'));
+        return redirect()->route('admin.user.index')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -58,7 +66,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $user = DB::table('user')->where('id', $id)->get()->first();
+        return view('admin.user.edit', ['user' => $user]);
     }
 
     /**
@@ -68,9 +78,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+ 
+    public function update(Request $request, User $user)
     {
-        //
+        User::where('id', $user->id)
+        ->update([
+            'name' => $request->name,
+        ]);
+
+    return redirect('admin/user')->with('success', 'Data Berhasil Di Update');
     }
 
     /**
@@ -81,6 +97,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::where('id','=',$id)->delete();
+        return redirect('admin/user')->with('success', 'Data Berhasil Di Hapus');
     }
 }

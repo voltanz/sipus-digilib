@@ -3,13 +3,17 @@
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize">Pengembalian</h2>
+        <h2 class="text-center text-capitalize py-3">::Pengembalian::</h2>
     </div>
-    <div class="container">
+    <center>
+    <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
+    </center>
+    <div class="container-fluid py-5 d-flex flex-column align-items-center"></div>
+    <div class="container" style="padding-bottom: 8rem">
         <div class="row">
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-book-half"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-book-half" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>1. BAWA BUKU</h4>
@@ -18,8 +22,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-file-earmark-check-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-file-earmark-check-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>2. CEK BUKU</h4>
@@ -28,8 +32,8 @@
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-person-vcard-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-person-vcard-fill" style="font-size: 1.5rem;"></i>
                 </div>
                 <div>
                 <h4>3. KARTU ANGGOTA</h4>
@@ -40,25 +44,23 @@
         </div>
         <div class="row pt-5 pb-5">
             <div class="col-4 d-flex">
-                <div class="me-2">
-                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-hand-thumbs-up-fill" style="font-size: 1.2rem;"></i>
                 </div>
                 <div>
-                <h4>3. MENAATI PERATURAN</h4>
+                <h4>4. MENAATI PERATURAN</h4>
                 <p>Mentaati Peraturan dan Tata Tertib Perpustakaan.</p>
                 </div>
             </div>
             <div class="col d-flex">
-                <div class="me-2">
-                    <i class="bi bi-pencil-square"></i>
+                <div style="padding-right: 15px">
+                    <i class="bi bi-pencil-square" style="font-size: 1.2rem;"></i>
                 </div>
                 <div class="me-1">
                 <h4>5. LAIN - LAIN</h4>
                 <p>Hal-hal lain yang belum diatur di dalam Tata
                     Tertib ini akan ditetapkan dan diumumkan
                     kemudian.</p>
-                    <div style="padding-bottom:10rem">
-                    </div>
                 </div>
             </div>
         </div>

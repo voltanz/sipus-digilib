@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Author;
 use Illuminate\Support\Facades\DB;
 
-
 class AuthorController extends Controller
 {
     /**
@@ -81,7 +80,7 @@ class AuthorController extends Controller
             'name' => $request->name,
         ]);
 
-    return redirect('admin/author')->with('success', 'Data Berhasil Di update');
+    return redirect('admin/author')->with('success', 'Data Berhasil Di Update');
     }
 
     /**
