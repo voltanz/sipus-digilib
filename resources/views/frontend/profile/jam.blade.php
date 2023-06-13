@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-        <h2 class="text-center text-capitalize"><b>Jam Pelayanan Perpustakaan</b></h2>
+        <h2 class="text-center text-capitalize">::Jam Pelayanan Perpustakaan::</h2>
     </div>
     <!-- <center>
     <img src="{{ asset('assets/logo/perpus.png') }}" style="width: 900px;"></a>
@@ -24,7 +24,7 @@
                 <br><br>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6" style="padding-bottom: 7rem">
             <img src="{{ asset('assets/logo/perpus.png') }}" style="width: 800px;">
             <br><br><br>
             </div>

@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="containe-fluid py-5 d-flex flex-column align-items-center">
-    <h2 class="text-center text-capitalize">Visi Misi SMA Negeri 1 Blega</h2>
+    <h2 class="text-center text-capitalize">::Visi Misi SMA Negeri 1 Blega::</h2>
 </div>
  <center>
     <img src="{{ asset('assets/logo/smansaga.png') }}" style="width: 200px;"></a>
