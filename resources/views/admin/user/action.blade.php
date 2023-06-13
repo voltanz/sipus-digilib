@@ -1,4 +1,4 @@
-<a class="btn btn-info btn-sm" href="">
+<a class="btn btn-info btn-sm" href="{{ route('admin.user.edit', $model) }}">
     <i class="fas fa-pencil-alt">
     </i>
 </a>
@@ -6,12 +6,12 @@
     @csrf
     @method('DELETE')
     <button type="submit" id="tombol" onclick="return confirm('Apakah kamu yakin?')" class="btn btn-danger btn-sm"
-        href="{{ route('admin.user.detail', $model) }}">
+        href="{{ route('admin.user.delete', $model) }}">
         <i class=" fas fa-trash"></i>
-        Delete
+
     </button>
 </form>
-<a class="btn btn-primary btn-sm" href="">
+<a class="btn btn-primary btn-sm" href="{{ route('admin.user.show', $model) }}">
     <i class="fas fa-list">
     </i>
 </a>
