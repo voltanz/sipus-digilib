@@ -1,4 +1,5 @@
 @extends('admin.template.default')
+@section('title','Daftar Peminjaman')
 @push('datatables')
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
@@ -16,15 +17,15 @@
             </div>
         @endif
         <div class="card-header">
-            <h3 class="card-title text-capitalize">daftar buku yang masih dipinjam</h3>
+            <h3 class="card-title text-capitalize">Daftar Peminjaman</h3>
         </div>
         <div class="card-body">
             <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">
                 <thead>
                     <tr>
-                        <th>no</th>
-                        <th>judul</th>
-                        <th>kode</th>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Kode</th>
                     </tr>
                 </thead>
                 <tbody>

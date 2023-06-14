@@ -42,7 +42,7 @@ class VerificationController extends Controller
 
     public function redirectPath()
     {
-        return route('home');
+        return route('homepage');
     }
 
     public function verified ()

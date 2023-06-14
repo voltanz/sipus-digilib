@@ -10,9 +10,9 @@ use App\Transaksi;
 use Yajra\DataTables\Facades\DataTables;
 use Spatie\Permission\Models\Role;
 
-class DataController extends Controller
-{
+class DataController extends Controller {
     public function authors()
+
     {
         $author = Author::query();
         return DataTables()
@@ -27,6 +27,7 @@ class DataController extends Controller
     }
 
     public function Books()
+
     {
         $book = Book::orderBy('title', 'ASC')->get();
 
@@ -46,6 +47,7 @@ class DataController extends Controller
     }
 
     public function borrows()
+
     {
         $transaksi = Transaksi::orderBy('transaksi.id', 'DESC')->get();
         $transaksi->load('user');
@@ -62,15 +64,14 @@ class DataController extends Controller
             ->rawColumns(['action'])
             ->toJson();
     }
-
     public function masih_dipinjam () {
         $masih_dipinjam =  Transaksi::join('detail_transaksi','transaksi.id','=','detail_transaksi.transaksi_id')->join('books','detail_transaksi.book_id','=','books.id')->select('books.title','transaksi.kode_pinjam')->where('detail_transaksi.status' , '=', 0)->get();
         return DataTables()->of($masih_dipinjam)
         ->addIndexColumn()
         ->toJson();
     }
-
     public function users()
+    
     {
         $users =Role::find(2)->users();
         return DataTables()->of($users)

@@ -16,27 +16,27 @@ class CategorySeeder extends Seeder
     {
         $kategori = [
             [
-                'category_name' => 'karya umum'
+                'category_name' => 'Karya Umum'
             ],
             [
-                'category_name' => 'filsafat'
+                'category_name' => 'Filsafat'
             ],
             [
-                'category_name' => 'ilmu sosial'
+                'category_name' => 'Ilmu Sosial'
             ],
             [
-                'category_name' => 'bahasa'
+                'category_name' => 'Bahasa'
             ],
             [
-                'category_name' => 'ilmu murni'
+                'category_name' => 'Ilmu Murni'
             ],[
-                'category_name' => 'pengetahuan praktis'
+                'category_name' => 'Pengetahuan Praktis'
             ],
             [
-                'category_name' => 'kesenian dan hiburan'
+                'category_name' => 'Kesenian dan Hiburan'
             ],
             [
-                'category_name' => 'kesusastraan'
+                'category_name' => 'Kesusastraan'
             ],
         ];
 

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Htt\Controllers\Admin\ProfileController;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
@@ -81,7 +82,8 @@ Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names
     'store' => 'author.store',
     'edit' => 'author.edit',
     'update' => 'author.update',
-    'destroy' => 'author.delete'
+    'destroy' => 'author.delete',
+    'show' => 'author.show'
 ]);
 
 # user
