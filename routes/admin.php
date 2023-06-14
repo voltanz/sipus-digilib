@@ -29,7 +29,7 @@ Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
 Route::get('/borrow/data', [DataController::class, 'borrows'])->name('borrow.data');
 Route::get('/borrow', [HomeController::class, 'borrows'])->name('borrow.index');
 Route::get('/borrow/detail/{id}', [HomeController::class, 'detail'])->name('borrow.detail');
-Route::post('/update', 'HomeController@update')->name('borrow.update');
+Route::post('/update', 'HomeController@update')->name('borrow.update'); //barusan diperkaiki
 
 // history route
 Route::get('transaksi', function () {
