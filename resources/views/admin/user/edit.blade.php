@@ -1,6 +1,6 @@
 @extends('admin.template.default')
 
-@section('title', 'edit pengguna')
+@section('title', 'Edit Pengguna')
 @section('content')
     <div class="col-md-10 mt-3">
         <div class="card card-info">

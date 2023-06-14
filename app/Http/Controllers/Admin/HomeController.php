@@ -11,10 +11,9 @@ use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Category;
 use Barryvdh\DomPDF\Facade\PDF;
-
-class HomeController extends Controller
-{
+class HomeController extends Controller {
     public function index()
+
     {
         $categories = Category::all();
         $grafik = DB::table('detail_transaksi')
@@ -30,11 +29,13 @@ class HomeController extends Controller
     }
 
     public function borrows()
+
     {
         return view('admin.borrow.index');
     }
 
     public function detail($id)
+
     {
         $detail = DB::table('transaksi')
             ->join('users', 'users.id', '=', 'transaksi.user_id')
@@ -47,12 +48,13 @@ class HomeController extends Controller
     }
 
     public function update(Request $request)
+
     {
         $tgl_kembali = strtotime($request->tgl_kembali);
         $tgl_pinjam = strtotime($request->tgl_pinjam);
         $tgl_pengembalian = strtotime($request->tgl_pengembalian);
         if ($tgl_pengembalian < $tgl_pinjam) {
-            return redirect()->back()->with('alert', 'Tanggal Pengembalian Tidak Boleh Kurang dari Tanggal Peminjaman');
+            return redirect()->back()->with('alert', 'Tanggal pengembalian tidak boleh kurang dari Tanggal Peminjaman');
         }
         if ($tgl_pengembalian < $tgl_kembali) {
             $denda = 0;
@@ -76,16 +78,20 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Data Berhasil Simpan');
     }
 
-    public function masih_dipinjam () {
+    public function masih_dipinjam () 
+    
+    {
         return view('admin.book.dipinjam');
     }
 
     public function history()
+
     {
         return view('admin.borrow.history');
     }
 
-    public function cetak_pdf () {
+    public function cetak_pdf () 
+    {
         $cetak = Transaksi::all();
         $pdf = PDF::loadview('admin.borrow.cetak_pdf',['cetak'=>$cetak]);
         return $pdf->stream();
