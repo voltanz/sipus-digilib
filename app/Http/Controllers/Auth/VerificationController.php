@@ -6,19 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 
-class VerificationController extends Controller
-{
-    /*
-    |--------------------------------------------------------------------------
-    | Email Verification Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller is responsible for handling email verification for any
-    | user that recently registered with the application. Emails may also
-    | be re-sent if the user didn't receive the original email message.
-    |
-    */
-
+class VerificationController extends Controller {
+   
     use VerifiesEmails;
 
     /**
@@ -33,20 +22,16 @@ class VerificationController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
-
-    public function redirectPath()
-    {
+    public function redirectPath() {
         return route('home');
     }
 
-    public function verified ()
-    {
+    public function verified () {
         return redirect($this->redirectPath())->with('success', 'Email Anda telah diverifikasi.');
     }
 }

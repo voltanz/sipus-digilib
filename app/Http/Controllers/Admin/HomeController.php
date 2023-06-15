@@ -12,10 +12,7 @@ use App\User;
 use App\Category;
 use Barryvdh\DomPDF\Facade\PDF;
 use Spatie\Permission\Models\Role;
-
-
-class HomeController extends Controller
-{
+class HomeController extends Controller {
     public function index()
     {
         $categories = Category::all();
@@ -30,12 +27,10 @@ class HomeController extends Controller
 
         return view('admin/home', compact('dipinjam', 'user', 'buku', 'categories', 'grafik'));
     }
-
     public function borrows()
     {
         return view('admin.borrow.index');
     }
-
     public function detail($id)
     {
         $detail = DB::table('transaksi')
@@ -47,7 +42,6 @@ class HomeController extends Controller
 
         return view('admin.borrow.detail', compact('detail'));
     }
-
     public function update(Request $request)
     {
         $tgl_kembali = strtotime($request->tgl_kembali);
@@ -77,11 +71,9 @@ class HomeController extends Controller
 
         return redirect()->back()->with('success', 'Data Berhasil Simpan');
     }
-
     public function masih_dipinjam () {
         return view('admin.book.dipinjam');
     }
-
     public function history()
     {
         return view('admin.borrow.history');

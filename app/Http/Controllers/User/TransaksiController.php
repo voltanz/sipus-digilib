@@ -8,16 +8,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Borrow;
 use App\Detail_transaksi;
-
-class TransaksiController extends Controller
-{
+class TransaksiController extends Controller {
     public function index()
     {
         $borrow = Transaksi::where('user_id', Auth()->user()->id)->orderByDesc('id')->get();
 
         return view('frontend.pinjam.transaksi', compact('borrow'));
     }
-
     public function store(Request $request)
     {
         $id = $request->id;
@@ -46,7 +43,6 @@ class TransaksiController extends Controller
 
         return redirect()->back()->with('success', 'Buku berhasil disimpan, Tunjukan Kode Pinjam Ke admin saat Pengembalian Buku');
     }
-
     public function detail_pinjam($id)
     {
         $detail = Detail_transaksi::where('transaksi_id', $id)->get();

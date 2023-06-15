@@ -6,9 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-
-class UserController extends Controller
-{
+class UserController extends Controller {
     /**
      * Display a listing of the resource.
      *
@@ -104,20 +102,4 @@ class UserController extends Controller
         User::where('id','=',$id)->delete();
         return redirect('admin/user')->with('success', 'Data Berhasil Di Hapus');
     }
-
-    // experiment
-    // pengirim
-    // public function pengirim()
-    // {
-    //     $variabel = 'Nilai variabel yang dikirim';
-    //     $url = route('admin.user.create') . '?variabel=' . urlencode($variabel);
-    //     return redirect($url);
-    // }
-    // // penerima
-    // public function penerima(Request $request)
-    // {
-    //     $variabel = $request->query('variabel');
-
-    //     return view('admin.user.create', ['variabel' => $variabel]);
-    // }
 }

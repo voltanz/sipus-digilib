@@ -10,9 +10,7 @@ use App\Detail_transaksi;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
-class BookController extends Controller
-{
+class BookController extends Controller {
     public function index()
     {
 
@@ -30,7 +28,6 @@ class BookController extends Controller
             'books' => $books
         ]);
     }
-
     public function borrow(Request $request)
     {
         $book = Book::where('id', $request->book_id)->first();
@@ -67,7 +64,6 @@ class BookController extends Controller
 
         return redirect('/')->with('success', 'Buku' . ucwords($request->title) . 'Berhasil Ditambahkan ke List Peminjaman');
     }
-
     public function pinjam()
     {
         $user = Auth()->user();

@@ -5,9 +5,6 @@
     <div class="containe-fluid py-5 d-flex flex-column align-items-center">
         <h2 class="text-center text-capitalize"><b>Kontak Perpustakaan</b></h2>
     </div>
-    <!-- <center>
-    <img src="{{ asset('assets/logo/perpus.png') }}" style="width: 900px;"></a>
-    </center><br><br> -->
     <div class="container"><br>
         <div class="row">
             <div class="col-6">

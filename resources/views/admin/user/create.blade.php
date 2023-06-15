@@ -19,7 +19,6 @@
                     </div>
 
                 </div>
-
                 <div class="row mb-3">
                     <div class="col d-flex align-items-center">
                         <div class="position-relative w-100">
@@ -45,9 +44,6 @@
                         </div>
                     </div>
                 @endif
-
-
-
                 <div class=" row mb-3">
                     <div class="col d-flex align-items-center">
                         <div class="position-relative w-100">
@@ -62,7 +58,6 @@
 
                     </div>
                 </div>
-
                 <div class="row mb-3">
                     <div class="col d-flex align-items-center">
                         <div class="position-relative w-100">
@@ -80,5 +75,4 @@
             </form>
         </div>
     </div>
-
 @endsection

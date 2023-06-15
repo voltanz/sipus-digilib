@@ -9,7 +9,6 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
 use Spatie\Permission\Models\Role;
-
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasRoles;
