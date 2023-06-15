@@ -11,13 +11,13 @@
         <div class="jumbotron jumbotron-fluid mb-5">
             <div class="container-fluid" style="padding-left:5rem; padding-right:5rem">
                 <div class="row pt-5 pb-5">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-6">
                         <iframe width="660" height="370" src="https://www.youtube.com/embed/VogR3q2HMW8?autoplay=1&mute=1"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-6">
                         <div class="pt-5">
                             <div class="overlay-content text-white text-light fw-bold">
                                 <h1 style="font-weight:bold">Situs Perpustakaan</h1>

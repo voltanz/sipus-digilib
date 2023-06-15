@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('admin/template/partials/head')
+@include('admin.template.partials.head')
 @include('sweetalert::alert')
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -12,7 +12,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="/" class="brand-link">
+            <a href="index3.html" class="brand-link">
 
                 <img src="{{ asset('assets/logo/smansaga.png') }}" alt="smansaga.png" class="brand-image"
                     style="opacity: .8">

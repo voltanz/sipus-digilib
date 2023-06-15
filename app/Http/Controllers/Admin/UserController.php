@@ -5,32 +5,29 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller {
+class UserController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-
     {
-        //
         return view('admin.user.index');
     }
-
-
      /**
 
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-
+    public function create(Request $request)
     {
-        return view('admin.user.create');
+        $coba = $request->get('select');
+        return view('admin.user.create', compact('coba'));
     }
 
     /**
@@ -40,11 +37,17 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-
     {
         $request->validate(['name'=> 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
 
-        User::create($request->only('name'));
+        $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'nisn' => $request['nisn'],
+            'password' => Hash::make($request['password']),
+        ]);
+
+        $user->assignRole($request->get('select'));
         return redirect()->route('admin.user.index')->with('success', 'Data Berhasil Ditambahkan');
     }
 
@@ -55,7 +58,6 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-
     {
         $user = User::find($id);
         return view ('admin.user.show',compact('user'));
@@ -68,7 +70,6 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id )
-
     {
         $user = User::find($id);
         return view('admin.user.edit', compact('user'));
@@ -83,16 +84,13 @@ class UserController extends Controller {
      */
 
     public function update(Request $request, User $user)
-
     {
         User::where('id', $user->id)
         ->update([
             'name' => $request->name,
             'email'=>$request->email
         ]);
-
     return redirect('admin/user')->with('success', 'Data Berhasil Di Update');
-
     }
 
     /**
@@ -102,9 +100,24 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    
     {
         User::where('id','=',$id)->delete();
         return redirect('admin/user')->with('success', 'Data Berhasil Di Hapus');
     }
+
+    // experiment
+    // pengirim
+    // public function pengirim()
+    // {
+    //     $variabel = 'Nilai variabel yang dikirim';
+    //     $url = route('admin.user.create') . '?variabel=' . urlencode($variabel);
+    //     return redirect($url);
+    // }
+    // // penerima
+    // public function penerima(Request $request)
+    // {
+    //     $variabel = $request->query('variabel');
+
+    //     return view('admin.user.create', ['variabel' => $variabel]);
+    // }
 }

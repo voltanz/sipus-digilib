@@ -54,7 +54,7 @@
             $('#dataTable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.borrow.data') }}",
+                ajax: '{{ route('admin.borrow.data') }}',
                 select: true,
                 columns: [{
                         data: 'DT_RowIndex',

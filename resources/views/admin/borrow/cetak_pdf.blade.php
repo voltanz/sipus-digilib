@@ -1,83 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <style>
-        #user {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        #user td,
-        #user th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #user tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        #user tr:hover {
-            background-color: #ddd;
-        }
-
-        #user th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #000503;
-            color: white;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laporan</title>
 </head>
 
 <body>
-
-    <table border="0" width="100%" style="text-align:center;">
-        <tbody>
-            <tr>
-                <td align="left" width="15%"><img src="{{ asset('assets/logo/smansaga.png') }}" width="100px"
-                        height="100px" alt="Logo Smansaga" title="Logo Smansaga"></td>
-                <td align="center" width="70%">
-                    <div>
-                        <span style="font-family: 'Times New Roman'; font-size:12pt">PEMERINTAH PROVINSI JAWA
-                            TIMUR</span><br>
-                        <span style="font-family: 'Times New Roman'; font-size:12pt">DINAS PENDIDIKAN</span><br>
-                        <span style="font-family: 'Times New Roman'; font-size:14pt"><strong>SMA NEGERI 1
-                                BLEGA</strong></span><br>
-                        <span style="font-family: 'Times New Roman'; font-size:11pt">Jl. Raya Blega Kec. Blega Kab.
-                            Bangkalan Telp (031) 3041 027 <br>email: smansaga@yahoo.co.id</span>
-                    </div>
-                </td>
-                <td align="left" width="15%"><img src="{{ asset('assets/logo/logo_jatim.png') }}" width="100px"
-                        height="100px" alt="Logo Jatim" title="Logo Jatim"></td>
-            </tr>
-        </tbody>
-    </table>
-    <hr style="height:10px; border:0; border-top:3px double #000000">
-    <div style="text-align: center">
-        <h3>Laporan Daftar Peminjaman</h3>
+    <div class="w-100">
+        <section id="kop"></section>
+        <section id="isi">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NISN</th>
+                        <th scope="col">Kode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($cetak as $item)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td class="text-capitalize">{{ $item->user->name }}</td>
+                            <td>{{ $item->user->nisn }}</td>
+                            <td>{{ $item->kode_pinjam }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </section>
+        <section id="footer"></section>
     </div>
-
-    <table id="user">
-        <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>NISN</th>
-            <th>Kode</th>
-        </tr>
-        @foreach ($cetak as $item)
-            <tr>
-                <td>{{ $loop->iteration }}</td>
-                <td>{{ $item->user->name }}</td>
-                <td>{{ $item->user->nisn }}</td>
-                <td>{{ $item->kode_pinjam }}</td>
-            </tr>
-        @endforeach
-    </table>
-
 </body>
 
 </html>
