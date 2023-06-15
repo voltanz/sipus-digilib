@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid mt-3">
         <div class="row text-capitalize">
-            <div class="col-lg-3 col-5">
+            <div class="col-lg-4 col-4">
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">
                         <h3>{{ $dipinjam }}</h3>
@@ -16,7 +16,7 @@
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-4 col-4">
                 <div class="small-box bg-success bg-gradient">
                     <div class="inner">
                         <h3>{{ $user }}</h3>
@@ -29,7 +29,7 @@
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-4 col-4">
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">
                         <h3>{{ $buku }}</h3>
