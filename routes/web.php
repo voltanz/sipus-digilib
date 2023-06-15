@@ -58,3 +58,23 @@ Route::prefix('/publikasi')->group(function () {
 });
 
 Auth::routes();
+
+// experiment
+// pengirim
+// Route::get('/admin.user.create', function () {
+//     $variabel = 'Nilai variabel yang dikirim';
+//     $url = route('admin.user.create') . '?variabel=' . urlencode($variabel);
+
+//     return redirect($url);
+// })->name('pengirim');
+
+// // // penerima
+// Route::get('/penerima', function (Request $request) {
+//     $variabel = $request->query('variabel');
+
+//     return view('halaman.penerima', ['variabel' => $variabel]);
+// })->name('halaman.penerima');
+
+// Route::get('/admin/user/create',function () {
+
+// });

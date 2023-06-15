@@ -26,7 +26,7 @@
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="" class="btn btn-info m-2">Profile</a>
-                <a href="{{ route('logout') }}" class="btn btn-info m-2 float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                     {{ __('Logout') }}
                 </a>

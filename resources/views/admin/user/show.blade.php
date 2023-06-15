@@ -1,5 +1,5 @@
 @extends('admin.template.default')
-@section('title', 'Detail Pengguna')
+
 @section('title', $user->id)
 @section('content')
     <div class="container py-5">

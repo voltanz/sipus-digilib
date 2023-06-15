@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid mt-3">
         <div class="row text-capitalize">
-            <div class="col-lg-4 col-4">
+            <div class="col-lg-3 col-5">
                 <!-- small box -->
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">
@@ -20,7 +20,7 @@
             <!-- ./col -->
 
             <!-- ./col -->
-            <div class="col-lg-4 col-4">
+            <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-success bg-gradient">
                     <div class="inner">
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-4 col-4">
+            <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">

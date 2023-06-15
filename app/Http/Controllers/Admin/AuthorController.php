@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 use App\Author;
 use Illuminate\Support\Facades\DB;
 
-class AuthorController extends Controller {
+class AuthorController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-
     {
         return view('admin.author.index');
     }
@@ -25,7 +25,6 @@ class AuthorController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create()
-
     {
         return view('admin.author.create');
     }
@@ -37,7 +36,6 @@ class AuthorController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-
     {
         $request->validate(['name' => 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
 
@@ -52,7 +50,6 @@ class AuthorController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-
     {
         //
     }
@@ -64,7 +61,6 @@ class AuthorController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-
     {
         $author = DB::table('authors')->where('id', $id)->get()->first();
         return view('admin.author.edit', ['author' => $author]);
@@ -78,7 +74,6 @@ class AuthorController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Author $author)
-
     {
         Author::where('id', $author->id)
         ->update([
@@ -86,7 +81,6 @@ class AuthorController extends Controller {
         ]);
 
     return redirect('admin/author')->with('success', 'Data Berhasil Di Update');
-
     }
 
     /**
@@ -96,7 +90,6 @@ class AuthorController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    
     {
         Author::where('id','=',$id)->delete();
         return redirect('admin/author')->with('success', 'Data Berhasil Di Hapus');
