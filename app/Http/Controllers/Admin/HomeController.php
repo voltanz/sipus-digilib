@@ -12,7 +12,9 @@ use App\User;
 use App\Category;
 use Barryvdh\DomPDF\Facade\PDF;
 use Spatie\Permission\Models\Role;
-class HomeController extends Controller {
+
+class HomeController extends Controller
+{
     public function index()
     {
         $categories = Category::all();
@@ -22,7 +24,7 @@ class HomeController extends Controller {
             ->select('detail_transaksi.*', 'books.*', 'categories.*')
             ->get();
         $buku = Book::all()->count();
-        $user =Role::find(2)->users()->count();
+        $user = Role::find(2)->users()->count();
         $dipinjam  = Detail_transaksi::where(['status' => 0])->count();
 
         return view('admin/home', compact('dipinjam', 'user', 'buku', 'categories', 'grafik'));
@@ -71,7 +73,8 @@ class HomeController extends Controller {
 
         return redirect()->back()->with('success', 'Data Berhasil Simpan');
     }
-    public function masih_dipinjam () {
+    public function masih_dipinjam()
+    {
         return view('admin.book.dipinjam');
     }
     public function history()
@@ -79,9 +82,10 @@ class HomeController extends Controller {
         return view('admin.borrow.history');
     }
 
-    public function cetak_pdf () {
+    public function cetak_pdf()
+    {
         $cetak = Transaksi::all();
-        $pdf = PDF::loadview('admin.borrow.cetak_pdf',['cetak'=>$cetak]);
+        $pdf = PDF::loadview('admin.borrow.cetak_pdf', ['cetak' => $cetak]);
         return $pdf->stream();
     }
 }
