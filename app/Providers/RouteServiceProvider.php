@@ -30,8 +30,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
         parent::boot();
     }
 
@@ -51,7 +49,7 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapAdminRoutes()
     {
-        Route::middleware('web', 'auth', 'role:admin')
+        Route::middleware('web', 'auth', 'role:admin||staf')
             ->prefix('admin')
             ->name('admin.')
             ->namespace($this->namespace . '\admin')
