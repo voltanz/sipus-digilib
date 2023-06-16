@@ -27,7 +27,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item active" href="{{ route('admin.user.create') }}?select=user">User</a></li>
-                    <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=staff">Staff</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=staf">Staf</a></li>
                     <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=admin">Admin</a></li>
                 </ul>
             </div>

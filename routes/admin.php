@@ -89,13 +89,13 @@ Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names
 // sumber data
 Route::get('/user/data', [DataController::class, 'users'])->name('user.data');
 
-Route::resource('user', '\App\Http\Controllers\Admin\UserController')->names([
-    'index' => 'user.index',
-    'edit' => 'user.edit',
-    'destroy' => 'user.delete',
-    'create' => 'user.create',
-    'show' => 'user.show',
-    'store' => 'user.store'
+Route::resource('user','\App\Http\Controllers\Admin\UserController')->names([
+    'index'=>'user.index',
+    'edit'=>'user.edit',
+    'destroy'=>'user.delete',
+    'create'=>'user.create',
+    'show'=>'user.show',
+    'store'=>'user.store'
 ]);
 
 Route::get('/cetak-peminjam', [HomeController::class, 'cetak_pdf'])->name('cetak_pdf');

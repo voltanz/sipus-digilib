@@ -8,9 +8,13 @@ use App\Author;
 use App\Book;
 use App\Category;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage; 
-class BookController extends Controller {
-    public function index() {
+
+use Illuminate\Support\Facades\Storage;
+
+class BookController extends Controller
+{
+    public function index()
+    {
         return view('admin/book/index');
     }
     public function create() {

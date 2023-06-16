@@ -6,20 +6,20 @@
             <h2 class="text-capitalize text-center mb-4">Tambah {{ $coba }}</h2>
             <form class="w-50" action="{{ route('admin.user.store') }}?select={{ $coba }}" method="POST">
                 @csrf
-                <div class="row mb-3 mb-3">
+                <div class="row mb-4">
                     <div class="col d-flex align-items-center">
                         <div class="w-100 position-relative">
                             <input class="form-control h-full" id="first_name" name="name" autocomplete="off"
                                 placeholder="Your Name" value="{{ old('name') }}">
                             @error('name')
-                                <span class="register text-danger position-absolute top-100"
+                                <span class="text-danger position-absolute top-100 register"
                                     data-error="{{ $message }}">{{ $message }}</span>
                             @enderror()
                         </div>
                     </div>
 
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="col d-flex align-items-center">
                         <div class="position-relative w-100">
                             <input class="form-control" id="email" name="email" autocomplete="off"
@@ -32,7 +32,7 @@
                 </div>
 
                 @if ($coba === 'user')
-                    <div class="row mb-3">
+                    <div class="row mb-4">
                         <div class="col d-flex align-items-center">
                             <div class="position-relative w-100">
                                 <input class="form-control" id="nisn" name="nisn" autocomplete="off"
@@ -44,7 +44,8 @@
                         </div>
                     </div>
                 @endif
-                <div class=" row mb-3">
+
+                <div class=" row mb-4">
                     <div class="col d-flex align-items-center">
                         <div class="position-relative w-100">
                             <input class="form-control" id="password" name="password" type="password"
@@ -58,7 +59,8 @@
 
                     </div>
                 </div>
-                <div class="row mb-3">
+
+                <div class="row mb-4">
                     <div class="col d-flex align-items-center">
                         <div class="position-relative w-100">
                             <input class="form-control" id="password_confirmation" placeholder="Confirm Password"

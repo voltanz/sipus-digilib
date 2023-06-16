@@ -4,9 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Database\DBAL\TimestampType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-class UserController extends Controller {
+
+class UserController extends Controller
+{
+
     /**
      * Display a listing of the resource.
      *
@@ -36,12 +40,26 @@ class UserController extends Controller {
      */
     public function store(Request $request)
     {
-        $request->validate(['name'=> 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
+        $validator = validator($request->all(), [
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users',
+            'nisn'=>'numeric|min:10|unique:users',
+            'password'=>'required|string|min:8|confirmed',
+        ]);
+
+        $select = $request->get('select');
+        $time = ($select === 'user') ? null : date("Y-m-d H:i:s");
+        $name = $select === 'user' ? '' : $select;
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         $user = User::create([
-            'name' => $request['name'],
+            'name' => $name . " " . $request['name'],
             'email' => $request['email'],
             'nisn' => $request['nisn'],
+            'email_verified_at'=> $time,
             'password' => Hash::make($request['password']),
         ]);
 
