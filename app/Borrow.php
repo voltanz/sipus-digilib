@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 class Borrow extends Model
 {
     protected $table = 'borrow_history';
@@ -18,7 +17,6 @@ class Borrow extends Model
     {
         return $this->belongsTo(Book::class);
     }
-
     public function transaksi()
     {
         return $this->belongsTo(Transaksi::class);

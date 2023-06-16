@@ -4,12 +4,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col s12 m12">
-                <blockquote>
-                    <h5>Daftar Buku Sedang Dipinjam</h5>
-                </blockquote>
-                <div class="card">
-                    <table class="responsive-table">
+            <div class="col s12 m12 pt-3">
+                <h2 class="text-center mb-4">Daftar Buku Sedang Dipinjam</h2>
+                </center>
+                <div class="card p-3">
+                    <table class="table table-striped table-hover responsive-table table-bordered">
                         <thead>
                             <tr>
                                 <th style="width: 5px;">No</th>
@@ -32,9 +31,9 @@
                                     <td>{{ date('d-m-Y', strtotime($row->tgl_kembali)) }}</td>
                                     <td>
                                         @if ($row->status == 0)
-                                            <span class="new badge yellow" data-badge-caption="Belum Kembali"></span>
+                                            <span class="badge bg-warning text-dark">Belum Kembali</span>
                                         @else
-                                            <span class="new badge" data-badge-caption="Sudah Kembali"></span>
+                                            <span class="badge bg-primary">Sudah Kembali</span>
                                         @endif
                                     </td>
                                 </tr>

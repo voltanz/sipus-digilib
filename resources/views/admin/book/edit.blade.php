@@ -1,6 +1,5 @@
 @extends('admin/template/default')
 
-
 @section('title','Edit Buku')
 
 @section('content')
@@ -11,13 +10,10 @@
 @endpush
 
 <div class="col-md-10 mt-3">
-    <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Form Edit Data Buku</h3>
         </div>
-        <!-- /.card-header -->
-        <!-- form start -->
         <form method="POST" action="/admin/book/{{ $book->id }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
@@ -57,7 +53,7 @@
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                <label class="custom-file-label" for="exampleInputFile">Choose File</label>
                             </div>
                         </div>
                         @error('image')
@@ -81,16 +77,12 @@
 @push('scripts')
 <script src="{{ asset('assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
 <script src="{{asset('assets/plugins/select2/js/select2.full.min.js')}}"></script>
-<!-- ck editor -->
 <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
-<!-- Summernote -->
 <script src="{{asset('assets/plugins/summernote/summernote-bs4.min.js')}}"></script>
 <script>
     $('#summernote').summernote({
         height: 200
     })
-
-    // customfile
 
     $(document).ready(function() {
         bsCustomFileInput.init();
@@ -98,16 +90,12 @@
 
     $('.select2').select2()
 
-    //Initialize Select2 Elements
     $('.select2bs4').select2({
         theme: 'bootstrap4'
     })
 
     $(function() {
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
         CKEDITOR.replace('editor1');
-        //bootstrap WYSIHTML5 - text editor
         $(".textarea").wysihtml5();
     });
 </script>

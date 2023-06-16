@@ -12,13 +12,10 @@
 @endpush
 
 <div class="col-md-10 mt-3">
-    <!-- general form elements -->
     <div class="card card-info">
         <div class="card-header">
             <h3 class="card-title">Form Tambah Data Buku</h3>
         </div>
-        <!-- /.card-header -->
-        <!-- form start -->
         <form method="POST" action="{{ route('admin.book.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
@@ -53,11 +50,11 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
+                    <label for="exampleInputFile">File Input</label>
                     <div class="input-group">
                         <div class="custom-file">
                             <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                            <label class="custom-file-label" for="exampleInputFile">Choose File</label>
                         </div>
                     </div>
                     @error('image')

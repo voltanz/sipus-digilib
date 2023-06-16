@@ -1,13 +1,13 @@
 @extends('frontend.default')
 
 @section('content')
-    <div class="main-container"
-        style="background-image: url({{ asset('assets/logo/perpus.png') }});
-                background-position: top;
-                background-repeat: no-repeat;
-                background-size: cover;
-                padding-top:5rem;
-                padding-bottom:4rem;">
+    <div class="main-container" 
+     style="background-image: url('{{ asset('assets/logo/perpus.png') }}');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 5rem;
+            padding-bottom: 4rem;">
         <div class="jumbotron jumbotron-fluid mb-5">
             <div class="container-fluid" style="padding-left:5rem; padding-right:5rem">
                 <div class="row pt-5 pb-5">
@@ -39,11 +39,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- Facts Start -->
     <section class="container-fluid facts my-3 py-3">
         <div class="container py-5">
             <div class="row g-5">
@@ -117,10 +115,10 @@
                                 kitchen set untuk ruang terbatas</a><br><span
                                 style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Desain Interior -
                                 Update : 10/04/2023</span></li>
-                        <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>Anjing</a><br><span
+                        <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of dedication</a><br><span
                                 style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
-                        <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>Anjing</a><br><span
+                        <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of dedication</a><br><span
                                 style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
                                 10/04/2023</span></li>
                         <li>9. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165769'>Buku panduan praktik
