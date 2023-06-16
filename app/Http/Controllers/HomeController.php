@@ -9,35 +9,24 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 use App\User;
-
 class HomeController extends Controller
 {
-
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    public function landingPage()
-    {
+    public function landingPage() {
         $buku = Book::all()->count();
         $user = Role::find(2)->users()->count();
         return view('index', compact('user', 'buku'));
     }
-    public function index()
-    {
+    public function index() {
         $books = Auth()->user()->borrow;
 
         return view('home', compact('books'));
     }
-
     public function profile()
     {
         $user = Auth()->user();
 
         return view('frontend.user.index', compact('user'));
     }
-
     public function edit(User $user)
     {
         return view('frontend.user.edit', [

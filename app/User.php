@@ -9,7 +9,6 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
 use Spatie\Permission\Models\Role;
-
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasRoles;
@@ -21,6 +20,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $fillable = [
         'name', 'email', 'password','nisn','email_verified_at'
+
     ];
 
     /**

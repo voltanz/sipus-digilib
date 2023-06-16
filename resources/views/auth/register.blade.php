@@ -19,9 +19,7 @@
                             @enderror()
                         </div>
                     </div>
-
                 </div>
-
                 <div class="row mb-3">
                     <div class="col d-flex align-items-center">
                         <i class="bi bi-envelope-at-fill me-2 fs-2"></i>
@@ -47,7 +45,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class=" row mb-3">
                     <div class="col d-flex align-items-center">
                         <i class="bi bi-lock-fill me-2 fs-2"></i>
@@ -60,10 +57,8 @@
                                 </span>
                             @enderror
                         </div>
-
                     </div>
                 </div>
-
                 <div class="row mb-3">
                     <div class="col d-flex align-items-center">
                         <i class="bi bi-lock-fill me-2 fs-2"></i>

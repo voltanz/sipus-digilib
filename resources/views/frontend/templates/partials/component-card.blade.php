@@ -1,6 +1,6 @@
 <div class="col my-2">
     <div class="d-flex flex-column align-items-center card h-100">
-        <div class="mb-2">
+        <div class="mb-2 p-4">
             <img src="{{ $book->getCover() }}" class="card-img-top">
         </div>
         <div class="card-body d-flex flex-column justify-content-between">

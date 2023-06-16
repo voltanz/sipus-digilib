@@ -11,7 +11,6 @@
 
 <div class="row mt-3">
     <div class="col-md-4">
-        <!-- general form elements -->
         <div class="card card-info card-outline">
             <div class="card-body box-profile">
                 <div class="text-center">
@@ -19,7 +18,6 @@
                 </div>
                 <h3 class="profile-username text-center">Cover Buku</h3>
             </div>
-            <!-- /.card-body -->
         </div>
     </div>
     <div class="col-md-8">
@@ -29,13 +27,12 @@
                     <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab">Deskripsi</a></li>
                     <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Detail</a></li>
                 </ul>
-            </div><!-- /.card-header -->
+            </div>
             <div class="card-body">
                 <div class="tab-content">
                     <div class="active tab-pane" id="description">
                         {{ $book->description }}
                     </div>
-                    <!-- /.tab-pane -->
                     <div class="tab-pane" id="timeline">
                         <ul class="list-group list-group-unbordered mb-3">
                             <li class="list-group-item">
@@ -56,12 +53,9 @@
                         </ul>
 
                     </div>
-                    <!-- /.tab-pane -->
                 </div>
-                <!-- /.tab-content -->
-            </div><!-- /.card-body -->
+            </div>
         </div>
-        <!-- card -->
     </div>
 </div>
 <hr>
@@ -85,7 +79,6 @@
 
     $('.select2').select2()
 
-    //Initialize Select2 Elements
     $('.select2bs4').select2({
         theme: 'bootstrap4'
     })

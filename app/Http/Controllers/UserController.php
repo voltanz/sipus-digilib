@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
-{
+class UserController extends Controller {
     public function peraturan(){
         return view('frontend.peraturan.tataTertib');
     }
-
     public function peminjaman() {
         return view('frontend.peraturan.peminjaman');
     }
@@ -21,7 +19,6 @@ class UserController extends Controller
     public function denda() {
         return view('frontend.peraturan.denda');
     }
-
      public function keanggotaan() {
         return view('frontend.peraturan.keanggotaan');
     }

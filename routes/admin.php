@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Route;
@@ -9,25 +10,25 @@ use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
 // author routes
-Route::get('/', [HomeController::class,'index'])->name('dashboard');
+Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 // book routes
 # sumber data
-Route::get('/book/data', [DataController::class,'books'])->name('book.data');
+Route::get('/book/data', [DataController::class, 'books'])->name('book.data');
 // routes
 Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
     'index' => 'book.index',
     'create' => 'book.create',
     'store' => 'book.store',
-    'update'=>'book.update',
-    'edit'=>'book.edit',
-    'destroy'=>'book.destroy'
+    'update' => 'book.update',
+    'edit' => 'book.edit',
+    'destroy' => 'book.destroy'
 ]);
 
 // borrow route
-Route::get('/borrow/data', [DataController::class,'borrows'])->name('borrow.data');
-Route::get('/borrow', [HomeController::class,'borrows'])->name('borrow.index');
-Route::get('/borrow/detail/{id}', [HomeController::class,'detail'])->name('borrow.detail');
-Route::post('/update', [HomeController::class.'update'])->name('borrow.update');
+Route::get('/borrow/data', [DataController::class, 'borrows'])->name('borrow.data');
+Route::get('/borrow', [HomeController::class, 'borrows'])->name('borrow.index');
+Route::get('/borrow/detail/{id}', [HomeController::class, 'detail'])->name('borrow.detail');
+Route::post('/update', 'HomeController@update')->name('borrow.update');
 
 // history route
 Route::get('transaksi', function () {
@@ -65,19 +66,19 @@ Route::get('transaksi', function () {
         ->toJson();
 })->name('transaksi.history');
 
-Route::get('/transaksi/history', [HomeController::class,'history'])->name('history');
+Route::get('/transaksi/history', [HomeController::class, 'history'])->name('history');
 
 #menu dashboard
-Route::get('/buku/data-dipinjam', [DataController::class,'masih_dipinjam'])->name('buku.data.pinjam');
-    Route::get('/buku-dipinjam',[HomeController::class,'masih_dipinjam'])->name('buku.masih_dipinjam');
+Route::get('/buku/data-dipinjam', [DataController::class, 'masih_dipinjam'])->name('buku.data.pinjam');
+Route::get('/buku-dipinjam', [HomeController::class, 'masih_dipinjam'])->name('buku.masih_dipinjam');
 
-    # Author
+# Author
 // sumber data
-Route::get('/author/data', [DataController::class,'authors'])->name('author.data');
+Route::get('/author/data', [DataController::class, 'authors'])->name('author.data');
 // routes
 Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names([
-    'index' =>'author.index',
-    'create' =>'author.create',
+    'index' => 'author.index',
+    'create' => 'author.create',
     'store' => 'author.store',
     'edit' => 'author.edit',
     'update' => 'author.update',
@@ -86,7 +87,7 @@ Route::resource('author', '\App\Http\Controllers\Admin\AuthorController')->names
 
 # user
 // sumber data
-Route::get('/user/data', [DataController::class,'users'])->name('user.data');
+Route::get('/user/data', [DataController::class, 'users'])->name('user.data');
 
 Route::resource('user','\App\Http\Controllers\Admin\UserController')->names([
     'index'=>'user.index',
@@ -97,4 +98,4 @@ Route::resource('user','\App\Http\Controllers\Admin\UserController')->names([
     'store'=>'user.store'
 ]);
 
-Route::get('/cetak-peminjam', [HomeController::class,'cetak_pdf'])->name('cetak_pdf');
+Route::get('/cetak-peminjam', [HomeController::class, 'cetak_pdf'])->name('cetak_pdf');
