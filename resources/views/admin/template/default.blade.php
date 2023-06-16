@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('admin/template/partials/head')
+@include('admin.template.partials.head')
 @include('sweetalert::alert')
 
 <body class="hold-transition sidebar-mini layout-fixed">

@@ -12,8 +12,21 @@
             </div>
         @endif
         <div class="card-header">
-            <h3 class="card-title">Data User</h3>
-            <a href="" class="btn btn-primary float-right"><i class="fa fa-plus"></i> User</a>
+            <h3 class="card-title">Data Pengguna</h3>
+            <div class="dropdown float-right">
+                <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Tambah Pengguna
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item active" href="{{ route('admin.user.create') }}?select=user">User</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=staf">Staf</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=admin">Admin</a></li>
+                </ul>
+            </div>
+            {{--
+            <a href="{{ route('admin.user.create') }}" class="btn btn-dark float-right">
+                Tambah Pengguna</a> --}}
         </div>
         <div class="card-body">
             <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">

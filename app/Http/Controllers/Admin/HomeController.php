@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Category;
 use Barryvdh\DomPDF\Facade\PDF;
+use Spatie\Permission\Models\Role;
+
 
 class HomeController extends Controller
 {
@@ -23,7 +25,7 @@ class HomeController extends Controller
             ->select('detail_transaksi.*', 'books.*', 'categories.*')
             ->get();
         $buku = Book::all()->count();
-        $user = User::all()->count();
+        $user =Role::find(2)->users()->count();
         $dipinjam  = Detail_transaksi::where(['status' => 0])->count();
 
         return view('admin/home', compact('dipinjam', 'user', 'buku', 'categories', 'grafik'));

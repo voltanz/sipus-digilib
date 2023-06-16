@@ -7,7 +7,6 @@ use App\Author;
 use App\Book;
 use App\User;
 use App\Transaksi;
-use Yajra\DataTables\Facades\DataTables;
 use Spatie\Permission\Models\Role;
 
 class DataController extends Controller
