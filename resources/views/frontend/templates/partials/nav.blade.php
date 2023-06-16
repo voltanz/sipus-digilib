@@ -122,7 +122,7 @@ if ($user = auth()->user()) {
                             role="button" aria-expanded="false"
                             style="text-decoration:none">{{ ucwords(Auth()->user()->name) }}</a>
                         <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
-                            @role('admin')
+                            @role('admin||staf')
                                 <li><a href="/admin" class="nav-link text-light" style="text-decoration:none">Dashboard</a>
                                 </li>
                                 <li class="divider"></li>

@@ -1,8 +1,8 @@
 @extends('frontend.default')
 
 @section('content')
-    <div class="main-container" 
-     style="background-image: url('{{ asset('assets/logo/perpus.png') }}');
+    <div class="main-container"
+        style="background-image: url('{{ asset('assets/logo/perpus.png') }}');
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
@@ -52,16 +52,11 @@
                     <span class="fs-3 text-dark fw-bold">Anggota</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <i class="fa fa-duotone fa-users fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">63
-                    </h1>
-                    <span class="fs-3 text-dark fw-bold">Guru</span>
-                    <hr class="bg-white w-25 mx-auto mb-0">
-                </div>
+
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">8
+                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
+                        {{ $staf }}
                     </h1>
                     <span class="fs-3 text-dark fw-bold">Staff</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
@@ -115,11 +110,13 @@
                                 kitchen set untuk ruang terbatas</a><br><span
                                 style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Desain Interior -
                                 Update : 10/04/2023</span></li>
-                        <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of dedication</a><br><span
-                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                        <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of
+                                dedication</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik :
+                                Umum - Update :
                                 10/04/2023</span></li>
-                        <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of dedication</a><br><span
-                                style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Umum - Update :
+                        <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of
+                                dedication</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik :
+                                Umum - Update :
                                 10/04/2023</span></li>
                         <li>9. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165769'>Buku panduan praktik
                                 teknologi kultur jaringan di laboratori...</a><br><span
