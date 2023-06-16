@@ -14,7 +14,8 @@ class HomeController extends Controller
     public function landingPage() {
         $buku = Book::all()->count();
         $user = Role::find(2)->users()->count();
-        return view('index', compact('user', 'buku'));
+        $staf = Role::find(3)->users()->count();
+        return view('index', compact('user', 'buku','staf'));
     }
     public function index() {
         $books = Auth()->user()->borrow;
