@@ -20,10 +20,12 @@
                         <div class="row">
                             <div class="col s6 m3">
                                 <p>Penulis</p>
+                                <p>Penerbit</p>
                                 <p>Jumlah Stok</p>
                             </div>
                             <div class="col s6 m5">
                                 <p><b>{{ $book->author->name }}</b></p>
+                                <p><b>{{ $book->publisher }}</b></p>
                                 <p><b>{{ $book->qty }}</b></p>
                             </div>
                         </div>
