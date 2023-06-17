@@ -8,7 +8,9 @@ use App\Book;
 use App\User;
 use App\Transaksi;
 use Spatie\Permission\Models\Role;
-class DataController extends Controller {
+
+class DataController extends Controller
+{
     public function authors()
     {
         $author = Author::query();
@@ -55,15 +57,16 @@ class DataController extends Controller {
             ->rawColumns(['action'])
             ->toJson();
     }
-    public function masih_dipinjam () {
-        $masih_dipinjam =  Transaksi::join('detail_transaksi','transaksi.id','=','detail_transaksi.transaksi_id')->join('books','detail_transaksi.book_id','=','books.id')->select('books.title','transaksi.kode_pinjam')->where('detail_transaksi.status' , '=', 0)->get();
+    public function masih_dipinjam()
+    {
+        $masih_dipinjam =  Transaksi::join('detail_transaksi', 'transaksi.id', '=', 'detail_transaksi.transaksi_id')->join('books', 'detail_transaksi.book_id', '=', 'books.id')->select('books.title', 'transaksi.kode_pinjam')->where('detail_transaksi.status', '=', 0)->get();
         return DataTables()->of($masih_dipinjam)
-        ->addIndexColumn()
-        ->toJson();
+            ->addIndexColumn()
+            ->toJson();
     }
     public function users()
     {
-        $users =Role::find(2)->users();
+        $users = Role::find(2)->users();
         return DataTables()->of($users)
             ->addIndexColumn()
             ->addColumn('action', "admin.user.action")

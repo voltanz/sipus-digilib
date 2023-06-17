@@ -17,22 +17,28 @@ class BookController extends Controller
     {
         return view('admin/book/index');
     }
-    public function create() {
+    public function create()
+    {
         $author = Author::all();
         $categories = Category::all();
         return view('admin/book/create', compact('author', 'categories'));
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $request->validate([
             'title' => 'required',
+            'publisher' => 'required',
             'description' => 'required',
             'image'        => 'file|image',
+            'qty_page'      => 'required',
             'qty'          => 'required'
         ], [
             'title.required'    => 'Kolom tidak boleh kosong',
+            'publisher.required'    => 'Kolom tidak boleh kosong',
             'description.required' => 'Kolom tidak boleh kosong',
             'image.image'          => 'Format Gambar tidak didukung',
+            'qty_page.required'     => 'Kolom tidak boleh kosong',
             'qty.required'          => 'Kolom tidak boleh kosong'
         ]);
 
@@ -43,21 +49,25 @@ class BookController extends Controller
         }
         Book::create([
             'title'         => $request->title,
+            'publisher'         => $request->publisher,
             'category_id'   => $request->category_id,
             'author_id'     => $request->author_id,
             'cover'         => $path,
             'description'   => $request->description,
+            'qty_page'           => $request->qty_page,
             'qty'           => $request->qty
         ]);
         return redirect('admin/book')->with('success', 'Data Buku Berhasil Ditambahkan');
     }
-    public function show($id) {
+    public function show($id)
+    {
         $book = Book::where('id', $id)->get()->first();
         return view('admin/book/show', compact('book'));
     }
 
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $categories = Category::all();
         $author = Author::all();
         $book = Book::where('id', $id)->get()->first();
@@ -77,14 +87,17 @@ class BookController extends Controller
                 'author_id'     => $request->author_id,
                 'category_id'   => $request->category_id,
                 'title'         => $request->title,
+                'publisher'         => $request->publisher,
                 'description'   => $request->description,
                 'cover'         => $path,
+                'qty_page'           => $request->qty_page,
                 'qty'           => $request->qty
             ]);
 
         return redirect('admin/book')->with('success', 'Data Berhasil Di Update!');
     }
-    public function destroy($id) {
+    public function destroy($id)
+    {
         DB::table('books')->where('id', '=', $id)->delete();
 
         return redirect('admin/book')->with('success', 'Data Berhasil Di Hapus');
