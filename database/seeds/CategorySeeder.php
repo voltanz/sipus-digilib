@@ -43,5 +43,6 @@ class CategorySeeder extends Seeder
         foreach ($kategori as $item) {
             Category::create($item);
         }
+
     }
 }
