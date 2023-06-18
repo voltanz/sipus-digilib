@@ -5,16 +5,16 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DataController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\Admin\UserController;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
-// author routes
+// halaman admin
 Route::get('/', [HomeController::class, 'index'])->name('dashboard');
-// book routes
+
+// rute book admin/book/data
 # sumber data
 Route::get('/book/data', [DataController::class, 'books'])->name('book.data');
-// routes
+// rute
 Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
     'index' => 'book.index',
     'create' => 'book.create',
@@ -24,13 +24,16 @@ Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
     'destroy' => 'book.destroy'
 ]);
 
-// borrow route
+// rute peminjaman admin/borrow/data
+# sumber data
 Route::get('/borrow/data', [DataController::class, 'borrows'])->name('borrow.data');
+# rute peminjaman (borrow)
 Route::get('/borrow', [HomeController::class, 'borrows'])->name('borrow.index');
 Route::get('/borrow/detail/{id}', [HomeController::class, 'detail'])->name('borrow.detail');
 Route::post('/update', 'HomeController@update')->name('borrow.update');
 
-// history route
+// rute history peminjaman admin/transaksi
+# sumber data menggunakan dataTable
 Route::get('transaksi', function () {
     $model = DB::table('transaksi')
         ->join('users', 'users.id', '=', 'transaksi.user_id')

@@ -17,16 +17,16 @@
         @endif
         <div class="card-header">
             <h3 class="card-title">Data Penulis</h3>
-            <a href="{{ route('admin.author.create') }}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>
+            <a href="{{ route('admin.author.create') }}" class="btn btn-light float-right"><i class="fa fa-plus"></i>
                 Penulis</a>
         </div>
         <div class="card-body">
             <table id="dataTable" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th style="width:10px;">No</th>
                         <th>Penulis</th>
-                        <th>Opsi</th>
+                        <th style="width:100px;">Opsi</th>
                     </tr>
                 </thead>
             </table>

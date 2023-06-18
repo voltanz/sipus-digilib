@@ -7,7 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 
 class VerificationController extends Controller {
-   
+
     use VerifiesEmails;
 
     /**
@@ -28,7 +28,7 @@ class VerificationController extends Controller {
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
     public function redirectPath() {
-        return route('home');
+        return route('homepage');
     }
 
     public function verified () {
