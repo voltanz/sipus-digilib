@@ -24,6 +24,11 @@ Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
     'destroy' => 'book.destroy'
 ]);
 
+
+//profile route
+Route::post('/edit', [ProfileController::class.'edit'])->name('siswaEdit');
+
+// borrow route
 // rute peminjaman admin/borrow/data
 # sumber data
 Route::get('/borrow/data', [DataController::class, 'borrows'])->name('borrow.data');
@@ -31,6 +36,7 @@ Route::get('/borrow/data', [DataController::class, 'borrows'])->name('borrow.dat
 Route::get('/borrow', [HomeController::class, 'borrows'])->name('borrow.index');
 Route::get('/borrow/detail/{id}', [HomeController::class, 'detail'])->name('borrow.detail');
 Route::post('/update', 'HomeController@update')->name('borrow.update');
+
 
 // rute history peminjaman admin/transaksi
 # sumber data menggunakan dataTable
