@@ -23,6 +23,9 @@ Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
     'destroy'=>'book.destroy'
 ]);
 
+//profile route
+Route::post('/edit', [ProfileController::class.'edit'])->name('siswaEdit');
+
 // borrow route
 Route::get('/borrow/data', [DataController::class,'borrows'])->name('borrow.data');
 Route::get('/borrow', [HomeController::class,'borrows'])->name('borrow.index');
