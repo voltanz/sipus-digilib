@@ -10,9 +10,7 @@ use App\Detail_transaksi;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
-class BookController extends Controller
-{
+class BookController extends Controller {
     public function index()
     {
 
@@ -30,7 +28,6 @@ class BookController extends Controller
             'books' => $books
         ]);
     }
-
     public function borrow(Request $request)
     {
         $book = Book::where('id', $request->book_id)->first();
@@ -45,7 +42,7 @@ class BookController extends Controller
             ])->count();
 
         if ($dtransaksi > 0) {
-            return redirect('/')->with('alert', 'Buku dengan judul: ' . ucwords($request->title) .  ',Masih Anda Pinjam');
+            return redirect(route('bookCollection'))->with('alert', 'Buku dengan judul: ' . ucwords($request->title) .  ',Masih Anda Pinjam');
         }
 
         $ub = Borrow::where([
@@ -65,9 +62,8 @@ class BookController extends Controller
         $book->decrement('qty');
 
 
-        return redirect('/')->with('success', 'Buku' . ucwords($request->title) . 'Berhasil Ditambahkan ke List Peminjaman');
+        return redirect(route('bookCollection'))->with('success', 'Buku' . ucwords($request->title) . 'Berhasil Ditambahkan ke List Peminjaman');
     }
-
     public function pinjam()
     {
         $user = Auth()->user();

@@ -1,4 +1,11 @@
 @extends('admin/template/default')
+
+@push('datatables')
+    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
+@endpush()
+
 @section('title', 'Daftar User')
 @section('content')
 
@@ -12,8 +19,20 @@
             </div>
         @endif
         <div class="card-header">
-            <h3 class="card-title">Data User</h3>
-            <a href="" class="btn btn-primary float-right"><i class="fa fa-plus"></i> User</a>
+            <h3 class="card-title">Data Pengguna</h3>
+            @role('admin')
+                <div class="dropdown float-right">
+                    <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Tambah Pengguna
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item active" href="{{ route('admin.user.create') }}?select=user">User</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=staf">Staf</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.user.create') }}?select=admin">Admin</a></li>
+                    </ul>
+                </div>
+            @endrole
         </div>
         <div class="card-body">
             <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">
@@ -30,7 +49,6 @@
     </div>
 @endsection
 @push('scripts')
-    <!-- data tables -->
     <script src="{{ asset('assets/plugins/datatables/jquery.datatables.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>

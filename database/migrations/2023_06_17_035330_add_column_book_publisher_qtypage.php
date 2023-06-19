@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDeletedAtToBooksTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddDeletedAtToBooksTable extends Migration
     public function up()
     {
         Schema::table('books', function (Blueprint $table) {
-            $table->string('deleted_at')->after('qty');
+            $table->string('publisher')->after('title');
+            $table->string('qty_page')->after('cover');
         });
     }
 
@@ -26,7 +27,8 @@ class AddDeletedAtToBooksTable extends Migration
     public function down()
     {
         Schema::table('books', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
+            $table->dropColumn('publisher');
+            $table->dropColumn('qty_page');
         });
     }
-}
+};

@@ -1,6 +1,5 @@
 @extends('admin/template/default')
 @push('datatables')
-    <!-- data tables -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
@@ -18,16 +17,16 @@
         @endif
         <div class="card-header">
             <h3 class="card-title">Data Penulis</h3>
-            <a href="{{ route('admin.author.create') }}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>
+            <a href="{{ route('admin.author.create') }}" class="btn btn-light float-right"><i class="fa fa-plus"></i>
                 Penulis</a>
         </div>
         <div class="card-body">
             <table id="dataTable" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th style="width:10px;">No</th>
                         <th>Penulis</th>
-                        <th>Opsi</th>
+                        <th style="width:100px;">Opsi</th>
                     </tr>
                 </thead>
             </table>
@@ -36,7 +35,6 @@
 
 @endsection
 @push('scripts')
-    <!-- data tables -->
     <script src="{{ asset('assets/plugins/datatables/jquery.datatables.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>

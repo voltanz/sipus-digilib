@@ -3,8 +3,7 @@
 @section('content')
     <div class="container-fluid mt-3">
         <div class="row text-capitalize">
-            <div class="col-lg-3 col-5">
-                <!-- small box -->
+            <div class="col-lg-4 col-4">
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">
                         <h3>{{ $dipinjam }}</h3>
@@ -17,11 +16,7 @@
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
-
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
+            <div class="col-lg-4 col-4">
                 <div class="small-box bg-success bg-gradient">
                     <div class="inner">
                         <h3>{{ $user }}</h3>
@@ -34,9 +29,7 @@
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
+            <div class="col-lg-4 col-4">
                 <div class="small-box bg-info bg-gradient">
                     <div class="inner">
                         <h3>{{ $buku }}</h3>
@@ -53,7 +46,6 @@
     </div>
 
     <section class="col-lg-12 connectedSortable ui-sortable">
-        <!-- Custom tabs (Charts with tabs)-->
         <div class="card card-success">
             <div class="card-header">
                 <h3 class="card-title">Grafik Peminjaman Buku Berdasarkan Kategori</h3>
@@ -68,9 +60,7 @@
                 <div class="chart">
                     <canvas id="myChart" style="width: 300px;"></canvas>
                 </div>
-                <!-- /.card-body -->
             </div>
-            <!-- /.card -->
     </section>
 @endsection()
 

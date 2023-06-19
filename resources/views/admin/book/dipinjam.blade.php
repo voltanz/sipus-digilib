@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 @endpush
-
 @section('content')
     <div class="card mt-3">
         @if (session('success'))
@@ -16,7 +15,7 @@
             </div>
         @endif
         <div class="card-header">
-            <h3 class="card-title text-capitalize">daftar buku yang masih dipinjam</h3>
+            <h3 class="card-title text-capitalize">Daftar Buku Yang Dipinjam</h3>
         </div>
         <div class="card-body">
             <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">

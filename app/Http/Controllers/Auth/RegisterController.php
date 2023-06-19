@@ -8,8 +8,6 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -32,8 +30,6 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-    // mengarahkan ke route tertentu setelah proses register
-
 
     /**
      * Create a new controller instance.
@@ -43,9 +39,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        // memeriksa apakah pengguna yang mengakses rute terkait adalah pengunjung (guest) atau pengguna yang sudah terotentikasi
-        // melindungi rute-rute yang hanya boleh diakses oleh pengunjung atau pengguna yang belum terotentikasi
-        // manipulasi middleware dapat dilakukan pada file Kernel.php
+
     }
 
     /**
@@ -54,8 +48,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
+    protected function validator(array $data) {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -63,9 +56,10 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
+        // if ($validator->fails()) {
+        //     return redirect()->back()->withErrors($validator)->withInput();
+        // }
+
     }
 
     /**
@@ -84,10 +78,7 @@ class RegisterController extends Controller
         ]);
 
         $user->assignRole('user');
-        // Anda memberikan peran "user" kepada objek pengguna yang dimaksud. Ini memungkinkan pengguna memiliki hak akses dan izin yang sesuai dengan peran yang diberikan
 
-
-        // send email vericitaion notification
         $user->sendEmailVerificationNotification();
         return $user;
     }

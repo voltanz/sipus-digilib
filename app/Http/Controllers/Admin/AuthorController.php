@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Author;
 use Illuminate\Support\Facades\DB;
-
 class AuthorController extends Controller
 {
     /**
@@ -41,17 +40,6 @@ class AuthorController extends Controller
 
         Author::create($request->only('name'));
         return redirect()->route('admin.author.index')->with('success', 'Data Berhasil Ditambahkan');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**

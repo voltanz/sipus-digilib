@@ -1,5 +1,4 @@
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -15,7 +14,6 @@
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
                 <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
                     <div class="media">
                         <img src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Avatar"
                             class="img-size-50 mr-3 img-circle">
@@ -28,6 +26,7 @@
                 <a href="{{ route('siswaEdit') }}" class="btn btn-info m-2">Profile</a>
                 <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
+
                     {{ __('Logout') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

@@ -38,5 +38,4 @@
             </li>
         </ul>
     </nav>
-    <!-- /.sidebar-menu -->
 </div>

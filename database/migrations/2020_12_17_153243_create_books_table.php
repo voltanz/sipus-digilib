@@ -21,7 +21,9 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('cover');
-            $table->timestamps();
+            $table->timestamp('deleted_at')->nullable()->default(null);
+            $table->timestamp('updated_at')->nullable()->default(null);
+            $table->timestamp('created_at')->nullable()->default(null);
 
 
             $table->foreign('author_id')->references('id')->on('authors')

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Category;
 use Barryvdh\DomPDF\Facade\PDF;
+use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
 {
@@ -23,17 +24,15 @@ class HomeController extends Controller
             ->select('detail_transaksi.*', 'books.*', 'categories.*')
             ->get();
         $buku = Book::all()->count();
-        $user = User::all()->count();
+        $user = Role::find(2)->users()->count();
         $dipinjam  = Detail_transaksi::where(['status' => 0])->count();
 
         return view('admin/home', compact('dipinjam', 'user', 'buku', 'categories', 'grafik'));
     }
-
     public function borrows()
     {
         return view('admin.borrow.index');
     }
-
     public function detail($id)
     {
         $detail = DB::table('transaksi')
@@ -45,7 +44,6 @@ class HomeController extends Controller
 
         return view('admin.borrow.detail', compact('detail'));
     }
-
     public function update(Request $request)
     {
         $tgl_kembali = strtotime($request->tgl_kembali);
@@ -57,7 +55,6 @@ class HomeController extends Controller
         if ($tgl_pengembalian < $tgl_kembali) {
             $denda = 0;
         } else {
-
             $denda = ($tgl_pengembalian - $tgl_kembali) / (60 * 60 * 24);
         }
 
@@ -70,24 +67,23 @@ class HomeController extends Controller
             ]);
 
         $book = Book::where('id', $request->book_id);
-
         $book->increment('qty');
 
         return redirect()->back()->with('success', 'Data Berhasil Simpan');
     }
-
-    public function masih_dipinjam () {
+    public function masih_dipinjam()
+    {
         return view('admin.book.dipinjam');
     }
-
     public function history()
     {
         return view('admin.borrow.history');
     }
 
-    public function cetak_pdf () {
+    public function cetak_pdf()
+    {
         $cetak = Transaksi::all();
-        $pdf = PDF::loadview('admin.borrow.cetak_pdf',['cetak'=>$cetak]);
+        $pdf = PDF::loadview('admin.borrow.cetak_pdf', ['cetak' => $cetak]);
         return $pdf->stream();
     }
 }

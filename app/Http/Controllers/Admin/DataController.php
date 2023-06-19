@@ -7,7 +7,6 @@ use App\Author;
 use App\Book;
 use App\User;
 use App\Transaksi;
-use Yajra\DataTables\Facades\DataTables;
 use Spatie\Permission\Models\Role;
 
 class DataController extends Controller
@@ -17,13 +16,10 @@ class DataController extends Controller
         $author = Author::query();
         return DataTables()
             ->of($author)
-            // ->editColumn('name', 'Hi {{$name}}!')
             ->addIndexColumn()
             ->addColumn('action', "admin.action")
-            // ->addColumn('hai', "hai")
             ->rawColumns(['action'])
             ->toJson();
-            # views/admin/index.blade.php
     }
 
     public function Books()
@@ -44,7 +40,6 @@ class DataController extends Controller
             ->rawColumns(['action', 'cover'])
             ->toJson();
     }
-
     public function borrows()
     {
         $transaksi = Transaksi::orderBy('transaksi.id', 'DESC')->get();
@@ -62,17 +57,16 @@ class DataController extends Controller
             ->rawColumns(['action'])
             ->toJson();
     }
-
-    public function masih_dipinjam () {
-        $masih_dipinjam =  Transaksi::join('detail_transaksi','transaksi.id','=','detail_transaksi.transaksi_id')->join('books','detail_transaksi.book_id','=','books.id')->select('books.title','transaksi.kode_pinjam')->where('detail_transaksi.status' , '=', 0)->get();
+    public function masih_dipinjam()
+    {
+        $masih_dipinjam =  Transaksi::join('detail_transaksi', 'transaksi.id', '=', 'detail_transaksi.transaksi_id')->join('books', 'detail_transaksi.book_id', '=', 'books.id')->select('books.title', 'transaksi.kode_pinjam')->where('detail_transaksi.status', '=', 0)->get();
         return DataTables()->of($masih_dipinjam)
-        ->addIndexColumn()
-        ->toJson();
+            ->addIndexColumn()
+            ->toJson();
     }
-
     public function users()
     {
-        $users =Role::find(2)->users();
+        $users = Role::find(2)->users();
         return DataTables()->of($users)
             ->addIndexColumn()
             ->addColumn('action', "admin.user.action")

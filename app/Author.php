@@ -2,12 +2,15 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Author extends Model
 {
-    use SoftDeletes;
+
+    use HasFactory, SoftDeletes;
+
     protected $guarded = [];
     public $timestamps = false;
     protected $dates = ['deleted_at'];

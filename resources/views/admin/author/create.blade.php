@@ -5,13 +5,10 @@
 @section('content')
 
 <div class="col-md-6 mt-3">
-    <!-- general form elements -->
     <div class="card card-info">
         <div class="card-header">
             <h3 class="card-title">Form Penulis</h3>
         </div>
-        <!-- /.card-header -->
-        <!-- form start -->
         <form method="POST" action="{{ route('admin.author.index') }}">
             @csrf
             <div class="card-body">
