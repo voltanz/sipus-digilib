@@ -15,18 +15,17 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
                 <a href="#" class="dropdown-item">
                     <div class="media">
-                        <img src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" alt="User Avatar"
-                            class="img-size-50 mr-3 img-circle">
+                        <img src="{{ asset('assets/logo/smansaga.png') }}" alt="smansaga.png"
+                            class="brand-image img-size-50 mr-3" style="opacity: .8">
                         <div class="media-body">
                             <p> {{ auth()->user()->name }}</p>
                         </div>
                     </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="{{ route('siswaEdit') }}" class="btn btn-info m-2">Profile</a>
-                <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
-
+                <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
                     {{ __('Logout') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -34,5 +33,6 @@
                 </form>
             </div>
         </li>
+        
     </ul>
 </nav>
