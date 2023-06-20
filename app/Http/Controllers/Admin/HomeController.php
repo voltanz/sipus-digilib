@@ -62,7 +62,6 @@ class HomeController extends Controller
         if ($tgl_pengembalian < $tgl_kembali) {
             $denda = 0;
         } else {
-
             $denda = ($tgl_pengembalian - $tgl_kembali) / (60 * 60 * 24);
         }
 
@@ -75,7 +74,6 @@ class HomeController extends Controller
             ]);
 
         $book = Book::where('id', $request->book_id);
-
         $book->increment('qty');
 
         return redirect()->back()->with('success', 'Data Berhasil Simpan');

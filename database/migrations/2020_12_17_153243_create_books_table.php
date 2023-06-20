@@ -13,6 +13,7 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
+
         if (!Schema::hasTable('books')) {
             Schema::create('books', function (Blueprint $table) {
                 $table->bigIncrements('id');

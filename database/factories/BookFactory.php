@@ -21,6 +21,7 @@ class BookFactory extends Factory
         $randomNumber = rand(1, 50);
         $cover = "https://picsum.photos/id/{$randomNumber}/200/300";
         return [
+
             'author_id' => Author::inRandomOrder()->first()->id,
             'title' => fake()->sentence(5),
             'publisher' => fake()->sentence(5),

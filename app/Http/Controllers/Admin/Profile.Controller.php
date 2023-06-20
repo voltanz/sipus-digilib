@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Author;
+use App\Profile;
 use Illuminate\Support\Facades\DB;
-class AuthorController extends Controller
+
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +26,7 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        return view('admin.author.create');
+        //
     }
 
     /**
@@ -36,10 +37,18 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['name' => 'required|min:3'], ['name.required' => 'Kolom Tidak Boleh Kosong', 'name.min' => 'Minimal 3 Karakter']);
+        //
+    }
 
-        Author::create($request->only('name'));
-        return redirect()->route('admin.author.index')->with('success', 'Data Berhasil Ditambahkan');
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
     }
 
     /**
@@ -48,10 +57,10 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Nama)
     {
-        $author = DB::table('authors')->where('id', $id)->get()->first();
-        return view('admin.author.edit', ['author' => $author]);
+        $Profile = Profile::find($Nama);
+        return view('admin.profile.edit', compact('Profile'));
     }
 
     /**
@@ -63,12 +72,7 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        Author::where('id', $author->id)
-        ->update([
-            'name' => $request->name,
-        ]);
-
-    return redirect('admin/author')->with('success', 'Data Berhasil Di Update');
+      //
     }
 
     /**
@@ -79,7 +83,6 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        Author::where('id','=',$id)->delete();
-        return redirect('admin/author')->with('success', 'Data Berhasil Di Hapus');
+        //
     }
 }

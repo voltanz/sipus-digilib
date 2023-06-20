@@ -4,8 +4,10 @@ use App\Author;
 use App\Book;
 use App\User;
 use Database\Seeders\CategorySeeder;
-use Illuminate\Database\Seeder;
+// use Database\Seeders\RolesTableSeeder;
+// use Database\Seeders\AdminUserSeeder;
 
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
