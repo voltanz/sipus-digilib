@@ -1,20 +1,34 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
 use App\Author;
-use App\Book;
-use Faker\Generator as Faker;
+use App\Category;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Book::class, function (Faker $faker) {
-
-    $randomNumber = rand(1, 100);
-    $cover = "https://picsum.photos/id/{$randomNumber}/200/300";
-    return [
-        'author_id' => Author::inRandomOrder()->first()->id,
-        'title' => $faker->sentence(4),
-        'description' => $faker->sentence(50),
-        'cover'     => $cover,
-        'qty'       => rand(10, 20)
-    ];
-});
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Book>
+ */
+class BookFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition()
+    {
+        $randomNumber = rand(1, 50);
+        $cover = "https://picsum.photos/id/{$randomNumber}/200/300";
+        return [
+            'author_id' => Author::inRandomOrder()->first()->id,
+            'title' => fake()->sentence(5),
+            'publisher' => fake()->sentence(5),
+            'description' => fake()->sentence(50),
+            'cover' => $cover,
+            'qty_page' => mt_rand(80, 600),
+            'qty' => mt_rand(5, 30),
+            'category_id' => Category::inRandomOrder()->first()->id,
+        ];
+    }
+}

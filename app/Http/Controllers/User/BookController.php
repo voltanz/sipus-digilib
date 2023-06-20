@@ -10,11 +10,13 @@ use App\Detail_transaksi;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-class BookController extends Controller {
+
+class BookController extends Controller
+{
     public function index()
     {
 
-        $books = Book::paginate(10);
+        $books = Book::paginate(12);
         return view('frontend.book.index', [
             'books' => $books
         ]);

@@ -8,6 +8,7 @@
             background-size: cover;
             padding-top: 5rem;
             padding-bottom: 4rem;">
+
         <div class="jumbotron jumbotron-fluid mb-5">
             <div class="container-fluid" style="padding-left:5rem; padding-right:5rem">
                 <div class="row pt-5 pb-5">
@@ -43,25 +44,26 @@
         </div>
     </div>
     <section class="container-fluid facts my-3 py-3">
+
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-solid fa-address-card fa-3x text-dark mb-3"></i>
                     <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
-                        {{ $user }}</h1>
+                        {{ $user }} </h1>
                     <span class="fs-3 text-dark fw-bold">Anggota</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
 
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-dark mb-3"></i>
                     <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
                         {{ $staf }}
                     </h1>
-                    <span class="fs-3 text-dark fw-bold">Staff</span>
+                    <span class="fs-3 text-dark fw-bold">Staf</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                <div class="col-sm-12 col-lg-4 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fa fa-solid fa-book fa-3x text-dark mb-3"></i>
                     <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
                         {{ $buku }}</h1>
@@ -70,6 +72,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <style>
