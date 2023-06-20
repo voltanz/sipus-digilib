@@ -21,7 +21,7 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'nisn'=>intval(sprintf("%010d", mt_rand(0, 999999999))),
+            'nisn' => intval(sprintf("%010d", mt_rand(0, 999999999))),
             'email_verified_at' => now(),
             'password' => Hash::make('password')
         ];

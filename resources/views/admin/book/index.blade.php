@@ -30,7 +30,7 @@
                     <tr>
                         <th>No</th>
                         <th style="width:30%">Judul</th>
-                        <th style="width:25%">Penerbit</th>
+                        <th style="width:20%">Penerbit</th>
                         <th>Penulis</th>
                         <th>Cover</th>
                         <th>Jumlah Halaman</th>

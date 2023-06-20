@@ -21,12 +21,15 @@ class BookFactory extends Factory
         $randomNumber = rand(1, 50);
         $cover = "https://picsum.photos/id/{$randomNumber}/200/300";
         return [
-            'author_id'=>Author::inRandomOrder()->first()->id,
-            'title'=>fake()->sentence(5),
-            'description'=>fake()->sentence(50),
-            'cover'=>$cover,
-            'qty' =>mt_rand(5,30),
-            'category_id' =>Category::inRandomOrder()->first()->id,
+
+            'author_id' => Author::inRandomOrder()->first()->id,
+            'title' => fake()->sentence(5),
+            'publisher' => fake()->sentence(5),
+            'description' => fake()->sentence(50),
+            'cover' => $cover,
+            'qty_page' => mt_rand(80, 600),
+            'qty' => mt_rand(5, 30),
+            'category_id' => Category::inRandomOrder()->first()->id,
         ];
     }
 }

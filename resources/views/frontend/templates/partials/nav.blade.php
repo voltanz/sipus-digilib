@@ -7,7 +7,7 @@ if ($user = auth()->user()) {
 }
 ?>
 
-<nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
+<div class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
             <a href="https://www.google.com/maps/dir//sman+1+blega/@-7.129874,112.9792957,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x2dd82102e9471ff5:0xb654904772599bb6!2m2!1d113.0493363!2d-7.1298793?entry=ttu"
@@ -45,33 +45,30 @@ if ($user = auth()->user()) {
     </div>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-full fw-bold">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler me-5" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-0 text-uppercase" style="font-size: 12px">
-                <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" href="{{ route('homepage') }}"
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav me-auto p-4 p-lg-0 text-uppercase" style="font-size: 12px">
+                    <a class="nav-item nav-link text-light" aria-current="page" href="{{ route('homepage') }}"
                         style="text-decoration:none">Home </a>
-                </li>
-                <li class="nav-item dropdown">
+                <div class="nav-item dropdown">
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
                         role="button" aria-expanded="false" style="text-decoration:none">Profile</a>
-                    <ul class="dropdown-menu dropdown-menu-dark" style="font-size: 12px">
-                        <li><a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah
-                                SMA Negeri 1 BLEGA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
-                                Perpustakaan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi
-                                Misi SMA Negeri 1 BLEGA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('jamPelayanan') }}" style="text-decoration:none">Jam
-                                Pelayanan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('kontak') }}"
-                                style="text-decoration:none">Kontak</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
+                    <div class="dropdown-menu dropdown-menu-dark" style="font-size: 12px">
+                        <a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah
+                                SMA Negeri 1 BLEGA</a>
+                        <a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
+                                Perpustakaan</a>
+                        <a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi
+                                Misi SMA Negeri 1 BLEGA</a>
+                        <a class="dropdown-item" href="{{ route('jamPelayanan') }}" style="text-decoration:none">Jam
+                                Pelayanan</a>
+                        <a class="dropdown-item" href="{{ route('kontak') }}"
+                                style="text-decoration:none">Kontak</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
                         role="button" aria-expanded="false" style="text-decoration:none">Peraturan</a>
                     <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
@@ -81,25 +78,23 @@ if ($user = auth()->user()) {
                         <li><a class="dropdown-item" href="{{ route('denda') }}">Denda</a></li>
                         <li><a class="dropdown-item" href="{{ route('keanggotaan') }}">Keanggotaan</a></li>
                     </ul>
-                </li>
-                <li class="nav-item dropdown">
+                </div>
+                <div class="nav-item dropdown">
                     <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#"
                         role="button" aria-expanded="false" style="text-decoration:none">Publikasi</a>
-                    <ul class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
-                        <li><a class="dropdown-item" href="https://jurnaldikbud.kemdikbud.go.id/">Jurnal Kemendikbud</a>
-                        </li>
-                        <li><a class="dropdown-item" href="https://repositori.kemdikbud.go.id/">Repository
-                                Kemendikbud</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
+                    <div class="dropdown-menu dropdown-menu-dark fade-down m-0" style="font-size: 12px">
+                        <a class="dropdown-item" href="https://jurnaldikbud.kemdikbud.go.id/">Jurnal Kemendikbud</a>
+                        <a class="dropdown-item" href="https://repositori.kemdikbud.go.id/">Repository
+                                Kemendikbud</a>
+                    </div>
+                </div>
+
                     <a href="{{ route('bookCollection') }}" class="nav-link text-light"
                         style="text-decoration:none">Koleksi Buku</a>
-                </li>
-                <li class="nav-item">
+
                     <a href="https://www.sman1blega.sch.id/" class="nav-link text-light"
                         style="text-decoration:none">| Situs Utama | </a>
-                </li>
+
                 </li>
                 @guest
                     <li><a href="{{ route('login') }}" class="nav-link text-light"
@@ -147,8 +142,8 @@ if ($user = auth()->user()) {
                         </ul>
                     </li>
                 @endguest
-            </ul>
+                </div>
         </div>
     </nav>
     </div>
-</nav>
+</div>
