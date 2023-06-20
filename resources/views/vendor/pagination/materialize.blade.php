@@ -1,10 +1,11 @@
 @if ($paginator->hasPages())
-    <ul class="pagination center">
+    <ul class="pagination center fs-5">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="disabled"><a href="#!" style="text-decoration: none"><i
+                        class="bi bi-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
         @else
-            <li class="waves-effect"><a href="{{ $paginator->previousPageUrl() }}"><i
+            <li class="enabled"><a href="{{ $paginator->previousPageUrl() }}"><i
                         class="material-icons">chevron_left</i></a></li>
         @endif
 
@@ -19,9 +20,12 @@
             @if (is_array($element))
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
-                        <li class="active"><a href="#!">{{ $page }}</a></li>
+                        <li class="active"><a href="#!" style="text-decoration: none">{{ $page }}
+                                &nbsp;&nbsp;&nbsp;</a></li>
                     @else
-                        <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        <li><a href="{{ $url }}" style="text-decoration: none">{{ $page }}
+                                &nbsp;&nbsp;&nbsp;</a>
+                        </li>
                     @endif
                 @endforeach
             @endif
@@ -29,10 +33,11 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li class="waves-effect"><a href="{{ $paginator->nextPageUrl() }}"><i
-                        class="material-icons">chevron_right</i></a></li>
+            <li class="waves-effect"><a href="{{ $paginator->nextPageUrl() }}"><i class="bi bi-chevron"></i></a>
+            </li>
         @else
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a>
+            </li>
         @endif
     </ul>
 @endif

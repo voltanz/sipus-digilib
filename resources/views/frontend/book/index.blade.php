@@ -8,7 +8,7 @@
             @foreach ($books as $book)
                 @include('frontend/templates/partials/component-card', $book)
             @endforeach()
-        </div>
+        </div><br><br>
         {{ $books->links('vendor.pagination.materialize') }}
     </div>
 @endsection

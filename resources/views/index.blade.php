@@ -12,7 +12,7 @@
         <div class="jumbotron jumbotron-fluid mb-5">
             <div class="container-fluid" style="padding-left:5rem; padding-right:5rem">
                 <div class="row pt-5 pb-5">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 ">
                         <iframe width="660" height="370" src="https://www.youtube.com/embed/VogR3q2HMW8?autoplay=1&mute=1"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -43,8 +43,13 @@
             </div>
         </div>
     </div>
-    <section class="container-fluid facts my-3 py-3">
-
+    <section class="container-fluid facts"
+        style="background-image: url('{{ asset('assets/logo/bg-angka.png') }}');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 4rem;">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
