@@ -13,27 +13,28 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-        if(!Schema::hasTable('books')) {
-        Schema::create('books', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('author_id');
-            $table->unsignedBigInteger('category_id');
-            $table->string('title');
-            $table->text('description');
-            $table->string('cover');
-            $table->timestamp('deleted_at')->nullable()->default(null);
-            $table->timestamp('updated_at')->nullable()->default(null);
-            $table->timestamp('created_at')->nullable()->default(null);
+
+        if (!Schema::hasTable('books')) {
+            Schema::create('books', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->unsignedBigInteger('author_id');
+                $table->unsignedBigInteger('category_id');
+                $table->string('title');
+                $table->text('description');
+                $table->string('cover');
+                $table->timestamp('deleted_at')->nullable()->default(null);
+                $table->timestamp('updated_at')->nullable()->default(null);
+                $table->timestamp('created_at')->nullable()->default(null);
 
 
-            $table->foreign('author_id')->references('id')->on('authors')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
+                $table->foreign('author_id')->references('id')->on('authors')
+                    ->onUpdate('CASCADE')
+                    ->onDelete('CASCADE');
 
                 $table->foreign('category_id')->references('id')->on('categories')->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
-        });
-    };
+                    ->onDelete('CASCADE');
+            });
+        };
     }
 
     /**

@@ -15,7 +15,7 @@
                     @csrf
                     <input type="hidden" name="book_id" value="{{ $book->id }}">
                     <input type="hidden" name="title" value="{{ $book->title }}">
-                    <button type="submit" class="btn btn-primary text-light text-capitalize w-100">Tambahkan</button>
+                    <button type="submit" class="btn btn-primary fw-bold text-light text-capitalize w-100">Tambahkan</button>
                 </form>
             </div>
         </div>

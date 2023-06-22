@@ -89,4 +89,5 @@ style="background-image: url({{ asset('assets/logo/background.jpg') }});
             </li>
         </ul>
     </div>
+    
 </footer>

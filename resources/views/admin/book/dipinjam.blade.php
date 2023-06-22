@@ -21,9 +21,9 @@
             <table id="dataTable" class="table table-bordered table-hover" style="width: 100%;">
                 <thead>
                     <tr>
-                        <th>no</th>
-                        <th>judul</th>
-                        <th>kode</th>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Kode</th>
                     </tr>
                 </thead>
                 <tbody>
