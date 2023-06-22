@@ -26,7 +26,7 @@ Route::resource('book', '\App\Http\Controllers\Admin\BookController')->names([
 
 
 //profile route
-Route::post('/edit', [ProfileController::class.'edit'])->name('siswaEdit');
+
 
 // borrow route
 // rute peminjaman admin/borrow/data
