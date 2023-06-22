@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminEditController;
 
 Route::get('/book/collection', [BookController::class, 'index'])->name('bookCollection');
 
@@ -58,3 +59,6 @@ Route::prefix('/publikasi')->group(function () {
 });
 
 Auth::routes();
+
+Route::resource('profile', AdminEditController::class);
+
