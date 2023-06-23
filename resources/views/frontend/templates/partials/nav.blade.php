@@ -7,7 +7,8 @@ if ($user = auth()->user()) {
 }
 ?>
 
-<div class="navbar navbar-expand-lg bg-dark d-flex flex-column w-full">
+
+<div class="navbar bg-dark d-flex flex-column w-full">
     <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
             <a href="https://www.google.com/maps/dir//sman+1+blega/@-7.129874,112.9792957,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x2dd82102e9471ff5:0xb654904772599bb6!2m2!1d113.0493363!2d-7.1298793?entry=ttu"
@@ -45,8 +46,8 @@ if ($user = auth()->user()) {
     </div>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-full fw-bold">
-        <button type="button" class="navbar-toggler me-5" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-light"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav me-auto p-4 p-lg-0 text-uppercase" style="font-size: 12px">
@@ -58,7 +59,7 @@ if ($user = auth()->user()) {
                     <div class="dropdown-menu dropdown-menu-dark" style="font-size: 12px">
                         <a class="dropdown-item" href="{{ route('sejarah') }}" style="text-decoration:none">Sejarah
                                 SMA Negeri 1 BLEGA</a>
-                        <a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staff
+                        <a class="dropdown-item" href="{{ route('staff') }}" style="text-decoration:none">Staf
                                 Perpustakaan</a>
                         <a class="dropdown-item" href="{{ route('visiMisi') }}" style="text-decoration:none">Visi
                                 Misi SMA Negeri 1 BLEGA</a>

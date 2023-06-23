@@ -21,6 +21,39 @@
     z-index: 99;
 }
 
+/* Typing Animation */
+.animated-text {
+    position: relative;
+    font-size: 50px;
+    color: #fdfdfd;
+    text-transform: uppercase;
+}
+
+.animated-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #ffa200;
+    border-right: 2px solid #ffa200;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;

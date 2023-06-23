@@ -12,18 +12,19 @@
         <div class="jumbotron jumbotron-fluid mb-5">
             <div class="container-fluid" style="padding-left:5rem; padding-right:5rem">
                 <div class="row pt-5 pb-5">
-                    <div class="col-lg-6 ">
-                        <iframe width="660" height="370" src="https://www.youtube.com/embed/VogR3q2HMW8?autoplay=1&mute=1"
-                            title="YouTube video player" frameborder="0"
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <iframe width="660" height="370"
+                            src="https://www.youtube.com/embed/VogR3q2HMW8?autoplay=1&mute=1" title="YouTube video player"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
                     <div class="col-lg-6">
                         <div class="pt-5">
-                            <div class="overlay-content text-white text-light fw-bold">
+                            <div class="overlay-content text-white text-light fw-bold wow fadeInUp" data-wow-delay="0.3s">
                                 <h1 style="font-weight:bold">Situs Perpustakaan</h1>
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-                                <h2 class="uppercase bold">SMA Negeri 1 Blega</h2>
+                                <h2 class="animated-text" data-text="SMA Negeri 1 Blega"
+                                    style="font-family: 'Anton', sans-serif;">SMA Negeri 1 Blega</h2>
                                 <p class="lead mb48 mb-xs-32">Situs ini ditujukan untuk seluruh Civitas Akademika SMA Negeri
                                     1 Blega
                                     maupun masyarakat pengguna internet pada umumnya.
@@ -55,7 +56,7 @@
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-solid fa-address-card fa-3x text-dark mb-3"></i>
                     <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
-                        {{ $user }} </h1>
+                        {{ $user }}</h1>
                     <span class="fs-3 text-dark fw-bold">Anggota</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
@@ -77,7 +78,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <style>
@@ -88,7 +88,7 @@
     <section class="bg-dark">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 mb-xs-24 col-md-6 text-light p-5">
+                <div class="col-sm-6 mb-xs-24 col-md-6 text-light p-5 wow fadeInDown" data-wow-delay="0.3s">
                     <i class="bi bi-journal-arrow-up fa-5x mb-3"></i>
                     <h6 class="uppercase">KOLEKSI BUKU TERBARU</h6>
                     <ul>
@@ -119,11 +119,13 @@
                                 style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik : Desain Interior -
                                 Update : 10/04/2023</span></li>
                         <li>7. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of
-                                dedication</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik :
+                                dedication</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik
+                                :
                                 Umum - Update :
                                 10/04/2023</span></li>
                         <li>8. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165780'>50 years of
-                                dedication</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik :
+                                dedication</a><br><span style='color:#dddddd;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemilik
+                                :
                                 Umum - Update :
                                 10/04/2023</span></li>
                         <li>9. <a style='color:#ffffff;' href='detailbuku.aspx?id=995000165769'>Buku panduan praktik
@@ -136,7 +138,7 @@
                                 10/04/2023</span></li>
                     </ul>
                 </div>
-                <div class="col-sm-6 mb-xs-24 col-md-6 text-light p-5">
+                <div class="col-sm-6 mb-xs-24 col-md-6 text-light p-5 wow fadeInUp" data-wow-delay="0.3s">
                     <i class="bi bi-book fa-5x mb-3 "></i>
                     <h6 class="uppercase">TOP 10 BUKU YANG SERING DIPINJAM</h6>
                     <ul>
