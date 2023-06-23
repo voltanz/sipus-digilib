@@ -10,7 +10,7 @@
     <div class="container-xxl py-5" id="team">
         <div class="container">
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-3 col-md-4 ">
+                <div class="col-lg-3 col-md-4 wow fadeInLeftBig" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="{{ asset('assets/dist/img/wildan.jpg') }}" alt="" />
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 ">
+                <div class="col-lg-3 col-md-4 wow fadeInUpBig" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="{{ asset('assets/dist/img/ibnu.jpg') }}" alt="" />
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 ">
+                <div class="col-lg-3 col-md-4 wow fadeInRightBig" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="{{ asset('assets/dist/img/didin.jpg') }}" alt="" />
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-lg-3 col-md-6 ">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 ">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="{{ asset('assets/dist/img/rahma.jpg') }}" alt="" />

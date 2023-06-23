@@ -25,11 +25,12 @@
                     </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="{{ route('profile.edit', auth()->user()->id ) }}" class="btn btn-info m-2">Profile</a>
-                <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <a href="{{ route('profile.edit', auth()->user()->id) }}" class="btn btn-info m-2">Profile</a>
+                {{-- <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="nav-icon fas fa-sign-out-alt"></i> --}}
 
-                <a href="" {{ route('logout') }}" class="btn btn-info m-2 float-right"
+                <a href="" {{ route('logout') }}" class="btn btn-danger m-2 float-right"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="nav-icon fas fa-sign-out-alt"></i>
                     {{ __('Logout') }}
@@ -39,6 +40,6 @@
                 </form>
             </div>
         </li>
-        
+
     </ul>
 </nav>

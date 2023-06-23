@@ -6,12 +6,12 @@ style="background-image: url({{ asset('assets/logo/background.jpg') }});
 
     <div class="container text-light">
         <div class="row p-2 fs-5 text-light fw-bold">
-            <div class="col-sm-12 text-center">
+            <div class="col-sm-12 text-center wow fadeInUp" data-wow-delay="0.3s">
                 <b><h2 style="font-size:3rem">LINKS</h2></b>
                 </div>  
             </div>
             <div class="row" style="margin:5rem">
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 text-center wow fadeInUp" data-wow-delay="0.1s">
                   <div class="card bg-dark text-light bg-opacity-75">
                     <div class="card-body">
                         <div class="text-center text-light">
@@ -23,7 +23,7 @@ style="background-image: url({{ asset('assets/logo/background.jpg') }});
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 text-center wow fadeInDown" data-wow-delay="0.1s">
                   <div class="card bg-dark text-light bg-opacity-75">
                     <div class="card-body">
                         <div class="text-center">
@@ -46,7 +46,7 @@ style="background-image: url({{ asset('assets/logo/background.jpg') }});
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 text-center wow fadeInUp" data-wow-delay="0.1s">
                   <div class="card bg-dark text-light bg-opacity-75">
                     <div class="card-body">
                         <div class="text-center">

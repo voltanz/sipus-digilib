@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Profile;
 use Illuminate\Support\Facades\DB;
+use PharIo\Manifest\Author;
 
 class ProfileController extends Controller
 {
@@ -72,7 +73,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-      //
+        //
     }
 
     /**
