@@ -55,24 +55,26 @@
             <div class="row g-5">
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-solid fa-address-card fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
-                        {{ $user }}</h1>
+                    <h1 class="num display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;"
+                        data-val="{{ $user }}">00
+                    </h1>
                     <span class="fs-3 text-dark fw-bold">Anggota</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
 
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
-                        {{ $staf }}
+                    <h1 class="num display-4 text-dark" data-toggle="counter-up" data-val="{{ $staf }}"
+                        style="font-family: 'Raleway', sans-serif;">00
                     </h1>
                     <span class="fs-3 text-dark fw-bold">Staf</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
                 <div class="col-sm-12 col-lg-4 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fa fa-solid fa-book fa-3x text-dark mb-3"></i>
-                    <h1 class="display-4 text-dark" data-toggle="counter-up" style="font-family: 'Raleway', sans-serif;">
-                        {{ $buku }}</h1>
+                    <h1 class="num display-4 text-dark" data-toggle="counter-up" data-val="{{ $buku }}"
+                        style="font-family: 'Raleway', sans-serif;">00
+                    </h1>
                     <span class="fs-3 text-dark fw-bold">Buku</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>

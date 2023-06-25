@@ -40,6 +40,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
+                        <th>NISN</th>
                         <th>Email</th>
                         <th>Opsi</th>
                     </tr>
@@ -67,6 +68,9 @@
                     },
                     {
                         data: 'name'
+                    },
+                    {
+                        data: 'nisn'
                     },
                     {
                         data: 'email'

@@ -8,8 +8,8 @@ if ($user = auth()->user()) {
 ?>
 
 
-<div class="navbar bg-dark d-flex flex-column w-full">
-    <ul class="d-flex justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
+<div class="bg-dark w-full" data-bs-theme="dark">
+    <ul class="d-flex pt-3 justify-content-start w-100  border-1 border-bottom border-white h-25" style="font-size: 12px">
         <li class="pe-4">
             <a href="https://www.google.com/maps/dir//sman+1+blega/@-7.129874,112.9792957,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x2dd82102e9471ff5:0xb654904772599bb6!2m2!1d113.0493363!2d-7.1298793?entry=ttu"
                 class="text-light text-decoration-none d-flex">
@@ -39,18 +39,20 @@ if ($user = auth()->user()) {
             </a>
         </li>
     </ul>
-    <div class="container-fluid justify-content-center flex-column my-2  >
+    <center>
+    <div class="container-fluid d-flex flex-column my-2  >
         <div class="d-flex">
         <a href="#!" class="brand-logo">
             <img class="mt-3 mb-3" src="{{ asset('assets/logo/sipus.png') }}" style="width: 350px;"></a>
     </div>
+    </center>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary w-full fw-bold">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon bg-light"></span>
+    <nav class="navbar bg-dark  navbar-expand-lg w-full fw-bold">
+        <button class="navbar-toggler mx-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav me-auto p-4 p-lg-0 text-uppercase" style="font-size: 12px">
+        <div class="collapse navbar-collapse flex-column" id="navbarCollapse">
+            <div class="navbar-nav p-4 p-lg-0 text-uppercase" style="font-size: 12px">
                     <a class="nav-item nav-link text-light" aria-current="page" href="{{ route('homepage') }}"
                         style="text-decoration:none">Home </a>
                 <div class="nav-item dropdown">

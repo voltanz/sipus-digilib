@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="col s12 m7">
-            <h2 class="text-center mb-4 pt-3">Detail Buku</h2>
+            <h2 class="text-center mb-4 pt-3">::Detail Buku::</h2>
             <div class="card horizontal p-3">
                 <center>
                     <div class="card-image pb-3">

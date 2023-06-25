@@ -4,7 +4,7 @@
 @section('content')
     <div class="container py-5" style="height: 100vh">
         <div class="d-flex flex-column align-items-center">
-            <h2 class="text-capitalze text-center mb-4">Daftar Buku Yang Dipinjam</h2>
+            <h2 class="text-capitalze text-center mb-4">::Daftar Buku Yang Dipinjam::</h2>
             <table class="table w-100">
                 <thead>
                     <tr>

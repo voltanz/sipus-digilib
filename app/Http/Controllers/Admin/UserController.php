@@ -19,7 +19,7 @@ class UserController extends Controller
     {
         return view('admin.user.index');
     }
-     /**
+    /**
 
      * Show the form for creating a new resource.
      *
@@ -42,8 +42,8 @@ class UserController extends Controller
         $validator = validator($request->all(), [
             'name' => 'required|string',
             'email' => 'required|email|unique:users',
-            'nisn'=>'numeric|min:10|unique:users',
-            'password'=>'required|string|min:8|confirmed',
+            'nisn' => 'numeric|min:10|unique:users',
+            'password' => 'required|string|min:8|confirmed',
         ]);
 
         $select = $request->get('select');
@@ -58,7 +58,7 @@ class UserController extends Controller
             'name' => $name . " " . $request['name'],
             'email' => $request['email'],
             'nisn' => $request['nisn'],
-            'email_verified_at'=> $time,
+            'email_verified_at' => $time,
             'password' => Hash::make($request['password']),
         ]);
 
@@ -75,7 +75,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view ('admin.user.show',compact('user'));
+        return view('admin.user.show', compact('user'));
     }
 
     /**
@@ -84,7 +84,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id )
+    public function edit($id)
     {
         $user = User::find($id);
         return view('admin.user.edit', compact('user'));
@@ -101,11 +101,12 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         User::where('id', $user->id)
-        ->update([
-            'name' => $request->name,
-            'email'=>$request->email
-        ]);
-    return redirect('admin/user')->with('success', 'Data Berhasil Di Update');
+            ->update([
+                'name' => $request->name,
+                'nisn' => $request->nisn,
+                'email' => $request->email
+            ]);
+        return redirect('admin/user')->with('success', 'Data Berhasil Di Update');
     }
 
     /**
@@ -116,7 +117,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::where('id','=',$id)->delete();
+        User::where('id', '=', $id)->delete();
         return redirect('admin/user')->with('success', 'Data Berhasil Di Hapus');
     }
 }
