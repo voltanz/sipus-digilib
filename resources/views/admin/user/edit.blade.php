@@ -20,6 +20,14 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label>NISN</label>
+                        <input type="text" class="form-control @error('nisn') is-invalid @enderror" name="nisn"
+                            value="{{ old('nisn') ?? $user->nisn }}" name="nisn">
+                        @error('nisn')
+                            <span class="in-block text-red">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label>E-mail</label>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                             value="{{ old('email') ?? $user->email }}">

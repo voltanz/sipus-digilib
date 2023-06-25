@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m12 pt-3">
-                <h2 class="text-center mb-4">Daftar Buku Sedang Dipinjam</h2>
+                <h2 class="text-center mb-4">::Daftar Buku Sedang Dipinjam::</h2>
                 </center>
                 <div class="card p-3">
                     <table class="table table-striped table-hover responsive-table table-bordered">
