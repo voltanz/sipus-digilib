@@ -58,3 +58,6 @@ Digital Library of SMAN 1 Blega adalah sebuah platform yang dirancang khusus unt
 ## 💳 License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+
+## Screenshot
+<img alt="Sipus Digilib SMAN 1 Blega" src="[https://img.shields.io/badge/License-MIT-yellow.svg](https://drive.google.com/drive/folders/1YpzjKBgx3y3_xvY1uJkUev4ZsYeXOVWB)https://drive.google.com/drive/folders/1YpzjKBgx3y3_xvY1uJkUev4ZsYeXOVWB" />
